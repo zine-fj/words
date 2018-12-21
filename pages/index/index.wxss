@@ -1,0 +1,32 @@
+/**index.wxss**/
+
+.words {
+  padding: 20rpx 30rpx;
+}
+.title {
+  font-size: 40rpx;
+}
+
+.author {
+  font-size: 32rpx;
+  line-height: 2.2;
+}
+
+.time {
+  float: right;
+}
+.content {
+  line-height: 1;
+  font-size: 28rpx;
+}
+.time-choice {
+  display: flex;
+  height: 90rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.time-choice text {
+  font-size: 32rpx;
+  color: #ccc;
+}
