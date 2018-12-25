@@ -7,6 +7,7 @@ Page({
     content: '',
     time: '',
     nowTime: '',
+    _url: '', 
     showTime: '', // 页面中要显示的 time
     timeList: {},
     isAllShow: true, // 页面全部加载完毕
@@ -17,7 +18,7 @@ Page({
    */
   onLoad: function (options) {
     this.getTime();
-    this.getData();
+    this.getUrl();
   },
 
   getTime(){
@@ -35,10 +36,32 @@ Page({
     })
   },
 
+  getUrl() {
+    let that = this;
+    let time = this.data.time;
+    let _url = this.data._url;
+    wx.request({
+      url: 'https://interface.meiriyiwen.com/article/today?dev=1',
+      success(res) {
+        let _nowTime = res.data.data.date.curr;
+        if (_nowTime != time) {
+          that.setData({
+            time: _nowTime
+          })
+        } else {
+          that.setData({
+            time
+          })
+        }
+      }
+    })
+  },
+
   // 获取数据
   getData() {
     let that = this;
     let time = this.data.time;
+    let _url = this.data._url;
     wx.showLoading({
       title: '文章加载中...',
     });
@@ -75,13 +98,17 @@ Page({
     let timeList = this.data.timeList;
     let prev = e.currentTarget.dataset.time;
     let next = e.currentTarget.dataset.time;
+    console.log(timeList)
     if (prev == 'prev') {
       that.setData({
         time: timeList.prev
       })
     } else if(next == 'next') {
-      if (parseInt(timeList.next) >= parseInt(nowTime)) {
+      console.log(timeList.next,nowTime)
+      if (parseInt(timeList.next) > parseInt(nowTime)) {
         timeList.next = nowTime
+      } else {
+        timeList.next = timeList.curr
       }
       that.setData({
         time: timeList.next
@@ -107,14 +134,19 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+   
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    let time = this.data.time
+    let that = this;
+    let timeStamp = this.data.timeStamp;
+    setTimeout(function () {
+      that.getData();
+    }, 1000)
   },
 
   /**
