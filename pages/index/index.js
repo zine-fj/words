@@ -7,7 +7,6 @@ Page({
     content: '',
     time: '',
     nowTime: '',
-    _url: '', 
     showTime: '', // 页面中要显示的 time
     timeList: {},
     isAllShow: true, // 页面全部加载完毕
@@ -39,7 +38,6 @@ Page({
   getUrl() {
     let that = this;
     let time = this.data.time;
-    let _url = this.data._url;
     wx.request({
       url: 'https://interface.meiriyiwen.com/article/today?dev=1',
       success(res) {
@@ -61,7 +59,6 @@ Page({
   getData() {
     let that = this;
     let time = this.data.time;
-    let _url = this.data._url;
     wx.showLoading({
       title: '文章加载中...',
     });
