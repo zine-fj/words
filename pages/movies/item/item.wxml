@@ -1,0 +1,20 @@
+<view class="container">
+  <image wx:if="{{ movie.images.large }}" class="background" src="{{ movie.images.large }}" mode="aspectFill" />
+  <block wx:if="{{ movie.title }}">
+    <view class="meta">
+      <image class="poster" src="{{ movie.images.large }}" mode="aspectFit" />
+      <text class="title">{{ movie.title }}({{ movie.year }})</text>
+      <view class="info info-star">
+        <text>评分：</text>
+        <image src='../../../images/rating{{movie.rating.stars}}.png' class='movie-star'></image>
+        <text>{{ movie.rating.average }}</text>
+      </view>
+      <text class="info">导演：<block wx:for="{{ movie.directors }}" wx:key="id"> {{ item.name }}, </block></text>
+      <text class="info">主演：<block wx:for="{{ movie.casts }}" wx:key="id"> {{ item.name }}, </block></text>
+    </view>
+    <view class="summary">
+      <text class="label">摘要：</text>
+      <text class="content">{{ movie.summary }}</text>
+    </view>
+  </block>
+</view>

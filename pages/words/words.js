@@ -104,8 +104,6 @@ Page({
       console.log(timeList.next,nowTime)
       if (parseInt(timeList.next) > parseInt(nowTime)) {
         timeList.next = nowTime
-      } else {
-        timeList.next = timeList.curr
       }
       that.setData({
         time: timeList.next

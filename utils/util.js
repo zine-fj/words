@@ -14,6 +14,21 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+// 自己封装的请求函数
+const myRequest = (options)=>{
+  let domain = 'https://douban.uieee.com/v2/movie/';
+  // let domain = 'https://api.douban.com/v2/movie/';
+  
+  options.header = { 'Content-Type': 'json' };
+  options.method = 'GET';
+  options.url = domain + options.url;
+  let successCB = (res)=>{
+    successCB(res);
+  };
+  wx.request(options)
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  myRequest: myRequest,
 }

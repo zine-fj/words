@@ -1,0 +1,128 @@
+.container-movies{
+  background: #f8f9fb;
+}
+.movies-header swiper {
+  height: 480rpx;
+}
+
+.movies-header swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+.movies-header swiper .back-image {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1000;
+  opacity: 0.1;
+}
+
+.movies-header swiper .movie-intro {
+  position: fixed;
+  top: 80rpx;
+  right: 0;
+  height: auto;
+  width: 300rpx;
+  z-index: 123;
+  opacity: 0.5;
+  color: #000;
+  width: 300rpx;
+  font-size: 28rpx;
+}
+.movies-header swiper .movie-intro .swiAvra{
+  margin: 30rpx 0;
+}
+
+.movies-header swiper .slide-image {
+  width: 324rpx;
+  height: 100%;
+  margin-left: 100rpx;
+}
+
+/* 搜索 */
+
+.movie-search {
+  display: flex;
+  justify-content: center;
+  margin: 20rpx 0 10rpx 0;
+}
+
+.search-input {
+  width: 50%;
+  height: 60rpx;
+  font-size: 24rpx;
+  border: 1px solid #eee;
+  padding-left: 20rpx;
+  border-radius: 10rpx;
+}
+
+.movie-search button {
+  margin: 0 20rpx;
+  color: #fff;
+}
+
+.movies-content {
+  box-sizing: border-box;
+  background-color: #f8f9fb;
+}
+
+.movies-item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  font-size: 20rpx;
+  margin: 40rpx 0;
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.movies-item .title {
+  display: flex;
+  margin-bottom: 10rpx;
+  width: 100%;
+}
+
+.movies-item .title text {
+  flex: 1;
+}
+
+.movies-item .title image {
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.movies-item .movies-content {
+  height: 300rpx;
+}
+
+.movies-item .movies-content .inner {
+  display: flex;
+  flex-direction: row;
+  height: 300rpx;
+  width: 900rpx;
+}
+
+.movies-item .movies-content .inner .movie-item {
+  display: flex;
+  flex-direction: column;
+  width: 180rpx;
+  margin: 10rpx;
+}
+
+.movies-item .movies-content .inner .movie-item image {
+  width: 180rpx;
+  height: 250rpx;
+}
+
+.movies-item .movies-content .inner .movie-item text {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 10rpx 0;
+}

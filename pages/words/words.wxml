@@ -9,7 +9,7 @@
   <!-- <view>{{wc}}</view> -->
   <text class='content'>{{content}}</text>
   <view class='time-choice' hidden="{{isAllShow}}">
-    <text bindtap='clickTime' data-time="prev">Prev</text>
-    <text bindtap='clickTime' data-time="next">Next</text>
+    <text bindtap='clickTime' data-time="prev">上一天</text>
+    <text bindtap='clickTime' data-time="next">下一天</text>
   </view>
 </view>
