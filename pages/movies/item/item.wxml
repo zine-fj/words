@@ -5,7 +5,7 @@
       <image class="poster" src="{{ movie.images.large }}" mode="aspectFit" />
       <text class="title">{{ movie.title }}({{ movie.year }})</text>
       <view class="info info-star">
-        <text>评分：</text>
+        <text class='info-star-title'>评分：</text>
         <image src='../../../images/rating{{movie.rating.stars}}.png' class='movie-star'></image>
         <text>{{ movie.rating.average }}</text>
       </view>

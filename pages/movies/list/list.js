@@ -9,9 +9,11 @@ Page({
   data: {
     movies_list: [],
     hasMore: true,
+    hasMoreFalse: '没有更多内容了',
     subtitle: '加载中...',
     countNum: 10,
-    total: 20, // 假设每页有电影20个
+    total: 20, // 假设一共有电影20个
+
   },
 
   /**
@@ -26,43 +28,39 @@ Page({
   // 获取电影
   getMoviesList(param) {
     let that = this;
-    let countNum = this.data.countNum;
     wx.showLoading({
       title: '拼命加载中...'
     })
-    if(param.id == 'search') {
-      console.log()
-      util.myRequest({
-        url: `${param.id}?q= ${param.searchId}&count=10`,
-        success(res) {
-          console.log(res);
-          wx.hideLoading({});
-          wx.setNavigationBarTitle({
-            title: res.data.title
-          });
-          that.setData({
-            movies_list: res.data.subjects,
-          });
-          wx.stopPullDownRefresh({});
-        }
-      })
+    let _url
+    if (param.id == 'search') {
+      _url = `movie/${param.id}?q=${param.searchId}&count=10`
     } else {
-      util.myRequest({
-        url: `${param.id}?count=10`,
-        success(res) {
-          console.log(res);
-          wx.hideLoading({});
-          wx.setNavigationBarTitle({
-            title: res.data.title
-          });
-          that.setData({
-            movies_list: res.data.subjects,
-          });
-          wx.stopPullDownRefresh({});
-        }
-      })
+      _url = `movie/${param.id}&count=10`
     }
-    
+    util.myRequest({
+      url: _url,
+      success(res) {
+        console.log(res);
+        wx.hideLoading({});
+        wx.setNavigationBarTitle({
+          title: res.data.title
+        });
+        let _movies_list = res.data.subjects;
+        if (_movies_list.length <= 0) {
+          that.setData({
+            hasMore: false,
+            hasMoreFalse: '没有更多内容了',
+          })
+        } else {
+          that.setData({
+            hasMore: true,
+            movies_list: _movies_list,
+            countNum: 10,
+          });
+        }
+        wx.stopPullDownRefresh({});
+      }
+    })
   },
 
   // 加载更多
@@ -73,7 +71,7 @@ Page({
     let total = this.data.total;
     let that = this;
     let movies_list = this.data.movies_list;
-    
+    let start = 0;
     if (countNum < total) {
       that.setData({
         hasMore: true
@@ -81,43 +79,40 @@ Page({
       countNum += 10;
     } else {
       that.setData({
-        hasMore: false
+        hasMore: false,
+        hasMoreFalse: '没有更多内容了',
       })
     }
+    console.log(countNum, total, start)
     wx.showLoading({
       title: '拼命加载中...',
     });
+    let _url;
     if (whitch.id == "search") {
-      util.myRequest({
-        url: `${whitch.id}?q=${whitch.searchId}&count=${countNum}`,
-        success(res) {
-          console.log(res)
-          wx.hideLoading({});
-          let data = res.data.subjects;
-          let total = res.data.total;
-          that.setData({
-            movies_list: data,
-            countNum,
-            total: total
-          });
-        }
-      })
+      _url = `movie/${whitch.id}?q=${whitch.searchId}&start=${start}&count=${countNum}`;
+      if (countNum >= 20) {
+        that.setData({
+          hasMore: false,
+          hasMoreFalse: '截取搜索的前20条内容',
+        })
+      }
     } else {
-      util.myRequest({
-        url: `${whitch.id}?count=${countNum}`,
-        success(res) {
-          wx.hideLoading({});
-          let data = res.data.subjects;
-          let total = res.data.total;
-          that.setData({
-            movies_list: data,
-            countNum,
-            total: total
-          });
-
-        }
-      })
+      _url = `movie/${whitch.id}?count=${countNum}`
     }
+    util.myRequest({
+      url: _url,
+      success(res) {
+        console.log(res)
+        wx.hideLoading({});
+        let data = res.data.subjects;
+        let total = res.data.total;
+        that.setData({
+          movies_list: data,
+          countNum,
+          total: total
+        });
+      }
+    })
   },
 
 
@@ -125,7 +120,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-    this.getMoviesList(whitch.id)
+    this.getMoviesList(whitch)
     this.setData({
       hasMore: true
     })
@@ -134,7 +129,6 @@ Page({
    * 页面相关事件处理函数--上拉加载
    */
   onReachBottom(e) {
-    console.log('上拉')
     this.loadMore(whitch);
   },
 

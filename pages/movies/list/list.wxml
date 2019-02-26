@@ -20,7 +20,7 @@
         <text>玩了命的加载中...</text>
       </view>
       <view wx:else>
-        <text>没有更多内容了</text>
+        <text>{{hasMoreFalse}}</text>
       </view>
     </view>
   </view>

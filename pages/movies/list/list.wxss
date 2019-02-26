@@ -46,8 +46,7 @@
   font-size: 28rpx;
   font-weight: bold;
   text-align: center;
-  background-color: rgba(247, 76, 49, 0.8);
-  color: #fff;
+  color: rgba(247, 76, 49, 0.8);
   padding: 10rpx;
   border-radius: 20rpx;
 }

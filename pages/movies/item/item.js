@@ -11,7 +11,7 @@ Page({
 
   getDetailMovie(e) {
     let that = this;
-    let movie_url = `subject/${e.id}`;
+    let movie_url = `movie/subject/${e.id}`;
     wx.showLoading({
       title: '拼命加载中...',
     });

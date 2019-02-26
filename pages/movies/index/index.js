@@ -43,11 +43,9 @@ Page({
   },
 
   // 搜索
-  inputBlur(e) {
-    console.log(e)
-    let _search = e.detail.value;
+  inputSearch(e) {
     this.setData({
-      search: _search
+      search: e.detail.value
     })
   },
   getSearch() {
@@ -71,8 +69,9 @@ Page({
 
     // 正在热映
     util.myRequest({
-      url: 'in_theaters?start=0&count=10',
+      url: 'movie/in_theaters?start=0&count=10',
       success(res) {
+        console.log(res)
         moviesType[0].title = res.data.title;
         moviesType[0].cont = res.data.subjects;
         that.setData({
@@ -83,7 +82,7 @@ Page({
     })
     // 即将上映
     util.myRequest({
-      url: 'coming_soon?start=0&count=10',
+      url: 'movie/coming_soon?start=0&count=10',
       success(res) {
         let data = res.data.subjects;
         moviesType[1].title = res.data.title;
@@ -96,7 +95,7 @@ Page({
     })
     // top250
     util.myRequest({
-      url: 'top250?start=0&count=10',
+      url: 'movie/top250?start=0&count=10',
       success(res) {
         let data = res.data.subjects;
         // 轮播图

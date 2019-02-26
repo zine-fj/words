@@ -15,16 +15,21 @@
   font-style: 42rpx;
   color: #444;
 }
-.info-star{
-  display:flex;
-align-items:center;
 
+.info-star {
+  display: flex;
+  align-items: center;
 }
-.movie-star{
-  width:120rpx;
-height:24rpx;
-margin-right:10rpx;
 
+.info-star-title {
+  display: inline-block;
+  width: 77rpx;
+}
+
+.movie-star {
+  width: 120rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
 }
 
 .info {
@@ -60,5 +65,5 @@ margin-right:10rpx;
   height: 100%;
   width: 100%;
   z-index: -1000;
-  opacity: .1;
+  opacity: 0.1;
 }
