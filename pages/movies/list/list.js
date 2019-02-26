@@ -18,8 +18,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
     whitch = options;
-    this.getMoviesList(options.id);
+    this.getMoviesList(options);
   },
 
   // 获取电影
@@ -29,9 +30,10 @@ Page({
     wx.showLoading({
       title: '拼命加载中...'
     })
-    if(param == 'search') {
+    if(param.id == 'search') {
+      console.log()
       util.myRequest({
-        url: `${param}?q = ${e.searchId}?count= 10`,
+        url: `${param.id}?q= ${param.searchId}&count=10`,
         success(res) {
           console.log(res);
           wx.hideLoading({});
@@ -46,7 +48,7 @@ Page({
       })
     } else {
       util.myRequest({
-        url: `${param}?count=10`,
+        url: `${param.id}?count=10`,
         success(res) {
           console.log(res);
           wx.hideLoading({});
@@ -89,6 +91,7 @@ Page({
       util.myRequest({
         url: `${whitch.id}?q=${whitch.searchId}&count=${countNum}`,
         success(res) {
+          console.log(res)
           wx.hideLoading({});
           let data = res.data.subjects;
           let total = res.data.total;

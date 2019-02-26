@@ -43,16 +43,17 @@ Page({
   },
 
   // 搜索
-  inputSearch(e) {
-    let search = this.data.search;
+  inputBlur(e) {
+    console.log(e)
+    let _search = e.detail.value;
     this.setData({
-      search: e
+      search: _search
     })
   },
   getSearch() {
-    let searchId = this.data.search.detail.value;
+    let search = this.data.search;
     wx.navigateTo({
-      url: `../list/list?id=search&searchId=${searchId}`,
+      url: `../list/list?id=search&searchId=${search}`,
     })
   },
 
@@ -133,9 +134,22 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
+    let _path = '/pages/movies/index/index';
     return {
       title: '豆瓣电影',
-      path: 'pages/movies/index/index'
+      path: _path,
+      // imageUrl: '/images/an.jpg',
+      success: function (res) {
+        // 转发成功
+        wx.showToast({
+          title: "转发成功",
+          icon: 'success',
+          duration: 2000
+        })
+      },
+      fail: function (res) {
+        // 转发失败
+      }
     }
   }
 })
