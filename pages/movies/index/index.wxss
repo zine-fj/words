@@ -1,3 +1,5 @@
+@import '/components/toast_side/side.wxss';
+
 .container-movies{
   background: #f8f9fb;
 }
@@ -31,7 +33,6 @@
   z-index: 123;
   opacity: 0.5;
   color: #000;
-  width: 300rpx;
   font-size: 28rpx;
 }
 .movies-header swiper .movie-intro .swiAvra{
@@ -50,11 +51,13 @@
   display: flex;
   justify-content: center;
   margin: 20rpx 0 10rpx 0;
+  background: #fff;
 }
 
 .search-input {
-  width: 50%;
+  width: 80%;
   height: 60rpx;
+  line-height: 60rpx;
   font-size: 24rpx;
   border: 1px solid #eee;
   padding-left: 20rpx;
@@ -76,7 +79,7 @@
   flex-direction: column;
   cursor: pointer;
   font-size: 20rpx;
-  margin: 40rpx 0;
+  margin: 30rpx 0;
   padding: 20rpx;
   background-color: #fff;
 }

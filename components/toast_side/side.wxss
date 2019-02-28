@@ -1,0 +1,85 @@
+/* pages/rightL/rightL.wxss */
+
+.hide {
+  display: none !important;
+}
+
+.movie-type {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.movie-type-ac {
+  animation: leftAct 0.5s 1;
+}
+
+@keyframes leftAct {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.movie-type .mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.movie-type .type-cont {
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #fff;
+  width: 80%;
+  height: 100%;
+}
+
+.movie-type .type-cont .cont {
+  border-top: 1rpx solid #ddd;
+  padding: 0 0 0 20rpx;
+  box-sizing: border-box;
+  height: calc(100% - 100rpx);
+}
+
+.movie-type .type-cont .cont .class {
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.movie-type .type-cont .cont .class .type {
+  margin: 0 0 20rpx 10rpx;
+}
+
+.movie-type .type-cont .cont .class  text {
+  font-size: 32rpx;
+  color: #000;
+  margin: 0 10rpx 20rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 10rpx;
+  padding: 5rpx 10rpx;
+  display: inline-block;
+}
+
+.text-act {
+  background: #ddd;
+  color: #fff;
+}
+
+.movie-type .type-cont .title {
+  border: 0.5px solid #ddd;
+  margin: 10px 20px;
+  height: 40rpx;
+  line-height: 1.5;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+}

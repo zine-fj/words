@@ -30,5 +30,10 @@
         "selectedIconPath": "/images/note-actived.png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于获取当前城市电影信息"
+    }
   }
 }

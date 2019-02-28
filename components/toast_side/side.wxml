@@ -1,0 +1,13 @@
+<view class="movie-type {{isMovieTypeShow?'hide':''}}" catchtouchmove="ture">
+  <view class="mask {{}}" bindtap='cancel'></view>
+  <view class="type-cont {{isMovieTypeShow?'':'movie-type-ac'}}">
+    <input class='title' focus="{{isTypeFocus}}" type='text' placeholder='请输入电影名...' bindconfirm='bindSearch' />
+    <scroll-view class='cont' scroll-y>
+      <!-- 类型，地区，年代，特色 -->
+      <view class='class' wx:for="{{movieList}}" wx:key="{{index}}">
+        <view class='type'>{{item.type}}:</view>
+        <text wx:for="{{item.list}}" wx:for-item="itemLast" wx:key="{{index}}" class="{{getType == itemLast.li?'text-act':''}}" data-id='{{itemLast.li}}' bindtap='bindMovieType'>{{itemLast.li}}</text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -33,29 +33,33 @@ Page({
     })
     let _url
     if (param.id == 'search') {
-      _url = `movie/${param.id}?q=${param.searchId}&count=10`
+      if(param.searchType == 'tag') {
+        _url = `movie/search?tag=${param.searchId}&count=10`
+      } else if (param.searchType == 'q') {
+        _url = `movie/search?q=${param.searchId}&count=10`
+      }
     } else {
       _url = `movie/${param.id}&count=10`
     }
     util.myRequest({
       url: _url,
       success(res) {
-        console.log(res);
         wx.hideLoading({});
+        console.log(res);
         wx.setNavigationBarTitle({
           title: res.data.title
         });
         let _movies_list = res.data.subjects;
-        if (_movies_list.length <= 0) {
-          that.setData({
-            hasMore: false,
-            hasMoreFalse: '没有更多内容了',
-          })
-        } else {
+        if (_movies_list.length > 0) {
           that.setData({
             hasMore: true,
             movies_list: _movies_list,
             countNum: 10,
+          });
+        } else {
+          that.setData({
+            hasMore: false,
+            hasMoreFalse: '没有更多内容了',
           });
         }
         wx.stopPullDownRefresh({});
@@ -89,11 +93,19 @@ Page({
     });
     let _url;
     if (whitch.id == "search") {
-      _url = `movie/${whitch.id}?q=${whitch.searchId}&start=${start}&count=${countNum}`;
+      if (whitch.searchType == 'tag') {
+        _url = `movie/search?tag=${whitch.searchId}&count=${countNum}`
+      } else if (whitch.searchType == 'q') {
+        _url = `movie/search?q=${whitch.searchId}&count=${countNum}`
+      }
       if (countNum >= 20) {
         that.setData({
           hasMore: false,
           hasMoreFalse: '截取搜索的前20条内容',
+        })
+      } else {
+        that.setData({
+          hasMore: true,
         })
       }
     } else {
@@ -137,5 +149,8 @@ Page({
    */
   onReady() {
 
+  },
+  onHide(){
+    console.log('list move')
   },
 })
