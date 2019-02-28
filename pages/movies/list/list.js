@@ -150,7 +150,5 @@ Page({
   onReady() {
 
   },
-  onHide(){
-    console.log('list move')
-  },
+  
 })

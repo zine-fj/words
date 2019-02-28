@@ -6,7 +6,7 @@
       <text class="title">{{ movie.title }}({{ movie.year }})</text>
       <view class="info info-star">
         <text class='info-star-title'>评分：</text>
-        <image src='../../../images/rating{{movie.rating.stars}}.png' class='movie-star'></image>
+        <image src='/images/rating{{movie.rating.stars}}.png' class='movie-star'></image>
         <text>{{ movie.rating.average }}</text>
       </view>
       <text class="info">导演：<block wx:for="{{ movie.directors }}" wx:key="id"> {{ item.name }}, </block></text>

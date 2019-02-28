@@ -6,8 +6,10 @@
         <text class='title'>{{item.title}}</text>
         <text class='sub-title'>{{item.original_title}}（{{item.year}}）</text>
         <view class='artists'>
-          导演：
-          <block wx:for="{{item.directors}}" >{{item.name}}</block>
+          <view>
+            <text wx:for="{{item.genres}}" wx:key="{{index}}" wx:for-item="itemType">{{itemType}} </text> /
+            <text>片长：{{item.durations}}</text>
+          </view>
         </view>
       </view>
       <view class='rating'>

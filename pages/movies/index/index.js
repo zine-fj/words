@@ -7,7 +7,12 @@ Page({
    */
   data: {
     arrowrightImg: '../../../images/arrowright.png',
-    imgUrls: [], // 轮播图效果
+    imgUrls: [{
+      title: '', // 电影名
+      average: '', // 评分
+      year: '', // 上映年
+      img: '', // 图片
+    }], // 轮播图效果
     indicatorDots: true,
     autoplay: true,
     circular: false, // 是否衔接
@@ -220,17 +225,13 @@ Page({
           });
 
           if (item.id == 'in_theaters') {
+            let _imgUrls = [];
             for (let i = 0; i < 4; i++) {
-              imgUrls.push(moviesType[0].cont[i].images.large);
-              swiTitle.push(moviesType[0].cont[i].title)
-              swiAvra.push(moviesType[0].cont[i].rating.average)
-              swiYear.push(moviesType[0].cont[i].year)
+              let theInfo = moviesType[0].cont[i];
+              _imgUrls.push(theInfo)
             }
             that.setData({
-              imgUrls,
-              swiTitle,
-              swiAvra,
-              swiYear
+              imgUrls: _imgUrls,
             });
           }
           wx.hideLoading({});
@@ -238,13 +239,14 @@ Page({
       })
     })
   },
+
+  // 点击手机完成按钮
   bindSearch(e) {
     console.log(e);
     let type = e.detail.value;
     this.getSearch('q', type)
   },
-
-  // 搜索
+  // 跳转到搜索列表页面
   getSearch(type,param) {
     wx.navigateTo({
       url: `../list/list?id=search&searchType=${type}&searchId=${param}`,
@@ -275,8 +277,6 @@ Page({
       getType: '',
     })
   },
-
-
   
   // 跳转到不同的列表页面
   toMovie(e) {

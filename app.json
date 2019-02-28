@@ -33,7 +33,7 @@
   },
   "permission": {
     "scope.userLocation": {
-      "desc": "用于获取当前城市电影信息"
+      "desc": "用于获取当前城市电影信息,否则默认北京"
     }
   }
 }
