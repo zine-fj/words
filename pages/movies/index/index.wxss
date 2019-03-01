@@ -27,7 +27,7 @@
 .movies-header swiper .movie-intro {
   position: fixed;
   top: 80rpx;
-  right: 0;
+  right: 10rpx;
   height: auto;
   width: 300rpx;
   z-index: 123;

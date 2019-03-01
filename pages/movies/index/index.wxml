@@ -15,7 +15,7 @@
             <view class='movie-intro'>
               <view>名字：{{item.title}}</view>
               <view class='swiAvra'>评分：{{item.rating.average}}</view>
-              <view>上映日期：{{item.year}}</view>
+              <view>上映年份：{{item.year}}</view>
             </view>
           </swiper-item>
       </navigator>

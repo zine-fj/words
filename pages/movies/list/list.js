@@ -34,12 +34,12 @@ Page({
     let _url
     if (param.id == 'search') {
       if(param.searchType == 'tag') {
-        _url = `movie/search?tag=${param.searchId}&count=10`
+        _url = `movie/search?tag=${param.searchId}&count=10&city=${param.city}`
       } else if (param.searchType == 'q') {
-        _url = `movie/search?q=${param.searchId}&count=10`
+        _url = `movie/search?q=${param.searchId}&count=10&city=${param.city}`
       }
     } else {
-      _url = `movie/${param.id}&count=10`
+      _url = `movie/${param.id}?count=10&city=${param.city}`
     }
     util.myRequest({
       url: _url,
@@ -118,6 +118,9 @@ Page({
         wx.hideLoading({});
         let data = res.data.subjects;
         let total = res.data.total;
+        if(!total) {
+          total = data.length
+        }
         that.setData({
           movies_list: data,
           countNum,

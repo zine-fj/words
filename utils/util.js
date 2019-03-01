@@ -30,7 +30,7 @@ const myRequest = (options) => {
   wx.request(options)
 }
 
-function getUserInfo() {
+const getUserInfo = ()=>{
   return new Promise((resolve, reject) => {
     wx.getUserInfo({
       success: resolve,
@@ -39,7 +39,7 @@ function getUserInfo() {
   })
 }
 
-function getLocation(type) {
+const getLocation = (type)=>{
   return new Promise((resolve, reject) => {
     wx.getLocation({
       type: type,
@@ -67,4 +67,5 @@ module.exports = {
   myRequest: myRequest,
   getCity,
   getLocation,
+  getUserInfo,
 }
