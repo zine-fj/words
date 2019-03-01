@@ -52,19 +52,20 @@ Page({
    */
   onLoad: function(options) {
     let that = this;
-    // 获取当前城市
-    util.getLocation().then((suc)=>{
-      util.getCity(suc.latitude, suc.longitude).then((suc)=>{
-        console.log(suc)
-        let city = suc.data.result.ad_info.city.replace('市','');
-        that.getMovies(city);
-        that.setData({
-          city: city
-        })
-      })
-    }).catch((err)=>{
-      that.getMovies('北京');
-    })
+    that.getMovies('北京');
+    // 获取当前城市 暂无合适地址，先注释
+    // util.getLocation().then((suc)=>{
+    //   util.getCity(suc.latitude, suc.longitude).then((suc)=>{
+    //     console.log(suc)
+    //     let city = suc.data.result.ad_info.city.replace('市','');
+    //     that.getMovies(city);
+    //     that.setData({
+    //       city: city
+    //     })
+    //   })
+    // }).catch((err)=>{
+    //   that.getMovies('北京');
+    // })
     // 获取电影类型
     that.setData({
       movieList: app.globalData.movieList
