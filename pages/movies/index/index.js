@@ -7,6 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    loca: {}, // 爱心
+    loveRgb: '',
     arrowrightImg: '../../../images/arrowright.png',
     imgUrls: [{
       title: '', // 电影名
@@ -46,31 +48,98 @@ Page({
     getType: '', // 当前选择的type
   },
 
+  // 版本更新
+  getUpdate() {
+    //检查是否存在新版本
+    wx.getUpdateManager().onCheckForUpdate(function (res) {
+      // 请求完新版本信息的回调
+      console.log("是否有新版本：" + res.hasUpdate);
+      if (res.hasUpdate) {//如果有新版本
+        // 小程序有新版本，会主动触发下载操作（无需开发者触发）
+        wx.getUpdateManager().onUpdateReady(function () {//当新版本下载完成，会进行回调
+          wx.showModal({
+            title: '更新提示',
+            content: '新版本已经准备好，单击确定重启应用',
+            showCancel: false,
+            success: function (res) {
+              if (res.confirm) {
+                // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
+                wx.getUpdateManager().applyUpdate();
+              }
+            }
+          })
+        })
+
+        // 小程序有新版本，会主动触发下载操作（无需开发者触发）
+        wx.getUpdateManager().onUpdateFailed(function () {//当新版本下载失败，会进行回调
+          wx.showModal({
+            title: '提示',
+            content: '检查到有新版本，但下载失败，请检查网络设置',
+            showCancel: false,
+          })
+        })
+      }
+    });
+  },
+
+  // 点击爱心
+  clickLove(e) {
+    console.log(e)
+    let X = e.detail.x * 2 - 10; // 位置
+    let Y = e.detail.y * 2 - 60;
+    let rgbColorR = Math.round(Math.random() * 255);
+    let rgbColorG = Math.round(Math.random() * 255);
+    let rgbColorB = Math.round(Math.random() * 255);
+    let _loveRgb = `rgb(${rgbColorR},${rgbColorG},${rgbColorB})`;
+
+    this.animation.rotate(45).step()
+      .scale(2).step()
+      .opacity(0).step();
+    this.setData({
+      loca: {
+        X,
+        Y
+      },
+      loveRgb: _loveRgb,
+      animat: this.animation.export()
+    })
+    setTimeout(() => {
+      this.animation.rotate(45)
+        .scale(1)
+        .opacity(1)
+        .step({ duration: 0 })
+      this.setData({ animation: this.animation.export() })
+    }, 100)
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
     let that = this;
-    that.getMovies('北京');
+    that.getUpdate();
     // 获取当前城市 暂无合适地址，先注释
-    // util.getLocation().then((suc)=>{
-    //   util.getCity(suc.latitude, suc.longitude).then((suc)=>{
-    //     console.log(suc)
-    //     let city = suc.data.result.ad_info.city.replace('市','');
-    //     that.getMovies(city);
-    //     that.setData({
-    //       city: city
-    //     })
-    //   })
-    // }).catch((err)=>{
-    //   that.getMovies('北京');
-    // })
+    util.getLocation().then((suc)=>{
+      util.getCity(suc.latitude, suc.longitude).then((suc)=>{
+        console.log(suc)
+        let city = suc.data.result.addressComponent.city.replace('市','');
+        that.getMovies(city);
+        that.setData({
+          city: city
+        })
+      })
+    }).catch((err)=>{
+      that.getMovies('北京');
+    })
     // 获取电影类型
     that.setData({
       movieList: app.globalData.movieList
-    })
+    });
+
+    this.animation = wx.createAnimation();
   },
+
   // 获取电影
   getMovies(city) {
     let that = this;
@@ -125,7 +194,6 @@ Page({
   },
   // 跳转到搜索列表页面
   getSearch(type,param) {
-
     wx.navigateTo({
       url: `../list/list?id=search&searchType=${type}&searchId=${param}`,
     })

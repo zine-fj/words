@@ -1,6 +1,10 @@
 <!--pages/movies/movies.wxml-->
+<!-- 侧滑 -->
 <include src='/components/toast_side/side.wxml' />
-<view class='container-movies'>
+<!-- 点击爱心 -->
+<include src='/components/click_love/love.wxml' />
+
+<view class='container-movies click-love'>
   <!-- 轮播图 -->
   <view class='movies-header'>
     <swiper indicator-dots="{{indicatorDots}}" 

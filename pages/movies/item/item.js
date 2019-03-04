@@ -28,7 +28,7 @@ Page({
         });
         let _info = res.data;
         let _photos = _info.photos;
-
+        console.log(_info)
         let details = _info.rating.details; // 有用评分人数
         let detailsArr = [];
         for (let i in details) {
@@ -71,14 +71,37 @@ Page({
     // 注意：当前图片和图片数组都应为同一路径即preview
     let src = e.currentTarget.dataset.src;
     let imgs = this.data.photos;
-    console.log(src, imgs)
     let imgUrls = [];
     imgs.forEach((item, index) => {
       imgUrls.push(item.image)
     })
+
     wx.previewImage({
       current: src, // 当前显示图片的http链接
       urls: imgUrls, // 需要预览的图片http链接列表
     })
   },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function() {
+    let _path = '/pages/movies/item/item';
+    return {
+      title: '豆瓣电影',
+      path: _path,
+      // imageUrl: '/images/an.jpg',
+      success: function(res) {
+        // 转发成功
+        wx.showToast({
+          title: "转发成功",
+          icon: 'success',
+          duration: 2000
+        })
+      },
+      fail: function(res) {
+        // 转发失败
+      }
+    }
+  }
 })

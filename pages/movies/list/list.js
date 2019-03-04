@@ -19,7 +19,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     console.log(options)
     whitch = options;
     this.getMoviesList(options);
@@ -33,7 +33,7 @@ Page({
     })
     let _url
     if (param.id == 'search') {
-      if(param.searchType == 'tag') {
+      if (param.searchType == 'tag') {
         _url = `movie/search?tag=${param.searchId}&count=10&city=${param.city}`
       } else if (param.searchType == 'q') {
         _url = `movie/search?q=${param.searchId}&count=10&city=${param.city}`
@@ -75,8 +75,11 @@ Page({
     let total = this.data.total;
     let that = this;
     let movies_list = this.data.movies_list;
-    let start = 0;
+
     if (countNum < total) {
+      wx.showLoading({
+        title: '拼命加载中...',
+      });
       that.setData({
         hasMore: true
       })
@@ -87,10 +90,6 @@ Page({
         hasMoreFalse: '没有更多内容了',
       })
     }
-    console.log(countNum, total, start)
-    wx.showLoading({
-      title: '拼命加载中...',
-    });
     let _url;
     if (whitch.id == "search") {
       if (whitch.searchType == 'tag') {
@@ -98,6 +97,7 @@ Page({
       } else if (whitch.searchType == 'q') {
         _url = `movie/search?q=${whitch.searchId}&count=${countNum}`
       }
+      console.log(countNum, total)
       if (countNum >= 20) {
         that.setData({
           hasMore: false,
@@ -118,7 +118,7 @@ Page({
         wx.hideLoading({});
         let data = res.data.subjects;
         let total = res.data.total;
-        if(!total) {
+        if (!total) {
           total = data.length
         }
         that.setData({
@@ -153,5 +153,27 @@ Page({
   onReady() {
 
   },
-  
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function() {
+    let _path = '/pages/movies/item/item';
+    return {
+      title: '豆瓣电影',
+      path: _path,
+      // imageUrl: '/images/an.jpg',
+      success: function(res) {
+        // 转发成功
+        wx.showToast({
+          title: "转发成功",
+          icon: 'success',
+          duration: 2000
+        })
+      },
+      fail: function(res) {
+        // 转发失败
+      }
+    }
+  }
 })

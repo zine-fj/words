@@ -1,3 +1,4 @@
+const util = require('../../utils/util.js');
 Page({
 
   /**
@@ -5,83 +6,84 @@ Page({
    */
   data: {
     content: '',
-    time: '',
-    nowTime: '',
-    showTime: '', // 页面中要显示的 time
     timeList: {},
-    isAllShow: true, // 页面全部加载完毕
+    theNowTime: '', // 今日日期
+    nowDay: '', // 周几
+    nowTime: '', // 当前选择文章的日期，
+    nowCity: '', // 当前城市
+    nowWemp: '', // 当前温度
+    nowWeather: '', // 当前天气
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.getTime();
-    this.getUrl();
+    this.getData();
+    this.getWeather();
   },
-
-  getTime(){
+  // 获取天气
+  getWeather() {
     let that = this;
-    let theTime = new Date();
-    let year = theTime.getFullYear();
-    let month = theTime.getMonth() + 1;
-    month = month < 10 ? '0' + month : month;
-    let date = theTime.getDate();
-    date = date < 10 ? '0' + date : date;
-    let nowTime = year + '' + month + date;
-    that.setData({
-      time: nowTime,
-      nowTime: nowTime
+    // 获取当前城市 暂无合适地址，先注释
+    util.getLocation().then((suc) => {
+      util.getCity(suc.latitude, suc.longitude).then((suc) => {
+        let city = suc.data.result.addressComponent.city.replace('市', '');
+        util.getWeather(city).then((suc) => {
+          let _info = suc.data.results[0].weather_data[0];
+          console.log(_info)
+          let _nowWemp = _info.date.split('：')[1].split(')')[0];
+          let _nowWeather = _info.weather;
+          that.setData({
+            nowCity: city,
+            nowWemp: _nowWemp,
+            nowWeather: _nowWeather,
+          })
+        }).catch((err) => {
+          console.log(err)
+          util.getWeather('北京');
+        });
+      })
+    }).catch((err) => {
+      console.log(err)
     })
   },
-
-  getUrl() {
+  // 获取时间
+  getTime() {
     let that = this;
-    let time = this.data.time;
-    wx.request({
-      url: 'https://interface.meiriyiwen.com/article/today?dev=1',
-      success(res) {
-        let _nowTime = res.data.data.date.curr;
-        if (_nowTime != time) {
-          that.setData({
-            time: _nowTime
-          })
-        } else {
-          that.setData({
-            time
-          })
-        }
-      }
+    let getTime = util.nowTime();
+    console.log(getTime)
+    let _nowTime = getTime.nowY + getTime.nowM + getTime.nowD;
+    that.setData({
+      nowTime: _nowTime,
+      theNowTime: _nowTime,
+      nowDay: getTime.nowDay
     })
   },
 
   // 获取数据
   getData() {
     let that = this;
-    let time = this.data.time;
+    let nowTime = this.data.nowTime;
     wx.showLoading({
       title: '文章加载中...',
     });
     wx.request({
-      url: `https://interface.meiriyiwen.com/article/day?dev=1&date=${time}`,
+      url: `https://interface.meiriyiwen.com/article/day?dev=1&date=${nowTime}`,
       success(res) {
+        console.log(res)
         wx.hideLoading();
         let data = res.data.data;
         let _content = data.content; // 内容
-        _content = _content.replace(/<\/p>/g, '\n');
+        _content = _content.replace(/<\/p>/g, '\n\n');
         _content = _content.replace(/<p>/g, '\t\t\t');
-        let a = time.substring(0, 4);
-        let b = time.substring(4, 6);
-        let c = time.substring(6, 8);
-        let _showTime = a + '-' + b + '-' + c;
         that.setData({
-          isAllShow: false,
           title: data.title,
           author: data.author,
           wc: data.wc,
           content: _content,
           timeList: data.date,
-          showTime: _showTime
         })
       }
     })
@@ -90,7 +92,6 @@ Page({
   // 点击选择昨天今天
   clickTime(e) {
     let that = this;
-    let time = this.data.time;
     let nowTime = this.data.nowTime;
     let timeList = this.data.timeList;
     let prev = e.currentTarget.dataset.time;
@@ -98,16 +99,24 @@ Page({
     console.log(timeList)
     if (prev == 'prev') {
       that.setData({
-        time: timeList.prev
+        nowTime: timeList.prev
       })
-    } else if(next == 'next') {
-      console.log(timeList.next,nowTime)
-      if (parseInt(timeList.next) > parseInt(nowTime)) {
-        timeList.next = nowTime
+
+    } else if (next == 'next') {
+      let getTime = util.nowTime();
+      let _nowTime = Number(getTime.nowY + getTime.nowM + getTime.nowD);
+      let _timeNext = Number(timeList.next);
+      console.log(_nowTime, _timeNext)
+      if (_nowTime < _timeNext) {
+        that.setData({
+          nowTime: _nowTime
+        })
+      } else {
+        that.setData({
+          nowTime: _timeNext
+        })
       }
-      that.setData({
-        time: timeList.next
-      })
+
     };
     this.getData();
     this.goTop();
@@ -128,54 +137,65 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-   
+  onReady: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-    let time = this.data.time
-    let that = this;
-    let timeStamp = this.data.timeStamp;
-    setTimeout(function () {
-      that.getData();
-    }, 1000)
+  onShow: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-    
+  onHide: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-    
+  onUnload: function() {
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-    
+  onPullDownRefresh: function() {
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-    
+  onReachBottom: function() {
+
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-    
+  onShareAppMessage: function() {
+    let _path = '/pages/words/words';
+    return {
+      title: '豆瓣电影',
+      path: _path,
+      // imageUrl: '/images/an.jpg',
+      success: function(res) {
+        // 转发成功
+        wx.showToast({
+          title: "转发成功",
+          icon: 'success',
+          duration: 2000
+        })
+      },
+      fail: function(res) {
+        // 转发失败
+      }
+    }
   }
 })

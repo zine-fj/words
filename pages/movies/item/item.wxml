@@ -62,7 +62,7 @@
           <view class='director-name director-title'>导演</view>
         </view>
         <view class='film-cont' wx:for='{{movie.casts}}' wx:key="{{index}}" wx:for-item="itemCasts">
-          <image src='{{itemCasts.avatars.medium}}' mode='aspectFit' bindtap='lookPic' />
+          <image src='{{itemCasts.avatars.medium}}' mode='aspectFit' />
           <view class='director-name'>{{itemCasts.name}}</view>
           <view class='director-name director-title'>演员</view>
         </view>

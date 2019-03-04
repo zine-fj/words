@@ -1,13 +1,19 @@
 .list {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .list .item {
   display: flex;
-  padding: 20rpx 40rpx;
-  border-bottom: 1rpx solid #eee;
-  cursor: pointer;
+  padding: 20rpx 20rpx;
+  width: 95%;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.4);
 }
 
 .list .item .poster {
@@ -20,8 +26,7 @@
   flex: 1;
 }
 
-.list .item .meta .title,
-.list .item .meta .sub-title {
+.list .item .meta .title, .list .item .meta .sub-title {
   display: block;
   margin-bottom: 15rpx;
 }
@@ -58,8 +63,7 @@
   color: #ccc;
 }
 
-.list .tips image,
-.list .tips text {
+.list .tips image, .list .tips text {
   vertical-align: middle;
 }
 
@@ -74,7 +78,6 @@
   justify-content: center;
   border-bottom: 1rpx solid #ccc;
 }
-
 
 .header text {
   padding: 20rpx 40rpx;

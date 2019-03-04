@@ -2,13 +2,13 @@
   "pages":[
     "pages/movies/index/index",
     "pages/movies/item/item",
-    "pages/movies/list/list",
-    "pages/words/words"
+    "pages/words/words",
+    "pages/movies/list/list"
   ],
   "window":{
     "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "一世长安",
+    "navigationBarTitleText": "素商",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
@@ -29,11 +29,13 @@
         "iconPath": "/images/note.png",
         "selectedIconPath": "/images/note-actived.png"
       }
+      
+      
     ]
   },
   "permission": {
     "scope.userLocation": {
-      "desc": "用于获取当前城市电影信息,否则默认北京"
+      "desc": "用于获取当前城市信息,否则默认北京"
     }
   }
 }

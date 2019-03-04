@@ -19,7 +19,7 @@
     <view class="tips">
       <view wx:if="{{ hasMore }}">
         <image src="/images/loading.gif" mode="aspectFill"/>
-        <text>玩了命的加载中...</text>
+        <text>努力加载中...</text>
       </view>
       <view wx:else>
         <text>{{hasMoreFalse}}</text>

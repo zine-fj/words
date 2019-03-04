@@ -1,15 +1,26 @@
 <!--index.wxml-->
-<view class='words'>
+<!-- 点击爱心 -->
+<include src='/components/click_love/love.wxml' />
+
+<view class="words bg{{nowDay}}">
   <view class='title'>{{title}}</view>
-  <view class='author' hidden="{{isAllShow}}">
-    <text>作者：{{author}}</text>
-    <text class='time'>{{showTime}}</text>
+  <view class='author'>
+    <text>文 / {{author}}</text>
   </view>
-  
-  <!-- <view>{{wc}}</view> -->
   <text class='content'>{{content}}</text>
-  <view class='time-choice' hidden="{{isAllShow}}">
-    <text bindtap='clickTime' data-time="prev">上一天</text>
-    <text bindtap='clickTime' data-time="next">下一天</text>
+  <view class='time-choice'>
+    <view class='choice-cl'>
+      <text class='prev' bindtap='clickTime' data-time="prev">上一天</text>
+      <text bindtap='clickTime' data-time="next">下一天</text>
+    </view>
+    <text>{{wc}} 字</text>
   </view>
+
+  <!-- 天气 -->
+  <!-- <view class='weather'>
+    <view class='weather-time'>{{theNowTime}}</view>
+    <view class='weather-city'>{{nowCity}}</view>
+    <view class='weather-wemp'>{{nowWemp}}</view>
+    <view class='weather-wind'>{{nowWeather}}</view>
+  </view> -->
 </view>
