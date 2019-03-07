@@ -1,0 +1,36 @@
+<view class='ky-play'>
+  <video class='video' object-fit='fill' poster='{{videoLi.cover.detail}}' src='{{videoLi.playUrl}}' controls></video>
+  <view class='video-h'>
+    <view class='title'>{{videoLi.title}}</view>
+    <view class='category'>{{videoLi.category}}  /  {{videoLi.videoTime}}</view>
+    <view class='description'>{{videoLi.description}}</view>
+    <view class='consumption'>
+      <text>收藏：{{videoLi.consumption.collectionCount}}</text>
+      <text>分享：{{videoLi.consumption.shareCount}}</text>
+      <text>回复：{{videoLi.consumption.replyCount}}</text>
+    </view>
+  </view>
+
+  <view class='author'>
+    <image mode='aspectFit' src='{{videoLi.author.icon}}' />
+    <view class='author-info'>
+      <view class='name'>{{videoLi.author.name}}</view>
+      <view class='description'>{{videoLi.author.description}}</view>
+    </view>
+  </view>
+
+  <!-- 其他视频 -->
+  <view class='other-video'>
+    <view class='title'>其他视频</view>
+    <view class='other-li' wx:for="{{otherVideoList}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap='bindOtherVideo'>
+      <view class='li-l'>
+        <image mode='aspectFill' src='{{item.cover.detail}}' />
+        <text>{{item.videoTime}}</text>
+      </view>
+      <view class='li-r'>
+        <view class='title'>{{item.title}}</view>
+        <view class='category'>{{item.category}}</view>
+      </view>
+    </view>
+  </view>
+</view>

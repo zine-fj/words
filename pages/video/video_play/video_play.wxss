@@ -1,0 +1,128 @@
+.ky-play {
+  width: 100%;
+  height: 100%;
+}
+
+.ky-play .video {
+  width: 100%;
+  height: 400rpx;
+}
+
+.ky-play .video-h {
+  padding: 10rpx 20rpx;
+}
+
+.ky-play .video-h .title {
+  font-size: 30rpx;
+}
+
+.ky-play .video-h .category {
+  font-size: 24rpx;
+  color: #444;
+  margin: 10rpx 0 20rpx 0;
+}
+
+.ky-play .video-h .description {
+  font-size: 30rpx;
+  color: #444;
+}
+
+.ky-play .video-h .consumption {
+  width: 65%;
+  font-size: 24rpx;
+  color: #444;
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx 0;
+}
+
+/* 作者 */
+
+.ky-play .author {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  border: 1rpx solid #ddd;
+  border-left: none;
+  border-right: none;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.ky-play .author image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  flex: none;
+}
+
+.ky-play .author .name {
+  font-size: 26rpx;
+  margin-bottom: 10rpx;
+}
+
+.ky-play .author .description {
+  font-size: 22rpx;
+}
+
+/* 其他视频 */
+
+.ky-play .other-video {
+  padding: 20rpx;
+}
+
+.ky-play .other-video .title {
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.ky-play .other-video .other-li {
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.4);
+  margin-bottom: 20rpx;
+  display: flex;
+  width: 100%;
+  height: 250rpx;
+   border-radius: 10rpx;
+   overflow: hidden;
+}
+
+.ky-play .other-video .li-l {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 50%;
+  margin-right: 20rpx;
+  flex: none;
+}
+
+.ky-play .other-video .li-l image {
+  width: 100%;
+  height: 100%;
+}
+
+.ky-play .other-video .li-l text {
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10rpx;
+  font-size: 22rpx;
+  color: #fff;
+}
+
+.ky-play .other-video .li-r {
+  margin: 20rpx 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ky-play .other-video .li-r .title {
+  font-size: 28rpx;
+}
+
+.ky-play .other-video .li-r .category {
+  font-size: 24rpx;
+}

@@ -51,17 +51,17 @@ Page({
   // 版本更新
   getUpdate() {
     //检查是否存在新版本
-    wx.getUpdateManager().onCheckForUpdate(function (res) {
+    wx.getUpdateManager().onCheckForUpdate(function(res) {
       // 请求完新版本信息的回调
       console.log("是否有新版本：" + res.hasUpdate);
-      if (res.hasUpdate) {//如果有新版本
+      if (res.hasUpdate) { //如果有新版本
         // 小程序有新版本，会主动触发下载操作（无需开发者触发）
-        wx.getUpdateManager().onUpdateReady(function () {//当新版本下载完成，会进行回调
+        wx.getUpdateManager().onUpdateReady(function() { //当新版本下载完成，会进行回调
           wx.showModal({
             title: '更新提示',
             content: '新版本已经准备好，单击确定重启应用',
             showCancel: false,
-            success: function (res) {
+            success: function(res) {
               if (res.confirm) {
                 // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
                 wx.getUpdateManager().applyUpdate();
@@ -71,7 +71,7 @@ Page({
         })
 
         // 小程序有新版本，会主动触发下载操作（无需开发者触发）
-        wx.getUpdateManager().onUpdateFailed(function () {//当新版本下载失败，会进行回调
+        wx.getUpdateManager().onUpdateFailed(function() { //当新版本下载失败，会进行回调
           wx.showModal({
             title: '提示',
             content: '检查到有新版本，但下载失败，请检查网络设置',
@@ -107,8 +107,12 @@ Page({
       this.animation.rotate(45)
         .scale(1)
         .opacity(1)
-        .step({ duration: 0 })
-      this.setData({ animation: this.animation.export() })
+        .step({
+          duration: 0
+        })
+      this.setData({
+        animation: this.animation.export()
+      })
     }, 100)
   },
 
@@ -120,16 +124,16 @@ Page({
     let that = this;
     that.getUpdate();
     // 获取当前城市 暂无合适地址，先注释
-    util.getLocation().then((suc)=>{
-      util.getCity(suc.latitude, suc.longitude).then((suc)=>{
+    util.getLocation().then((suc) => {
+      util.getCity(suc.latitude, suc.longitude).then((suc) => {
         console.log(suc)
-        let city = suc.data.result.addressComponent.city.replace('市','');
+        let city = suc.data.result.addressComponent.city.replace('市', '');
         that.getMovies(city);
         that.setData({
           city: city
         })
       })
-    }).catch((err)=>{
+    }).catch((err) => {
       that.getMovies('北京');
     })
     // 获取电影类型
@@ -148,37 +152,52 @@ Page({
     wx.showLoading({
       title: '拼命加载中...'
     });
-    moviesType.forEach((item, index) => {
-      let url = `movie/${item.id}?start=0&count=10&city=${city}`;
-      util.myRequest({
-        url: url,
-        success(res) {
-          console.log(res)
-          if (!res.data.subjects) {
-            wx.showLoading({
-              title: '服务器不稳定，请稍后再试！'
-            });
-          } else {
-            moviesType[index].title = res.data.title;
-            moviesType[index].cont = res.data.subjects;
-            that.setData({
-              moviesType,
-            });
-            if (item.id == 'in_theaters') {
-              let _imgUrls = [];
-              for (let i = 0; i < 4; i++) {
-                let theInfo = moviesType[0].cont[i];
-                _imgUrls.push(theInfo)
-              }
-              that.setData({
-                imgUrls: _imgUrls,
-              });
-            }
-          }
+    util.myRequest({
+      url: 'movie/in_theaters',
+      success(res) {
+        if (!res.data.subjects) {
           wx.hideLoading({});
+          wx.showModal({
+            title: '服务器不稳定',
+            content: '将自动跳转到每日一文',
+            success(res) {
+              if (res.confirm) {
+                wx.switchTab({
+                  url: '/pages/words/words',
+                })
+              }
+            }
+          })
+        } else {
+          moviesType.forEach((item, index) => {
+            let url = `movie/${item.id}?start=0&count=10&city=${city}`;
+            util.myRequest({
+              url: url,
+              success(res) {
+                wx.hideLoading({});
+                moviesType[index].title = res.data.title;
+                moviesType[index].cont = res.data.subjects;
+                that.setData({
+                  moviesType,
+                });
+                if (item.id == 'in_theaters') {
+                  let _imgUrls = [];
+                  for (let i = 0; i < 4; i++) {
+                    let theInfo = moviesType[0].cont[i];
+                    _imgUrls.push(theInfo)
+                  }
+                  that.setData({
+                    imgUrls: _imgUrls,
+                  });
+                }
+                
+              }
+            })
+          })
         }
-      })
+      }
     })
+
   },
   // 输入时，下方按钮重置
   bindInput() {
@@ -193,7 +212,7 @@ Page({
     this.getSearch('q', type)
   },
   // 跳转到搜索列表页面
-  getSearch(type,param) {
+  getSearch(type, param) {
     wx.navigateTo({
       url: `../list/list?id=search&searchType=${type}&searchId=${param}`,
     })
@@ -223,7 +242,7 @@ Page({
       getType: '',
     })
   },
-  
+
   // 跳转到不同的列表页面
   toMovie(e) {
     let id = e.currentTarget.dataset.id;

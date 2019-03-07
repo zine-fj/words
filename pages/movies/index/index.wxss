@@ -68,6 +68,7 @@ page {
   border: 1px solid #eee;
   padding-left: 20rpx;
   border-radius: 10rpx;
+  color: #ddd;
 }
 
 .movie-search button {

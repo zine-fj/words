@@ -2,6 +2,8 @@
   "pages":[
     "pages/movies/index/index",
     "pages/movies/item/item",
+    "pages/video/index/index",
+    "pages/video/video_play/video_play",
     "pages/words/words",
     "pages/movies/list/list"
   ],
@@ -20,6 +22,12 @@
       {
         "pagePath": "pages/movies/index/index",
         "text": "豆瓣电影",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home-actived.png"
+      },
+      {
+        "pagePath": "pages/video/index/index",
+        "text": "开眼视频",
         "iconPath": "/images/board.png",
         "selectedIconPath": "/images/board-actived.png"
       },
@@ -29,8 +37,6 @@
         "iconPath": "/images/note.png",
         "selectedIconPath": "/images/note-actived.png"
       }
-      
-      
     ]
   },
   "permission": {
