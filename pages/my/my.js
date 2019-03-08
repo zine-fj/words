@@ -72,6 +72,7 @@ Page({
             }
           })
         } else {
+          wx.hideLoading();
           self.setData({
             hasUserInfo: false,
           })
