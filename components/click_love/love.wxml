@@ -1,1 +1,0 @@
-<view class="love" style="position: absolute;left:{{loca.X}}rpx;top:{{loca.Y}}rpx;background:{{loveRgb}};" animation="{{animat}}"></view>

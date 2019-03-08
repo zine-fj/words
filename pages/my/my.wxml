@@ -1,0 +1,26 @@
+<!--pages/my/my.wxml-->
+<view class='my'>
+  <view class='header'>
+    <image mode='aspectFill' src='{{userInfo.avatarUrl}}' />
+
+    <button class="getUserButton {{hasUserInfo?'hide':''}}" open-type='getUserInfo' bindgetuserinfo='bindUserInfo'>点我授权</button>
+    <view class="my-name {{hasUserInfo?'':'hide'}}">{{userInfo.nickName}}</view>
+    <!-- 天气 -->
+    <view class='weather'>
+      <!-- <view class='weather-time'>{{theNowTime}}</view> -->
+      <view class='weather-city'>{{nowCity}}</view>
+      <view class='weather-wemp'>{{nowWemp}}</view>
+      <view class='weather-wind'>{{nowWeather}}</view>
+    </view>
+  </view>
+
+  <view class='my-list'>
+    <navigator class='my-li' wx:for="{{myList}}" wx:key="{{index}}" url="{{item.url}}">
+      <view class='li-l'>
+        <image mode='aspectFit' src='{{item.img}}' />
+        <text class='li-l-text'>{{item.name}}</text>
+      </view>
+      <image class='li-r' src='{{item.arrowRight}}' mode='aspectFit'></image>
+    </navigator>
+  </view>
+</view>

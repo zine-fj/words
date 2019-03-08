@@ -1,6 +1,9 @@
 {
   "pages":[
     "pages/movies/index/index",
+    "pages/my/my",
+    "pages/state/state",
+    "pages/colors/colors",
     "pages/movies/item/item",
     "pages/video/index/index",
     "pages/video/video_play/video_play",
@@ -26,16 +29,10 @@
         "selectedIconPath": "/images/home-actived.png"
       },
       {
-        "pagePath": "pages/video/index/index",
-        "text": "开眼视频",
-        "iconPath": "/images/board.png",
-        "selectedIconPath": "/images/board-actived.png"
-      },
-      {
-        "pagePath": "pages/words/words",
-        "text": "每日一文",
-        "iconPath": "/images/note.png",
-        "selectedIconPath": "/images/note-actived.png"
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/profile.png",
+        "selectedIconPath": "/images/profile-actived.png"
       }
     ]
   },

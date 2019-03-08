@@ -1,0 +1,42 @@
+/* pages/colors/colors.wxss */
+page {
+  width: 100%;
+  height: 100%;
+}
+.color {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.color-logo {
+  width: 55rpx;
+  height: 479rpx;
+  position: absolute;
+  right: 50rpx;
+  top: 50rpx;
+}
+.color-words {
+  position: absolute;
+  right: 150rpx;
+  width: 50rpx;
+  word-wrap: break-word; 
+  top: 100rpx;
+  font-family: 'KaiTi';
+  font-size: 60rpx;
+  color: #fff;
+}
+.math-words {
+  position: absolute;
+  left: 50rpx;
+  bottom: 50rpx;
+  color: #fff;
+  background: rgba(0,0,0,.2);
+  font-size: 24rpx;
+  width: 40rpx;
+  word-wrap: break-word; 
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10rpx 0;
+}

@@ -1,6 +1,4 @@
 /**index.wxss**/
-/* 爱心 */
-@import '/components/click_love/love.wxss';
 
 .words {
   font-family: 'STFangsong';
@@ -35,14 +33,3 @@
   font-family:'KaiTi';
 }
 
-/* .weather {
-  position: absolute;
-  right: 20rpx;
-  top: 20rpx;
-  text-align: right;
-}
-.weather view {
-  line-height: 1.5;
-  font-size:20rpx;
-  color:#ddd;
-} */

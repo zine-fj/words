@@ -1,0 +1,105 @@
+/* pages/my/my.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  display: none !important;
+}
+
+.my {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.my .header {
+  position: relative;
+  width: 92%;
+  height: 250rpx;
+  box-shadow: 0 0 30rpx rgba(0, 0, 0, 0.4);
+  border-radius: 20rpx;
+  margin: 30rpx auto 80rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.my .header image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  border: 1rpx solid #ddd;
+  margin: 0 20rpx;
+}
+
+.my .getUserButton {
+  margin: 0;
+  border: none;
+  background: #fff;
+  font-size: 24rpx;
+  overflow: hidden;
+}
+
+.weather {
+  position: absolute;
+  right: 20rpx;
+  top: 40rpx;
+  text-align: right;
+}
+
+.weather view {
+  line-height: 1.5;
+  font-size: 20rpx;
+  color: #ddd;
+}
+.weather .weather-city {
+  font-size: 24rpx;
+}
+.weather .weather-wemp {
+  font-size: 46rpx;
+}
+.weather .weather-wind {
+  font-size: 28rpx;
+}
+
+.my-list {
+  margin-top: 30rpx;
+  box-sizing: border-box;
+}
+
+.my-list .my-li {
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  border: 1rpx solid #ddd;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 20rpx;
+}
+
+.my-list .my-li .li-l {
+  display: inline-flex;
+  align-items: center;
+}
+
+.my-list .my-li image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 30rpx;
+}
+
+.my-list .my-li .li-l-text {
+  font-size: 28rpx;
+}
+
+.my-list .my-li .li-r {
+  width: 40rpx;
+  height: 40rpx;
+}

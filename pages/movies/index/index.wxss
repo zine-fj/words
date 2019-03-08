@@ -1,7 +1,5 @@
 /* 侧滑 */
 @import '/components/toast_side/side.wxss';
-/* 爱心 */
-@import '/components/click_love/love.wxss';
 page {
   width: 100%;
   height: 100%;

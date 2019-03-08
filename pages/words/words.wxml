@@ -1,6 +1,4 @@
 <!--index.wxml-->
-<!-- 点击爱心 -->
-<include src='/components/click_love/love.wxml' />
 
 <view class="words bg{{nowDay}}">
   <view class='title'>{{title}}</view>
@@ -15,12 +13,4 @@
     </view>
     <text>{{wc}} 字</text>
   </view>
-
-  <!-- 天气 -->
-  <!-- <view class='weather'>
-    <view class='weather-time'>{{theNowTime}}</view>
-    <view class='weather-city'>{{nowCity}}</view>
-    <view class='weather-wemp'>{{nowWemp}}</view>
-    <view class='weather-wind'>{{nowWeather}}</view>
-  </view> -->
 </view>

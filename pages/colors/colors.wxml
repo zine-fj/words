@@ -1,0 +1,6 @@
+<!--pages/colors/colors.wxml-->
+<view class='color' style='background:rgba({{rgb}})' bindtap='bindChangeColor'>
+  <image class='color-logo' mode='aspectFill' src='../../images/colorLogo.png' />
+  <text class='color-words'>{{colorName}}</text>
+  <view class='math-words'>点击页面可切换随机颜色哦</view>
+</view>

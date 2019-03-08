@@ -1,4 +1,4 @@
-<view class="movie-type {{isMovieTypeShow?'hide':''}}" catchtouchmove="ture"   bindtap='clickLove'>
+<view class="movie-type {{isMovieTypeShow?'hide':''}}" catchtouchmove="ture">
   <view class="mask {{}}" bindtap='cancel'></view>
   <view class="type-cont {{isMovieTypeShow?'':'movie-type-ac'}}">
     <input class='title' focus="{{isTypeFocus}}" type='text' placeholder='请输入电影名...' bindconfirm='bindSearch' bindinput='bindInput' />

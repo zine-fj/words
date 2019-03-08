@@ -8,11 +8,6 @@ Page({
     content: '',
     timeList: {},
     theNowTime: '', // 今日日期
-    nowDay: '', // 周几
-    nowTime: '', // 当前选择文章的日期，
-    nowCity: '', // 当前城市
-    nowWemp: '', // 当前温度
-    nowWeather: '', // 当前天气
   },
 
   /**
@@ -21,33 +16,6 @@ Page({
   onLoad: function(options) {
     this.getTime();
     this.getData();
-    this.getWeather();
-  },
-  // 获取天气
-  getWeather() {
-    let that = this;
-    // 获取当前城市 暂无合适地址，先注释
-    util.getLocation().then((suc) => {
-      util.getCity(suc.latitude, suc.longitude).then((suc) => {
-        let city = suc.data.result.addressComponent.city.replace('市', '');
-        util.getWeather(city).then((suc) => {
-          let _info = suc.data.results[0].weather_data[0];
-          console.log(_info)
-          let _nowWemp = _info.date.split('：')[1].split(')')[0];
-          let _nowWeather = _info.weather;
-          that.setData({
-            nowCity: city,
-            nowWemp: _nowWemp,
-            nowWeather: _nowWeather,
-          })
-        }).catch((err) => {
-          console.log(err)
-          util.getWeather('北京');
-        });
-      })
-    }).catch((err) => {
-      console.log(err)
-    })
   },
   // 获取时间
   getTime() {
@@ -60,6 +28,7 @@ Page({
       theNowTime: _nowTime,
       nowDay: getTime.nowDay
     })
+   
   },
 
   // 获取数据

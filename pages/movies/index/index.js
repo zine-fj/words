@@ -7,8 +7,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    loca: {}, // 爱心
-    loveRgb: '',
     arrowrightImg: '../../../images/arrowright.png',
     imgUrls: [{
       title: '', // 电影名
@@ -80,40 +78,6 @@ Page({
         })
       }
     });
-  },
-
-  // 点击爱心
-  clickLove(e) {
-    console.log(e)
-    let X = e.detail.x * 2 - 10; // 位置
-    let Y = e.detail.y * 2 - 60;
-    let rgbColorR = Math.round(Math.random() * 255);
-    let rgbColorG = Math.round(Math.random() * 255);
-    let rgbColorB = Math.round(Math.random() * 255);
-    let _loveRgb = `rgb(${rgbColorR},${rgbColorG},${rgbColorB})`;
-
-    this.animation.rotate(45).step()
-      .scale(2).step()
-      .opacity(0).step();
-    this.setData({
-      loca: {
-        X,
-        Y
-      },
-      loveRgb: _loveRgb,
-      animat: this.animation.export()
-    })
-    setTimeout(() => {
-      this.animation.rotate(45)
-        .scale(1)
-        .opacity(1)
-        .step({
-          duration: 0
-        })
-      this.setData({
-        animation: this.animation.export()
-      })
-    }, 100)
   },
 
 
