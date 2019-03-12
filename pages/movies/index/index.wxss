@@ -76,7 +76,6 @@ page {
 
 .movies-content {
   box-sizing: border-box;
-  background-color: #f8f9fb;
 }
 
 .movies-item {

@@ -7,7 +7,9 @@ page {
 
 .video-list {
   width: 100%;
-  height: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 30rpx 0;
 }
 
 .video-li {
@@ -17,7 +19,7 @@ page {
   position: relative;
   left: 0;
   top: 0;
-  margin: 20rpx auto;
+  margin: 0 auto 30rpx;
   box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.4);
 }
 

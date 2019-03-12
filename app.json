@@ -2,12 +2,13 @@
   "pages":[
     "pages/movies/index/index",
     "pages/my/my",
-    "pages/state/state",
-    "pages/colors/colors",
-    "pages/movies/item/item",
     "pages/video/index/index",
     "pages/video/video_play/video_play",
+    "pages/collection/collection",
     "pages/words/words",
+    "pages/colors/colors",
+    "pages/state/state",
+    "pages/movies/item/item",
     "pages/movies/list/list"
   ],
   "window":{

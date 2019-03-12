@@ -138,5 +138,7 @@ App({
         li: '更早'
       },]
     }],
+    wordsUrl: 'https://interface.meiriyiwen.com/',
+    eyeUrl: 'https://baobab.kaiyanapp.com/',
   }
 })

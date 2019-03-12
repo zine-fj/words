@@ -1,15 +1,18 @@
 <!--index.wxml-->
 
-<view class="words bg{{nowDay}}">
-  <view class='title'>{{title}}</view>
-  <view class='author'>
+<view class="words" style='background: rgba({{bg}})'>
+  <view class='title ovcl'>{{title}}</view>
+  <view class='author ovcl'>
     <text>文 / {{author}}</text>
   </view>
+  <!-- 收藏 -->
+   <view class="collection {{resDate.isCollection?'collection-act':''}}" data-id="{{resDate.isCollection}}"  catchtap='catchCollection'></view>
+  <!-- 内容 -->
   <text class='content'>{{content}}</text>
   <view class='time-choice'>
     <view class='choice-cl'>
       <text class='prev' bindtap='clickTime' data-time="prev">上一天</text>
-      <text bindtap='clickTime' data-time="next">下一天</text>
+      <text bindtap='clickTime' data-time="next" hidden='{{!isNextShow}}'>下一天</text>
     </view>
     <text>{{wc}} 字</text>
   </view>

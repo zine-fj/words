@@ -1,0 +1,44 @@
+<!-- 中国色 -->
+<view class='collection' style='background: rgba({{bg}})'>
+
+  <view class='collection-nav'>
+    <view class="nav-li {{nowNav==item.id?'nav-li-act':''}}" wx:for="{{navList}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap='bindCollecNav'>{{item.name}}</view>
+  </view>
+
+  <!-- 中国色 -->
+  <view class='collec-colors' wx:if="{{nowNav == 'zgs'}}">
+    <view class='color-cl' wx:for="{{colorsArr}}" wx:key="{{index}}">
+      <!-- 内容 -->
+      <view style="background: rgb({{item.RGB}});box-shadow: 0 0 20rpx rgba({{item.RGB}},0.7)" class="content {{item.isTouchMove?'touch-move-active':''}}" 
+      data-index='{{index}}' 
+      data-color="{{item.hex}}"
+      bindtouchstart="drawStart" 
+      bindtouchmove="drawMove"
+       bindtap='bindColors'>
+        <!-- <view class='color-word'>
+            <text wx:for="{{item.poetryArr}}">{{item}}，</text>
+          </view> -->
+        <text class='color-word'>光阴过处徒留皎月几盅，温柔了十方春冬</text>
+        <text class='color-name'>{{item.name}}</text>
+      </view>
+
+      <!-- 删除 -->
+      <view class="remove {{item.isTouchMove}}" bindtap="delItem" data-id="{{index}}">
+        <!-- 小心心 -->
+        <view animation="{{animat}}" class="remove-love"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 每日一文 -->
+  <view class='collec-words' wx:if="{{nowNav == 'mryw'}}">
+    <view class='word-li' wx:for="{{wordsList}}" wx:key="{{index}}" data-id="{{item.time}}" bindtap='bindWords'>
+      <view class='word-title'>{{item.title}}</view>
+      <view class='word-author'>文 / {{item.author}}</view>
+      <view class='word-time'>{{item.time}}</view>
+      <view class='word-collec' animation="{{nowClickWord == index?animatWrod:animatWrodLove}}" data-index="{{index}}" catchtap='bindWordsLove'></view>
+    </view>
+  </view>
+
+  <view class="no-collection {{isNoCollec?'':'hide'}}">暂无收藏</view>
+</view>

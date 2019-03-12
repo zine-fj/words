@@ -1,2 +1,2 @@
 <!--pages/state/state.wxml-->
-<view>声明</view>
+<view class='about' style='background: rgba({{bg}})'>关于</view>

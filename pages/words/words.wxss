@@ -2,7 +2,7 @@
 
 .words {
   font-family: 'STFangsong';
-  padding: 20rpx;
+  padding: 20rpx 20rpx 40rpx;
 }
 .title {
   font-size: 40rpx;
@@ -12,9 +12,14 @@
   color: #444;
   line-height: 2.5;
 }
-
+.ovcl {
+  width: calc(100% - 100rpx);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .content {
-  line-height: 1.2;
+  line-height: 1.5;
   font-size: 32rpx;
 }
 .time-choice {
@@ -33,3 +38,36 @@
   font-family:'KaiTi';
 }
 
+/* 收藏 */
+.collection {
+  position: absolute;
+  right: 50rpx;
+  top: 50rpx;
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  transform: rotate(45deg);
+  background: rgba(0,0,0,.05);
+}
+.collection-act{
+  background: #f00;
+}
+
+.collection:after, .collection:before {
+  content: '';
+  width: inherit;
+  height: inherit;
+  background: inherit;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  position: fixed;
+}
+
+.collection:after {
+  top: -10px;
+}
+
+.collection:before {
+  left: -10px;
+}

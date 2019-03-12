@@ -1,10 +1,12 @@
 // pages/kaiyan/kaiyan.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    eyeUrl: app.globalData.eyeUrl,
     infoList: [{
       id: '',
       title: '', // 名字
@@ -33,22 +35,26 @@ Page({
    */
   onLoad: function (options) {
     this.getInfo();
-
+    let _bg = wx.getStorageSync('bg');
+    this.setData({
+      bg: _bg
+    })
   },
 
   getInfo() {
     let self = this;
+    let eyeUrl = this.data.eyeUrl;
     wx.showLoading({
       title: '努力加载中...',
     })
     wx.request({
-      url: 'https://baobab.kaiyanapp.com/api/v4/tabs/selected',
+      url: `${eyeUrl}api/v4/tabs/selected`,
       success(res) {
         let _itemList = res.data.itemList;
         let itemList = _itemList.filter((item) => {
           return item.type == 'video'
         })
-        console.log(itemList)
+        // console.log(itemList)
         let _infoList = itemList.map((item, index) => {
           let _infoListArr = {};
           _infoListArr.id = item.data.id;
@@ -80,8 +86,7 @@ Page({
           _infoListArr.videoTime = `${min}′${sec}″`
           return _infoListArr;
         })
-        console.log(_infoList);
-        wx.setStorageSync('infoList', _infoList)
+        // console.log(_infoList);
         wx.hideLoading();
         self.setData({
           infoList: _infoList
@@ -109,7 +114,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

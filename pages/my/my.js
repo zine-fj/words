@@ -20,13 +20,18 @@ Page({
       img: '../../images/safari.png',
       name: '中国色',
       arrowRight: '../../images/arrowright.png',
-        url: '/pages/colors/colors'
-      }, {
-        img: '',
-        name: '声明',
-        arrowRight: '../../images/arrowright.png',
-        url: '/pages/state/state'
-      }, ],
+      url: '/pages/colors/colors'
+    }, {
+      img: '../../images/star.png',
+      name: '我的收藏',
+      arrowRight: '../../images/arrowright.png',
+      url: '/pages/collection/collection'
+    }, {
+      img: '',
+      name: '声明',
+      arrowRight: '../../images/arrowright.png',
+      url: '/pages/state/state'
+    }, ],
     hasUserInfo: false, // 是否已授权，默认否
     userInfo: '',
     theNowTime: '', // 今日日期
@@ -44,13 +49,13 @@ Page({
     this.getTime();
     this.getWeather();
     this.bindUserInfo();
+    
   },
 
   // 获取授权
   bindUserInfo() {
     let self = this;
     wx.getSetting({
-      
       success(res) {
         wx.showLoading({
           title: '努力加载中...',
@@ -93,7 +98,7 @@ Page({
         let city = suc.data.result.addressComponent.city.replace('市', '');
         util.getWeather(city).then((suc) => {
           let _info = suc.data.results[0].weather_data[0];
-          console.log(_info)
+          // console.log(_info)
           let _nowWemp = _info.date.split('：')[1].split(')')[0];
           let _nowWeather = _info.weather;
           that.setData({
@@ -135,6 +140,11 @@ Page({
     })
   },
 
+  // 更新天气
+  bindWeather() {
+    this.getWeather();
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -146,7 +156,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    let _bg = wx.getStorageSync('bg');
+    this.setData({
+      bg: _bg
+    })
   },
 
   /**

@@ -1,0 +1,198 @@
+/* 中国色 */
+page{
+  width: 100%;
+  height: 100%;
+}
+.hide {
+  display: none!important;
+}
+.collection {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  min-height: 100%;
+  border: 1rpx solid transparent;
+}
+.collection-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1rpx solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(255,255,255,.6);
+  z-index: 1000;
+}
+.collection-nav .nav-li {
+  font-size: 32rpx;
+  color: #000;
+}
+.collection-nav .nav-li-act {
+  color: #f00;
+}
+/* 中国色 */
+.collec-colors {
+  padding: 20rpx;
+  margin-top: 80rpx;
+}
+.collec-colors .color-cl {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 95%;
+  height: auto;
+  margin: 20rpx auto 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+/* 内容 */
+.collec-colors .color-cl .content {
+  width: 100%;
+  height: auto;
+  padding: 20rpx 20rpx 50rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  z-index: 1;
+  transition: all 0.4s;
+  transform: translateX(0);
+}
+.collec-colors .color-cl .touch-move-active {
+  transform: translateX(-100rpx);
+}
+.collec-colors .color-word {
+  font-size: 32rpx;
+}
+.collec-colors .color-name {
+  position: absolute;
+  right: 20rpx;
+  bottom: 10rpx;
+  font-size: 24rpx;
+}
+/* 删除 */
+.collec-colors .remove{  
+  width: 100rpx;  
+  height: 100%;  
+  position: absolute;  
+  top: 0;  
+  right: -0;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  z-index: 0;
+}
+
+/* 小红心 */
+.collec-colors .remove-love {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  transform: rotate(45deg);
+  background: #f00;
+  box-shadow: 0 0 10rpx #f00;
+  opacity: 1;
+}
+.collec-colors .remove-love:after, .remove-love:before {
+  content: '';
+  width: inherit;
+  height: inherit;
+  background: inherit;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  position: fixed;
+}
+
+.collec-colors .remove-love:after {
+  top: -10px;
+}
+
+.collec-colors .remove-love:before {
+  left: -10px;
+}
+
+/* 暂无收藏 */
+.collection .no-collection {
+  display: block;
+  margin: 300rpx auto 0;
+  text-align: center;
+  font-size: 36rpx;
+  color: #ddd;
+}
+
+/* 每日一文 */
+.collec-words {
+  padding: 20rpx;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80rpx;
+}
+.collec-words .word-li {
+  position: relative;
+  width: 48%;
+  height: 300rpx;
+  box-shadow: 0 0 20rpx #ddd;
+  background: rgba(255,255,255,1);
+  border-radius: 10rpx;
+  margin-right: 2%;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.collec-words .word-li:nth-child(even) {
+  margin-right: 0;
+}
+
+.collec-words .word-li .word-time {
+  position: absolute;
+  left: 20rpx;
+  bottom: 20rpx;
+  font-size: 30rpx;
+  color: #ddd;
+}
+.collec-words .word-li .word-title {
+  font-size: 38rpx;
+  margin-bottom: 20rpx;
+}
+.collec-words .word-li .word-author {
+  font-size: 30rpx;
+  color: #444;
+}
+/* 每日一文 小红心 */
+.collec-words .word-li .word-collec {
+  position: absolute;
+  right: 30rpx;
+  bottom: 30rpx;
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  transform: rotate(45deg);
+  background: #f00;
+  box-shadow: 0 0 10rpx #f00;
+  opacity: 1;
+}
+.collec-words .word-li .word-collec:after, .word-collec:before {
+  content: '';
+  width: inherit;
+  height: inherit;
+  background: inherit;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  position: fixed;
+}
+
+.collec-words .word-li .word-collec:after {
+  top: -10px;
+}
+
+.collec-words .word-li .word-collec:before {
+  left: -10px;
+}

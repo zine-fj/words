@@ -9,7 +9,11 @@ Page({
   },
   onLoad: function(options) {
     console.log(options)
-    this.getDetailMovie(options)
+    this.getDetailMovie(options);
+    let _bg = wx.getStorageSync('bg');
+    this.setData({
+      bg: _bg
+    })
   },
   // 获取电影信息
   getDetailMovie(e) {
@@ -17,7 +21,7 @@ Page({
     let starList = this.data.starList;
     let movie_url = `movie/subject/${e.id}`;
     wx.showLoading({
-      title: '拼命加载中...',
+      title: '努力加载中...',
     });
     util.myRequest({
       url: movie_url,
@@ -80,6 +84,13 @@ Page({
       current: src, // 当前显示图片的http链接
       urls: imgUrls, // 需要预览的图片http链接列表
     })
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    
   },
 
   /**

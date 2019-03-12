@@ -1,5 +1,5 @@
 <!--pages/kaiyan/kaiyan.wxml-->
-<view class='video-list'>
+<view class='video-list' style='background: rgba({{bg}})'>
   <view class='video-li' wx:for="{{infoList}}" wx:key="{{index}}" data-id='{{item.id}}' bindtap='bindKanYan'>
     <image src='{{item.cover.detail}}' mode='aspectFill' />
     <view class='words'>

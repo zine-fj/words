@@ -1,12 +1,12 @@
 <!--pages/my/my.wxml-->
-<view class='my'>
+<view class='my' style='background: rgba({{bg}})'>
   <view class='header'>
     <image mode='aspectFill' src='{{userInfo.avatarUrl}}' />
 
     <button class="getUserButton {{hasUserInfo?'hide':''}}" open-type='getUserInfo' bindgetuserinfo='bindUserInfo'>点我授权</button>
     <view class="my-name {{hasUserInfo?'':'hide'}}">{{userInfo.nickName}}</view>
     <!-- 天气 -->
-    <view class='weather'>
+    <view class='weather' bindtap='bindWeather'>
       <!-- <view class='weather-time'>{{theNowTime}}</view> -->
       <view class='weather-city'>{{nowCity}}</view>
       <view class='weather-wemp'>{{nowWemp}}</view>

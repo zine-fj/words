@@ -1,4 +1,4 @@
-<view class='container'>
+<view class='container' style='background: rgba({{bg}})'>
   <view class='list'>
     <navigator class='item' wx:for="{{ movies_list }}" wx:key="{{index}}" url='../item/item?id={{item.id}}'>
       <image class='poster' src='{{item.images.small}}'></image>

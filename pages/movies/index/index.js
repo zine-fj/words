@@ -105,7 +105,10 @@ Page({
       movieList: app.globalData.movieList
     });
 
-    this.animation = wx.createAnimation();
+    let _bg = wx.getStorageSync('bg')
+    this.setData({
+      bg: _bg
+    })
   },
 
   // 获取电影
@@ -114,7 +117,7 @@ Page({
     let moviesType = this.data.moviesType;
     let imgUrls = this.data.imgUrls;
     wx.showLoading({
-      title: '拼命加载中...'
+      title: '努力加载中...'
     });
     util.myRequest({
       url: 'movie/in_theaters',
@@ -123,11 +126,11 @@ Page({
           wx.hideLoading({});
           wx.showModal({
             title: '服务器不稳定',
-            content: '将自动跳转到每日一文',
+            content: '将跳转到我的页面',
             success(res) {
               if (res.confirm) {
                 wx.switchTab({
-                  url: '/pages/words/words',
+                  url: '/pages/my/my',
                 })
               }
             }
@@ -214,6 +217,13 @@ Page({
     wx.navigateTo({
       url: `../list/list?id=${id}&city=${city}`,
     })
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    
   },
 
   /**

@@ -2,7 +2,7 @@
 <!-- 侧滑 -->
 <include src='/components/toast_side/side.wxml' />
 
-<view class='container-movies'>
+<view class='container-movies' style='background: rgba({{bg}})'>
   <!-- 轮播图 -->
   <view class='movies-header'>
     <swiper indicator-dots="{{indicatorDots}}" 

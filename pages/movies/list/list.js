@@ -23,13 +23,17 @@ Page({
     console.log(options)
     whitch = options;
     this.getMoviesList(options);
+    let _bg = wx.getStorageSync('bg');
+    this.setData({
+      bg: _bg
+    })
   },
 
   // 获取电影
   getMoviesList(param) {
     let that = this;
     wx.showLoading({
-      title: '拼命加载中...'
+      title: '努力加载中...'
     })
     let _url
     if (param.id == 'search') {
@@ -78,7 +82,7 @@ Page({
 
     if (countNum < total) {
       wx.showLoading({
-        title: '拼命加载中...',
+        title: '努力加载中...',
       });
       that.setData({
         hasMore: true
@@ -152,6 +156,12 @@ Page({
    */
   onReady() {
 
+  },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    
   },
 
   /**

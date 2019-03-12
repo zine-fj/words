@@ -12,7 +12,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let _bg = wx.getStorageSync('bg');
+    this.setData({
+      bg: _bg
+    })
   },
 
   /**
@@ -26,7 +29,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

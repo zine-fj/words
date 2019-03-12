@@ -1,4 +1,4 @@
-<view class='ky-play'>
+<view class='ky-play' style='background: rgba({{bg}})'>
   <video class='video' object-fit='fill' poster='{{videoLi.cover.detail}}' src='{{videoLi.playUrl}}' controls></video>
   <view class='video-h'>
     <view class='title'>{{videoLi.title}}</view>
@@ -21,16 +21,21 @@
 
   <!-- 其他视频 -->
   <view class='other-video'>
-    <view class='title'>其他视频</view>
-    <view class='other-li' wx:for="{{otherVideoList}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap='bindOtherVideo'>
-      <view class='li-l'>
-        <image mode='aspectFill' src='{{item.cover.detail}}' />
-        <text>{{item.videoTime}}</text>
-      </view>
-      <view class='li-r'>
-        <view class='title'>{{item.title}}</view>
-        <view class='category'>{{item.category}}</view>
-      </view>
+    <view class='other-li' wx:for="{{otherVideoList}}" wx:key="{{index}}">
+      <view class='title'>{{item.title}}：</view>
+      <scroll-view class='other-scroll' scroll-x="true" >
+        <view class='scroll-li' wx:for="{{item.videoArr}}" wx:key="{{index}}" wx:for-item="videoItem" data-id="{{videoItem.id}}" bindtap='bindOtherVideo'>
+          <image class='other-img' mode='aspectFill' src='{{videoItem.img}}' />
+          <view class='other-time'>{{videoItem.videoTime}}</view>
+          <view class='li-cl'>
+            <image class='li-cl-l' mode='aspectFill' src='{{videoItem.authorImg}}' />
+            <view class='li-cl-r'>
+              <view class='li-title'>{{videoItem.title}}</view>
+              <view class='li-author'>{{videoItem.author}}</view> 
+            </view>
+          </view>
+        </view>
+      </scroll-view>
     </view>
   </view>
 </view>
