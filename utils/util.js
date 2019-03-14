@@ -6,7 +6,7 @@ const formatTime = date => {
   const minute = date.getMinutes()
   const second = date.getSeconds()
 
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+  return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
 const formatNumber = n => {
@@ -46,6 +46,15 @@ const getLocation = (type)=>{
       success: resolve,
       fail: reject
     })
+  })
+}
+
+const showMsg = (msg)=>{
+  wx.showToast({
+    title: msg,
+    icon: 'none',
+    duration: 1500,
+    mask: true,
   })
 }
 
@@ -110,4 +119,5 @@ module.exports = {
   getWeather,
   getUserInfo,
   nowTime,
+  showMsg,
 }

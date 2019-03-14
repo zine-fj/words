@@ -9,14 +9,18 @@ Page({
     navList: [{
       name: '中国色',
       id: 'zgs'
-    },{
+    }, {
       name: '每日一文',
       id: 'mryw'
+    }, {
+      name: '开眼视频',
+      id: 'kysp'
     }],
+    videoCancelImg: '/images/close.png', 
     colorsArr: [], // 颜色列表
     nowNav: 'zgs', // 当前的列表
-    wordsUrl: app.globalData.wordsUrl,
     wordsList: [], // 文章列表
+    videosList: [], // 视频列表
     nowClickWord: -1, // 当前点击的小红心
     isNoCollec: true, // 是否暂无收藏，默认是
   },
@@ -24,8 +28,8 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
+  onLoad: function(options) {
+
     let _bg = wx.getStorageSync('bg');
     this.setData({
       bg: _bg
@@ -38,54 +42,53 @@ Page({
     this.setData({
       nowNav: id
     })
-    if(id == 'mryw') {
+    if (id == 'mryw') {
       this.getWords();
-    } else if(id == 'zgs') {
+    } else if (id == 'zgs') {
       this.getColorSync();
+    } else if (id == 'kysp') {
+      this.getVideos();
     }
   },
 
   // 获取每日一文
   getWords() {
     let self = this;
-    let wordsUrl = this.data.wordsUrl;
     let wordsArr = wx.getStorageSync('wordsArr');
     let wordsList = this.data.wordsList;
-    console.log(wordsArr)
     if (wordsArr) {
       wordsArr = wordsArr.reverse();
-
       let _isNoCollec;
       if (wordsArr.length > 0) {
         _isNoCollec = false;
       } else {
         _isNoCollec = true;
       }
-      // timeFormat(time)
-      console.log(wordsArr)
-      wordsArr.forEach((item,index)=>{
-        item.time = self.timeFormat(item.time)
+      this.setData({
+        wordsList: wordsArr,
+        isNoCollec: _isNoCollec,
       })
-     this.setData({
-       wordsList: wordsArr,
-       isNoCollec: _isNoCollec,
-     })
+    } else {
+      this.setData({
+        isNoCollec: true,
+      })
     }
   },
   // 点击文章小红心
   bindWordsLove(e) {
     let self = this;
     let index = e.currentTarget.dataset.index;
-    let wordsList = this.data.wordsList;
-    console.log(wordsList)
+    let wordsList = wx.getStorageSync('wordsArr');
     wordsList[wordsList.indexOf(wordsList[index])] = null;
     wordsList.splice(wordsList.indexOf(null), 1);
-    console.log(wordsList);
+    // console.log(wordsList);
     this.setData({
       nowClickWord: index
     })
 
-    this.animation.opacity(0).step({ duration: 500 });
+    this.animation.opacity(0).step({
+      duration: 500
+    });
     this.setData({
       animatWrod: this.animation.export()
     })
@@ -93,18 +96,20 @@ Page({
     this.setData({
       animatWrodLove: this.animation.export()
     })
+    console.log(wordsList)
     wx.setStorageSync('wordsArr', wordsList)
     setTimeout(() => {
       self.setData({
         wordsList,
         nowClickWord: -1,
       })
-      
+
     }, 500)
   },
   // 点击收藏的文章
   bindWords(e) {
     let id = e.currentTarget.dataset.id;
+    // 将日期2019 - 01 - 01变为20190101
     id = id.split('-').join('')
     console.log(id);
     wx.navigateTo({
@@ -121,12 +126,32 @@ Page({
     })
   },
 
+  // 暂无收藏去添加
+  bindToAdd() {
+    let nowNav = this.data.nowNav;
+    console.log(nowNav)
+    if (nowNav == 'zgs') {
+      wx.navigateTo({
+        url: '/pages/colors/colors',
+      })
+    } else if (nowNav == 'mryw') {
+      wx.navigateTo({
+        url: '/pages/words/words',
+      })
+    } else if (nowNav == 'kysp') {
+      wx.navigateTo({
+        url: '/pages/video/index/index',
+      })
+    }
+  },
+
   // 获取颜色
   getColorSync() {
     let _colorsArr = wx.getStorageSync('colorsArr');
+    let _isNoCollec;
     if (_colorsArr) {
       _colorsArr = _colorsArr.reverse();
-      let _isNoCollec;
+      console.log(_colorsArr.length)
       if (_colorsArr.length > 0) {
         _isNoCollec = false;
       } else {
@@ -136,11 +161,15 @@ Page({
         colorsArr: _colorsArr,
         isNoCollec: _isNoCollec
       })
+    } else {
+      this.setData({
+        isNoCollec: true
+      })
     }
-    
+
   },
 
-  drawStart: function (e) {
+  drawStart: function(e) {
     let _startX = e.changedTouches[0].clientX;
     let _startY = e.changedTouches[0].clientY;
     this.setData({
@@ -149,7 +178,7 @@ Page({
     })
   },
   // 手指滑动
-  drawMove: function (e) {
+  drawMove: function(e) {
     let self = this;
     let colorsArr = self.data.colorsArr;
     let index = e.currentTarget.dataset.index; // 当前索引
@@ -161,9 +190,9 @@ Page({
       X: startX,
       Y: startY
     }, {
-        X: touchMoveX,
-        Y: touchMoveY
-      });
+      X: touchMoveX,
+      Y: touchMoveY
+    });
     colorsArr.forEach((item, i) => {
       item.isTouchMove = false;
       // 滑动超过 30°角 return
@@ -193,7 +222,7 @@ Page({
     return 360 * Math.atan(_Y / _X) / (2 * Math.PI);
   },
   // 中国色 删除
-  delItem: function (e) {
+  delItem: function(e) {
     let self = this;
     let id = e.currentTarget.dataset.id;
     let colorsArr = this.data.colorsArr;
@@ -202,7 +231,9 @@ Page({
     colorsArr.splice(colorsArr.indexOf(null), 1);
     console.log(colorsArr);
 
-    this.animation.opacity(0).step({ duration: 500 });
+    this.animation.opacity(0).step({
+      duration: 500
+    });
     this.setData({
       animat: this.animation.export()
     })
@@ -222,62 +253,115 @@ Page({
 
   },
 
+  // 获取开眼视频
+  getVideos() {
+    let self = this;
+    let videos = wx.getStorageSync('videosArr');
+    if (videos) {
+      videos = videos.reverse();
+      let _isNoCollec;
+      if (videos.length > 0) {
+        _isNoCollec = false;
+      } else {
+        _isNoCollec = true;
+      }
+      self.setData({
+        videosList: videos,
+        isNoCollec: _isNoCollec
+      })
+    } else {
+      this.setData({
+        isNoCollec: true,
+      })
+    }
+  },
+
+  // 点击视频
+  bindVideo(e) {
+    let id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/video/video_play/video_play?id=${id}`,
+    })
+  },
+
+  // 点击视频取消按钮
+  bindVideoCancel(e) {
+    let self = this;
+    let id = e.currentTarget.dataset.id;
+
+    let videosList = this.data.videosList;
+    console.log(videosList)
+    videosList[videosList.indexOf(videosList[id])] = null;
+    videosList.splice(videosList.indexOf(null), 1);
+    wx.setStorageSync('videosArr', videosList);
+    wx.showLoading({
+      title: '删除视频中..',
+    })
+    setTimeout(() => {
+      wx.hideLoading();
+      self.setData({
+        videosList,
+      })
+    }, 500)
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
     this.animation = wx.createAnimation();
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
     this.getWords()
     this.getColorSync()
+    this.getVideos()
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   // 时间转换
-  timeFormat(time){
+  timeFormat(time) {
     let y = time.substring(0, 4);
     let m = time.substring(4, 6);
     let n = time.substring(6, 8);
     let endInfo = `${y}-${m}-${n}`
     return endInfo
-  }, 
+  },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

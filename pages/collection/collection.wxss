@@ -1,11 +1,14 @@
 /* 中国色 */
-page{
+
+page {
   width: 100%;
   height: 100%;
 }
+
 .hide {
-  display: none!important;
+  display: none !important;
 }
+
 .collection {
   width: 100%;
   height: auto;
@@ -13,6 +16,7 @@ page{
   min-height: 100%;
   border: 1rpx solid transparent;
 }
+
 .collection-nav {
   position: fixed;
   left: 0;
@@ -23,21 +27,26 @@ page{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: rgba(255,255,255,.6);
+  background: rgba(255, 255, 255, 0.6);
   z-index: 1000;
 }
+
 .collection-nav .nav-li {
   font-size: 32rpx;
   color: #000;
 }
+
 .collection-nav .nav-li-act {
   color: #f00;
 }
+
 /* 中国色 */
+
 .collec-colors {
   padding: 20rpx;
   margin-top: 80rpx;
 }
+
 .collec-colors .color-cl {
   position: relative;
   left: 0;
@@ -50,7 +59,9 @@ page{
   align-items: center;
   color: #fff;
 }
+
 /* 内容 */
+
 .collec-colors .color-cl .content {
   width: 100%;
   height: auto;
@@ -61,32 +72,38 @@ page{
   transition: all 0.4s;
   transform: translateX(0);
 }
+
 .collec-colors .color-cl .touch-move-active {
   transform: translateX(-100rpx);
 }
+
 .collec-colors .color-word {
   font-size: 32rpx;
 }
+
 .collec-colors .color-name {
   position: absolute;
   right: 20rpx;
   bottom: 10rpx;
   font-size: 24rpx;
 }
+
 /* 删除 */
-.collec-colors .remove{  
-  width: 100rpx;  
-  height: 100%;  
-  position: absolute;  
-  top: 0;  
-  right: -0;  
-  display: flex;  
-  justify-content: center;  
-  align-items: center;  
+
+.collec-colors .remove {
+  width: 100rpx;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 0;
 }
 
 /* 小红心 */
+
 .collec-colors .remove-love {
   display: inline-block;
   width: 40rpx;
@@ -96,6 +113,7 @@ page{
   box-shadow: 0 0 10rpx #f00;
   opacity: 1;
 }
+
 .collec-colors .remove-love:after, .remove-love:before {
   content: '';
   width: inherit;
@@ -116,6 +134,7 @@ page{
 }
 
 /* 暂无收藏 */
+
 .collection .no-collection {
   display: block;
   margin: 300rpx auto 0;
@@ -124,7 +143,12 @@ page{
   color: #ddd;
 }
 
+.collection .no-collection .word {
+  margin-bottom: 20rpx;
+}
+
 /* 每日一文 */
+
 .collec-words {
   padding: 20rpx;
   width: 100%;
@@ -134,18 +158,20 @@ page{
   flex-wrap: wrap;
   margin-top: 80rpx;
 }
+
 .collec-words .word-li {
   position: relative;
   width: 48%;
   height: 300rpx;
   box-shadow: 0 0 20rpx #ddd;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   border-radius: 10rpx;
   margin-right: 2%;
   margin-bottom: 20rpx;
   padding: 20rpx;
   box-sizing: border-box;
 }
+
 .collec-words .word-li:nth-child(even) {
   margin-right: 0;
 }
@@ -157,15 +183,19 @@ page{
   font-size: 30rpx;
   color: #ddd;
 }
+
 .collec-words .word-li .word-title {
   font-size: 38rpx;
   margin-bottom: 20rpx;
 }
+
 .collec-words .word-li .word-author {
   font-size: 30rpx;
   color: #444;
 }
+
 /* 每日一文 小红心 */
+
 .collec-words .word-li .word-collec {
   position: absolute;
   right: 30rpx;
@@ -178,6 +208,7 @@ page{
   box-shadow: 0 0 10rpx #f00;
   opacity: 1;
 }
+
 .collec-words .word-li .word-collec:after, .word-collec:before {
   content: '';
   width: inherit;
@@ -195,4 +226,105 @@ page{
 
 .collec-words .word-li .word-collec:before {
   left: -10px;
+}
+
+/* 开眼视频 */
+
+.collec-videos {
+  padding: 20rpx;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80rpx;
+}
+
+.collec-videos .video-li {
+  position: relative;
+  width: 95%;
+  display: flex;
+  height: 240rpx;
+  margin: 0 auto 20rpx;
+  box-shadow: 0 0 10rpx #ddd;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.collec-videos .video-cancel {
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.collec-videos .video-img {
+  position: relative;
+  width: 48%;
+  height: 100%;
+  box-sizing: border-box;
+  margin-right: 20rpx;
+  flex: none;
+}
+
+.collec-videos .video-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.collec-videos .video-img .time {
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  padding: 5rpx 10rpx;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.collec-videos .video-cont {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx 0;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.collec-videos .video-cont .cont-title {
+  width: 80%;
+  height: auto;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  flex: none;
+}
+.collec-videos .video-cont .cont-category {
+  font-size: 26rpx;
+  color: #ddd;
+}
+.collec-videos .cont-b {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.collec-videos .cont-b .author-img {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+  flex: none;
+}
+.collec-videos .cont-b .cont-r-author {
+  font-size: 26rpx;
+  color: #444;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

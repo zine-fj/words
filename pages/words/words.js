@@ -28,10 +28,10 @@ Page({
   },
   // 获取时间
   getTime() {
-    let that = this;
+    let self = this;
     let getTime = util.nowTime();
     let _nowTime = getTime.nowY + getTime.nowM + getTime.nowD;
-    that.setData({
+    self.setData({
       nowTime: _nowTime,
       theNowTime: _nowTime,
     })
@@ -40,7 +40,7 @@ Page({
 
   // 获取数据
   getData(time) {
-    let that = this;
+    let self = this;
     let _nowTime;
     if(time) {
       _nowTime = time
@@ -72,7 +72,7 @@ Page({
         let wordsArr = wx.getStorageSync('wordsArr');
         if (wordsArr) {
           wordsArr.forEach((item,index)=>{
-            if (item.time == resDate.curr) {
+            if (item.time == self.timeFormat(resDate.curr)) {
               resDate.isCollection = item.isCollection
             }
           })
@@ -80,7 +80,7 @@ Page({
         let _content = data.content; // 内容
         _content = _content.replace(/<\/p>/g, '\n\n');
         _content = _content.replace(/<p>/g, '\t\t\t');
-        that.setData({
+        self.setData({
           title: data.title,
           author: data.author,
           wc: data.wc,
@@ -115,19 +115,34 @@ Page({
       })
       wordsArr.pop({ time: resDate.curr, isCollection: false, author: author, title: title})
     }
-    wx.setStorageSync('wordsArr', wordsArr);
+   // 将时间20190101变为2019-01-01
+    wordsArr.forEach((item,index)=>{
+      if (item.time.length == 8) {
+        item.time = self.timeFormat(item.time)
+      }
+    })
     console.log(wordsArr)
+    wx.setStorageSync('wordsArr', wordsArr);
+   
+  },
+  // 时间转换
+  timeFormat(time) {
+    let y = time.substring(0, 4);
+    let m = time.substring(4, 6);
+    let n = time.substring(6, 8);
+    let endInfo = `${y}-${m}-${n}`
+    return endInfo
   },
 
   // 点击选择 昨天今天
   clickTime(e) {
-    let that = this;
+    let self = this;
     let nowTime = this.data.nowTime;
     let timeList = this.data.timeList;
     let prev = e.currentTarget.dataset.time;
     let next = e.currentTarget.dataset.time;
     if (prev == 'prev') {
-      that.setData({
+      self.setData({
         nowTime: timeList.prev
       })
 
@@ -137,11 +152,11 @@ Page({
       let _timeNext = Number(timeList.next);
       console.log(_nowTime, _timeNext)
       if (_nowTime < _timeNext) {
-        that.setData({
+        self.setData({
           nowTime: _nowTime
         })
       } else {
-        that.setData({
+        self.setData({
           nowTime: _timeNext
         })
       }

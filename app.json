@@ -1,13 +1,13 @@
 {
   "pages":[
-    "pages/movies/index/index",
     "pages/my/my",
-    "pages/video/index/index",
-    "pages/video/video_play/video_play",
     "pages/collection/collection",
+    "pages/state/state",
+    "pages/video/index/index",
+    "pages/movies/index/index",
+    "pages/video/video_play/video_play",
     "pages/words/words",
     "pages/colors/colors",
-    "pages/state/state",
     "pages/movies/item/item",
     "pages/movies/list/list"
   ],
@@ -27,13 +27,13 @@
         "pagePath": "pages/movies/index/index",
         "text": "豆瓣电影",
         "iconPath": "/images/home.png",
-        "selectedIconPath": "/images/home-actived.png"
+        "selectedIconPath": "/images/home_select.png"
       },
       {
         "pagePath": "pages/my/my",
         "text": "我的",
-        "iconPath": "/images/profile.png",
-        "selectedIconPath": "/images/profile-actived.png"
+        "iconPath": "/images/my.png",
+        "selectedIconPath": "/images/my_select.png"
       }
     ]
   },

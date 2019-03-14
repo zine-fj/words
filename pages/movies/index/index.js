@@ -105,10 +105,7 @@ Page({
       movieList: app.globalData.movieList
     });
 
-    let _bg = wx.getStorageSync('bg')
-    this.setData({
-      bg: _bg
-    })
+    
   },
 
   // 获取电影
@@ -223,7 +220,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    let _bg = wx.getStorageSync('bg')
+    this.setData({
+      bg: _bg
+    })
   },
 
   /**

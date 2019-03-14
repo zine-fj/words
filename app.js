@@ -4,6 +4,8 @@ App({
 
   },
   globalData: {
+    version: '2.0.0',
+    vName: '素商',
     userInfo: null,
     movieList: [{
       type: '类型',

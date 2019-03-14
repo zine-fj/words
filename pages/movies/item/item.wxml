@@ -41,7 +41,7 @@
             <text>{{item.img}}</text>
             <progress percent="{{item.star}}" active stroke-width="8" backgroundColor="#eee" color="#fdb933" border-radius="50rpx" />
           </view>
-          <view class='star-people'>{{movie.ratings_count}}评分</view>
+          <view class='star-people'>{{movie.ratings_count}} 评分</view>
         </view>
       </view>
     </view>
@@ -97,7 +97,8 @@
           {{itemComm.content}}
         </view>
         <view class='comments-footer'>
-          赞 {{itemComm.useful_count}}
+          <image mode='aspctFit' src='{{goodImg}}' />
+          {{itemComm.useful_count}}
         </view>
       </view>
     </view>

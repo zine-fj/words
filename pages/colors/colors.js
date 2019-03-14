@@ -164,7 +164,7 @@ Page({
     console.log('长按');
     let id = e.currentTarget.dataset.id;
     let colors = this.data.colors;
-    let _bg = colors[id].RGB.join(',') + ',' + .2;
+    let _bg = colors[id].RGB.join(',') + ',' + 1;
     // console.log(_bg)
     this.poetryOpacity();
     wx.showModal({

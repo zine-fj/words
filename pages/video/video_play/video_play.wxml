@@ -1,21 +1,32 @@
+<include src="../../../components/toast_up/toast_up.wxml" />
 <view class='ky-play' style='background: rgba({{bg}})'>
-  <video class='video' object-fit='fill' poster='{{videoLi.cover.detail}}' src='{{videoLi.playUrl}}' controls></video>
+  <video class='video' object-fit='fill' poster='{{videoLi.poster}}' src='{{videoLi.video}}' controls></video>
   <view class='video-h'>
     <view class='title'>{{videoLi.title}}</view>
     <view class='category'>{{videoLi.category}}  /  {{videoLi.videoTime}}</view>
     <view class='description'>{{videoLi.description}}</view>
     <view class='consumption'>
-      <text>收藏：{{videoLi.consumption.collectionCount}}</text>
-      <text>分享：{{videoLi.consumption.shareCount}}</text>
-      <text>回复：{{videoLi.consumption.replyCount}}</text>
+      <view class='consumption-li like' data-type="like" data-id="{{videoLi.id}}" bindtap='bindVideoType'>
+        <image mode='aspectFit' src="{{videoLi.isCollection?heartSelectImg:heartImg}}" />
+        <text>{{videoLi.like}}</text>
+      </view>
+      <view class='consumption-li share'>
+        <image mode='aspectFit' src='{{shareImg}}' />
+        <text>{{videoLi.share}}</text>
+        <button open-type='share' class='share-button' type='mini' data-type="share" bindtap='bindVideoType'></button>
+      </view>
+      <view class='consumption-li comment' data-type="comment" bindtap='bindVideoType'>
+        <image mode='aspectFit' src='{{commentImg}}' />
+        <text>{{videoLi.comment}}</text>
+      </view>
     </view>
   </view>
 
   <view class='author'>
-    <image mode='aspectFit' src='{{videoLi.author.icon}}' />
+    <image mode='aspectFit' src='{{videoLi.authorImg}}' />
     <view class='author-info'>
-      <view class='name'>{{videoLi.author.name}}</view>
-      <view class='description'>{{videoLi.author.description}}</view>
+      <view class='name'>{{videoLi.authorName}}</view>
+      <view class='description'>{{videoLi.authorDes}}</view>
     </view>
   </view>
 

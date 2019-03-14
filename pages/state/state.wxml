@@ -1,2 +1,18 @@
 <!--pages/state/state.wxml-->
-<view class='about' style='background: rgba({{bg}})'>关于</view>
+<view class='state' style='background: rgba({{bg}})'>
+  <view class='header'>
+    <image class='v-img' mode='aspectFill' src='{{vImg}}' />
+    <view class='version-name'>
+      <text class='v-name'>{{vName}}</text>
+      <text class='v-version'>V {{version}}</text>
+    </view>
+  </view>
+
+  <view class='content'>
+    <view class='cont-li'>
+      <view class='title'></view>
+      <view class=''></view>
+    </view>
+  </view>
+
+</view>

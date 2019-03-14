@@ -63,9 +63,8 @@ page {
   height: 60rpx;
   line-height: 60rpx;
   font-size: 24rpx;
-  border: 1px solid #eee;
+  box-shadow: 0 0 10rpx #ddd;
   padding-left: 20rpx;
-  border-radius: 10rpx;
   color: #ddd;
 }
 

@@ -72,17 +72,16 @@ page {
 }
 
 .my-list .my-li {
-  width: 100%;
+  width: 95%;
   height: 100rpx;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20rpx;
-  border: 1rpx solid #ddd;
-  border-left: none;
-  border-right: none;
-  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx #ddd;
+  margin: 0 auto 20rpx;
   background: #fff;
 }
 
@@ -104,4 +103,5 @@ page {
 .my-list .my-li .li-r {
   width: 40rpx;
   height: 40rpx;
+  margin-right: 0;
 }

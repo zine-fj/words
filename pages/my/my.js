@@ -7,27 +7,27 @@ Page({
    */
   data: {
     myList: [{
-      img: '../../images/board.png',
+      img: '../../images/video.png',
       name: '开眼视频',
       arrowRight: '../../images/arrowright.png',
       url: '/pages/video/index/index'
     }, {
-      img: '../../images/note.png',
+      img: '../../images/article.png',
       name: '每日一文',
       arrowRight: '../../images/arrowright.png',
       url: '/pages/words/words'
     }, {
-      img: '../../images/safari.png',
+      img: '../../images/color.png',
       name: '中国色',
       arrowRight: '../../images/arrowright.png',
       url: '/pages/colors/colors'
     }, {
-      img: '../../images/star.png',
+      img: '../../images/like.png',
       name: '我的收藏',
       arrowRight: '../../images/arrowright.png',
       url: '/pages/collection/collection'
     }, {
-      img: '',
+      img: '../../images/state.png',
       name: '声明',
       arrowRight: '../../images/arrowright.png',
       url: '/pages/state/state'
@@ -49,7 +49,7 @@ Page({
     this.getTime();
     this.getWeather();
     this.bindUserInfo();
-    
+
   },
 
   // 获取授权

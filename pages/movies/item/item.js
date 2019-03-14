@@ -2,6 +2,7 @@
 const util = require('../../../utils/util.js');
 Page({
   data: {
+    goodImg: '../../../images/good.png',
     movie: {},
     starList: [],
     inWordShow: -1,
