@@ -16,9 +16,7 @@ data-id="{{mathNum}}"
     <view class="collection {{item.isCollection?'collection-act':''}}" data-id="{{index}}"  catchtap='catchCollection'></view>
     <text class='color-words'>{{item.name}}</text>
     <view class='poetry' animation="{{poetryAnimat}}">
-      <!-- <text wx:for="{{item.poetryArr}}">{{item}}</text> -->
-      <text>温柔了十方春冬</text>
-      <text>光阴过处徒留皎月几盅</text>
+      <text wx:for="{{item.arr}}">{{item}}</text>
     </view>
    
   </view>

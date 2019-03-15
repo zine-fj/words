@@ -9,13 +9,32 @@ Page({
     vImg: '/images/an.jpg',
     vName: app.globalData.vName,
     version: app.globalData.version,
-    introList: [{
-      title: '功能介绍',
-      contList: [{
-        title: '1、豆瓣电影',
-        contLi: []
-      }]
-    }],
+    arrowRight: '../../images/arrowright.png',
+    isGnjsShow: false, // 功能介绍是否显示，默认否
+    isMzsmShow: false, // 免责声明是否显示，默认否
+    isGywShow: false, // 关于我是否显示，默认否
+  },
+
+  bindState(e) {
+    let type = e.currentTarget.dataset.type;
+    let isGnjsShow = this.data.isGnjsShow;
+    let isMzsmShow = this.data.isMzsmShow;
+    let isGywShow = this.data.isGywShow;
+    if(type == 'gnjs') {
+      this.setData({
+        isGnjsShow: !isGnjsShow
+      })
+    } else if (type == 'mzsm') {
+      this.setData({
+        isMzsmShow: !isMzsmShow
+      })
+    } else if (type == 'gyw') {
+      this.setData({
+        isGywShow: !isGywShow
+      })
+    }
+    
+    console.log(type)
   },
 
   /**
@@ -23,9 +42,15 @@ Page({
    */
   onLoad: function(options) {
     let _bg = wx.getStorageSync('bg');
-    this.setData({
-      bg: _bg
-    })
+    if (_bg) {
+      this.setData({
+        bg: _bg
+      })
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: _bg.hex,
+      })
+    }
   },
 
   /**

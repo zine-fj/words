@@ -52,9 +52,15 @@ Page({
     
 
     let _bg = wx.getStorageSync('bg');
-    this.setData({
-      bg: _bg,
-    })
+    if (_bg) {
+      this.setData({
+        bg: _bg
+      })
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: _bg.hex,
+      })
+    }
   },
 
   // 获取当前视频信息
@@ -92,6 +98,9 @@ Page({
         _videoLi.authorName = item.author.name;
         _videoLi.authorDes = item.author.description;
         _videoLi.isCollection = false;
+        wx.setNavigationBarTitle({
+          title: item.title,
+        })
 
         let videosArr = wx.getStorageSync('videosArr');
         if (videosArr) {

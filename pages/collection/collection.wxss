@@ -80,7 +80,9 @@ page {
 .collec-colors .color-word {
   font-size: 32rpx;
 }
-
+.collec-colors .color-word .color-list-word {
+  margin-bottom: 10rpx;
+}
 .collec-colors .color-name {
   position: absolute;
   right: 20rpx;

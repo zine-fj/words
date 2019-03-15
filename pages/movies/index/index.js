@@ -220,10 +220,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let _bg = wx.getStorageSync('bg')
-    this.setData({
-      bg: _bg
-    })
+    let _bg = wx.getStorageSync('bg');
+    if (_bg) {
+      this.setData({
+        bg: _bg
+      })
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: _bg.hex,
+      })
+    }
   },
 
   /**

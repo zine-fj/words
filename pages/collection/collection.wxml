@@ -1,5 +1,5 @@
 <!-- 中国色 -->
-<view class='collection' style='background: rgba({{bg}})'>
+<view class='collection' style='background: rgba({{bg.rgba}})'>
 
   <view class='collection-nav'>
     <view class="nav-li {{nowNav==item.id?'nav-li-act':''}}" wx:for="{{navList}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap='bindCollecNav'>{{item.name}}</view>
@@ -15,10 +15,9 @@
       bindtouchstart="drawStart" 
       bindtouchmove="drawMove"
        bindtap='bindColors'>
-        <!-- <view class='color-word'>
-            <text wx:for="{{item.poetryArr}}">{{item}}，</text>
-          </view> -->
-        <text class='color-word'>光阴过处徒留皎月几盅，温柔了十方春冬</text>
+        <view class='color-word'>
+            <text wx:for="{{item.arr}}" wx:key="{{index}}" class='color-list-word'>{{item}}，</text>
+          </view>
         <text class='color-name'>{{item.name}}</text>
       </view>
 
@@ -59,7 +58,7 @@
     </view>
   </view>
 
-  <view class="no-collection {{isNoCollec?'':'hide'}}">
+  <view class="no-collection {{isNoCollec}} {{isNoCollec?'':'hide'}}">
     <view class='word'>暂无收藏</view>
     <button size='mini' bindtap='bindToAdd'>去添加</button>
   </view>

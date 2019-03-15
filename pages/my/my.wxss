@@ -19,7 +19,7 @@ page {
   position: relative;
   width: 92%;
   height: 250rpx;
-  box-shadow: 0 0 30rpx rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 30rpx #ddd;
   border-radius: 20rpx;
   margin: 30rpx auto 80rpx;
   box-sizing: border-box;

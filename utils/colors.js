@@ -12,7 +12,9 @@ const colorsArr = [{
     ],
     hex: "#f9f4dc",
     name: "乳白",
-    pinyin: "rubai"
+    pinyin: "rubai",
+    arr: ['似曾是桥上轻雨伞开','你着一袭素白'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -28,7 +30,9 @@ const colorsArr = [{
     ],
     hex: "#f7e8aa",
     name: "杏仁黄",
-    pinyin: "xingrenhuang"
+    pinyin: "xingrenhuang",
+    arr: ['画江湖','提笔将此生勾勒'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -44,7 +48,9 @@ const colorsArr = [{
     ],
     hex: "#f8df72",
     name: "茉莉黄",
-    pinyin: "molihuang"
+    pinyin: "molihuang",
+    arr: ['古道印残灯','风雪夜下瘦马归人'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -60,7 +66,9 @@ const colorsArr = [{
     ],
     hex: "#f8df70",
     name: "麦秆黄",
-    pinyin: "maiganhuang"
+    pinyin: "maiganhuang",
+    arr: ['袅袅兮秋风','洞庭波兮木叶下'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -76,7 +84,9 @@ const colorsArr = [{
     ],
     hex: "#fbda41",
     name: "油菜花黄",
-    pinyin: "youcaihuahuang"
+    pinyin: "youcaihuahuang",
+    arr: ['今天哭明天笑','不求有人能明了','一身骄傲'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -92,7 +102,9 @@ const colorsArr = [{
     ],
     hex: "#fed71a",
     name: "佛手黄",
-    pinyin: "foshouhuang"
+    pinyin: "foshouhuang",
+    arr: ['过情关','谁敢闯'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -108,7 +120,9 @@ const colorsArr = [{
     ],
     hex: "#f7de98",
     name: "篾黄",
-    pinyin: "miehuang"
+    pinyin: "miehuang",
+    arr: ['情归何方','曲为谁唱'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -124,7 +138,9 @@ const colorsArr = [{
     ],
     hex: "#f8d86a",
     name: "葵扇黄",
-    pinyin: "kuishanhuang"
+    pinyin: "kuishanhuang",
+    arr: ['将你写作诗阙','送千里无邪'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -140,7 +156,9 @@ const colorsArr = [{
     ],
     hex: "#fcd337",
     name: "柠檬黄",
-    pinyin: "ningmenghuang"
+    pinyin: "ningmenghuang",
+    arr: ['伊人终相伴','对酒笑谈江山'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -156,7 +174,9 @@ const colorsArr = [{
     ],
     hex: "#fcd217",
     name: "金瓜黄",
-    pinyin: "jinguahuang"
+    pinyin: "jinguahuang",
+    arr: ['阴谋阳谋书剑恩仇','埋骨后付东流'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -172,7 +192,9 @@ const colorsArr = [{
     ],
     hex: "#ffd111",
     name: "藤黄",
-    pinyin: "tenghuang"
+    pinyin: "tenghuang",
+    arr: ['那薄如蝉翼的未来','经不起谁来拆'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -188,7 +210,9 @@ const colorsArr = [{
     ],
     hex: "#f6dead",
     name: "酪黄",
-    pinyin: "laohuang"
+    pinyin: "laohuang",
+    arr: ['有书生偏偏风流','有佳人独坐楼阁'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -204,7 +228,9 @@ const colorsArr = [{
     ],
     hex: "#f7da94",
     name: "香水玫瑰黄",
-    pinyin: "xiangshuimeiguihuang"
+    pinyin: "xiangshuimeiguihuang",
+    arr: ['东篱把酒黄昏后','有暗香盈袖'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -220,7 +246,9 @@ const colorsArr = [{
     ],
     hex: "#f9d367",
     name: "淡密黄",
-    pinyin: "danmihuang"
+    pinyin: "danmihuang",
+    arr: ['檐下窗棂斜映枝丫','与你席地对座饮茶'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -236,7 +264,9 @@ const colorsArr = [{
     ],
     hex: "#fbcd31",
     name: "大豆黄",
-    pinyin: "dadouhuang"
+    pinyin: "dadouhuang",
+    arr: ['一句珍重','天涯送了谁'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -252,7 +282,9 @@ const colorsArr = [{
     ],
     hex: "#fccb16",
     name: "素馨黄",
-    pinyin: "suxinhuang"
+    pinyin: "suxinhuang",
+    arr: ['衣带渐宽终不悔','为伊消得人憔悴'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -268,7 +300,9 @@ const colorsArr = [{
     ],
     hex: "#fecc11",
     name: "向日葵黄",
-    pinyin: "xiangrikuihuang"
+    pinyin: "xiangrikuihuang",
+    arr: ['看二更云','三更月','四更天'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -284,7 +318,9 @@ const colorsArr = [{
     ],
     hex: "#fbc82f",
     name: "雅梨黄",
-    pinyin: "yalihuang"
+    pinyin: "yalihuang",
+    arr: ['梨花淡白柳深青','柳絮飞时花满城'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -300,7 +336,9 @@ const colorsArr = [{
     ],
     hex: "#fcc515",
     name: "黄连黄",
-    pinyin: "huanglianhuang"
+    pinyin: "huanglianhuang",
+    arr: ['物是人非事事休','欲语泪先流'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -316,7 +354,9 @@ const colorsArr = [{
     ],
     hex: "#fcc307",
     name: "金盏黄",
-    pinyin: "jinzhanhuang"
+    pinyin: "jinzhanhuang",
+    arr: ['千山暮雪','只影向谁去'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -332,7 +372,9 @@ const colorsArr = [{
     ],
     hex: "#f8c387",
     name: "蛋壳黄",
-    pinyin: "dankehuang"
+    pinyin: "dankehuang",
+    arr: ['漠漠梨花烂漫','纷纷柳絮飞残'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -348,7 +390,9 @@ const colorsArr = [{
     ],
     hex: "#f7c173",
     name: "肉色",
-    pinyin: "rouse"
+    pinyin: "rouse",
+    arr: ['你眉眼含笑','我亦多情不敢老'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -364,7 +408,9 @@ const colorsArr = [{
     ],
     hex: "#fbb929",
     name: "鹅掌黄",
-    pinyin: "ezhanghuang"
+    pinyin: "ezhanghuang",
+    arr: ['苍路茫茫','曲终人不见'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -380,7 +426,9 @@ const colorsArr = [{
     ],
     hex: "#fbb612",
     name: "鸡蛋黄",
-    pinyin: "jidanhuang"
+    pinyin: "jidanhuang",
+    arr: ['我已等待了千年','为何城门还不开'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -396,7 +444,9 @@ const colorsArr = [{
     ],
     hex: "#fcb70a",
     name: "鼬黄",
-    pinyin: "youhuang"
+    pinyin: "youhuang",
+    arr: ['岁月长 又何妨','半醒好相忘'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -412,7 +462,9 @@ const colorsArr = [{
     ],
     hex: "#f9a633",
     name: "榴萼黄",
-    pinyin: "liuehuang"
+    pinyin: "liuehuang",
+    arr: ['束发长歌','不醉 不肯归'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -428,7 +480,9 @@ const colorsArr = [{
     ],
     hex: "#fba414",
     name: "淡橘橙",
-    pinyin: "danjucheng"
+    pinyin: "danjucheng",
+    arr: ['给我一杯酒','喝尽人间愁'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -444,7 +498,9 @@ const colorsArr = [{
     ],
     hex: "#fca106",
     name: "枇杷黄",
-    pinyin: "pipahuang"
+    pinyin: "pipahuang",
+    arr: ['山水一程','风雪再一程'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -460,7 +516,9 @@ const colorsArr = [{
     ],
     hex: "#fca104",
     name: "橙皮黄",
-    pinyin: "chengpihuang"
+    pinyin: "chengpihuang",
+    arr: ['一笑 一啼','一生为谁'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -476,7 +534,9 @@ const colorsArr = [{
     ],
     hex: "#fc8c23",
     name: "北瓜黄",
-    pinyin: "beiguahuang"
+    pinyin: "beiguahuang",
+    arr: ['北风乱夜未央','你的影子剪不断'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -492,7 +552,9 @@ const colorsArr = [{
     ],
     hex: "#f28e16",
     name: "杏黄",
-    pinyin: "xinghuang"
+    pinyin: "xinghuang",
+    arr: ['揉蓝衫子杏黄裙','独倚玉阑无语点檀唇'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -508,7 +570,9 @@ const colorsArr = [{
     ],
     hex: "#ff9900",
     name: "雄黄",
-    pinyin: "xionghuang"
+    pinyin: "xionghuang",
+    arr: ['雄黄假名石','鷣鸟远难笼'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -524,7 +588,9 @@ const colorsArr = [{
     ],
     hex: "#fb8b05",
     name: "万寿菊黄",
-    pinyin: "wanshoujuhuang"
+    pinyin: "wanshoujuhuang",
+    arr: ['冲天香阵透长安','满城尽带黄金甲'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -540,7 +606,9 @@ const colorsArr = [{
     ],
     hex: "#e9ddb6",
     name: "菊蕾白",
-    pinyin: "juleibai"
+    pinyin: "juleibai",
+    arr: ['西风酒旗市','细雨菊花天'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -556,7 +624,9 @@ const colorsArr = [{
     ],
     hex: "#eed045",
     name: "秋葵黄",
-    pinyin: "qiukuihuang"
+    pinyin: "qiukuihuang",
+    arr: ['弓背霞明剑照霜','秋风走马出咸阳'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -572,7 +642,9 @@ const colorsArr = [{
     ],
     hex: "#f2ce2b",
     name: "硫华黄",
-    pinyin: "liuhuahuang"
+    pinyin: "liuhuahuang",
+    arr: ['听琴声萧萧','该忘的忘不掉'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -588,7 +660,9 @@ const colorsArr = [{
     ],
     hex: "#f1ca17",
     name: "柚黄",
-    pinyin: "youhuang"
+    pinyin: "youhuang",
+    arr: ['轻纱随风','难解思念的伤'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -604,7 +678,9 @@ const colorsArr = [{
     ],
     hex: "#ddc871",
     name: "芒果黄",
-    pinyin: "mangguohuang"
+    pinyin: "mangguohuang",
+    arr: ['屋檐如悬崖','风铃如沧海','我等燕归来'],
+    type: 'song'
   },
   {
     CMYK: [
@@ -620,7 +696,9 @@ const colorsArr = [{
     ],
     hex: "#dfc243",
     name: "蒿黄",
-    pinyin: "haohuang"
+    pinyin: "haohuang",
+    arr: ['芙蓉水面采','船行影犹在','你却不回来'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -636,7 +714,9 @@ const colorsArr = [{
     ],
     hex: "#e2c027",
     name: "姜黄",
-    pinyin: "jianghuang"
+    pinyin: "jianghuang",
+    arr: ['痴之风古','长久不衰'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -652,7 +732,9 @@ const colorsArr = [{
     ],
     hex: "#e4bf11",
     name: "香蕉黄",
-    pinyin: "xiangjiaohuang"
+    pinyin: "xiangjiaohuang",
+    arr: ['我要飞过万水千山回到你身边','哪怕只能说声再见'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -668,7 +750,9 @@ const colorsArr = [{
     ],
     hex: "#d2b42c",
     name: "草黄",
-    pinyin: "caohuang"
+    pinyin: "caohuang",
+    arr: ['惟草木之零落兮','恐美人之迟暮'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -684,7 +768,9 @@ const colorsArr = [{
     ],
     hex: "#d2b116",
     name: "新禾绿",
-    pinyin: "xinhelv"
+    pinyin: "xinhelv",
+    arr: ['饮三杯旧景新颜','长堤携流云掩映春不夜'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -700,7 +786,9 @@ const colorsArr = [{
     ],
     hex: "#b7ae8f",
     name: "月灰",
-    pinyin: "yuehui"
+    pinyin: "yuehui",
+    arr: ['月上柳梢头','人约黄昏后'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -716,7 +804,9 @@ const colorsArr = [{
     ],
     hex: "#ad9e5f",
     name: "淡灰绿",
-    pinyin: "danhuilv"
+    pinyin: "danhuilv",
+    arr: ['爆竹燃暗淡月弯弯','锣鼓转踏醒路长长'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -732,7 +822,9 @@ const colorsArr = [{
     ],
     hex: "#8e804b",
     name: "草灰绿",
-    pinyin: "caohuilv"
+    pinyin: "caohuilv",
+    arr: ['扬子江头杨柳春','杨花愁杀渡江人'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -748,7 +840,9 @@ const colorsArr = [{
     ],
     hex: "#887322",
     name: "苔绿",
-    pinyin: "tailv"
+    pinyin: "tailv",
+    arr: ['要多少斑驳','青苔才会入墙'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -764,7 +858,9 @@ const colorsArr = [{
     ],
     hex: "#867018",
     name: "碧螺春绿",
-    pinyin: "biluochunlv"
+    pinyin: "biluochunlv",
+    arr: ['春水碧于天','画船听雨眠'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -780,7 +876,9 @@ const colorsArr = [{
     ],
     hex: "#685e48",
     name: "燕羽灰",
-    pinyin: "yanyuhui"
+    pinyin: "yanyuhui",
+    arr: ['燕婉良时 相濡以沫','都只不过是场美丽的谎言'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -796,7 +894,9 @@ const colorsArr = [{
     ],
     hex: "#695e45",
     name: "蟹壳灰",
-    pinyin: "xiekehui"
+    pinyin: "xiekehui",
+    arr: ['誓言就该比永远更远'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -812,7 +912,9 @@ const colorsArr = [{
     ],
     hex: "#645822",
     name: "潭水绿",
-    pinyin: "tanshuilv"
+    pinyin: "tanshuilv",
+    arr: ['所谓伊人','在水一方'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -828,7 +930,9 @@ const colorsArr = [{
     ],
     hex: "#5e5314",
     name: "橄榄绿",
-    pinyin: "ganlanlv"
+    pinyin: "ganlanlv",
+    arr: ['窈窕淑女','君子好逑'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -844,7 +948,9 @@ const colorsArr = [{
     ],
     hex: "#f9f1db",
     name: "蚌肉白",
-    pinyin: "bangroubai"
+    pinyin: "bangroubai",
+    arr: ['青春受榭','白日昭之'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -860,7 +966,9 @@ const colorsArr = [{
     ],
     hex: "#f8e8c1",
     name: "豆汁黄",
-    pinyin: "douzhihuang"
+    pinyin: "douzhihuang",
+    arr: ['不吾知其亦已兮','苟余情其信芳'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -876,7 +984,9 @@ const colorsArr = [{
     ],
     hex: "#f9d770",
     name: "淡茧黄",
-    pinyin: "danjianhuang"
+    pinyin: "danjianhuang",
+    arr: ['浮世千寻沫','冲淡了我的轮廓'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -892,7 +1002,9 @@ const colorsArr = [{
     ],
     hex: "#ffc90c",
     name: "乳鸭黄",
-    pinyin: "ruyahuang"
+    pinyin: "ruyahuang",
+    arr: ['有力自保','有处可去','有人相依'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -908,7 +1020,9 @@ const colorsArr = [{
     ],
     hex: "#f2e6ce",
     name: "荔肉白",
-    pinyin: "liroubai"
+    pinyin: "liroubai",
+    arr: ['一骑红尘妃子笑','无人知是荔枝来'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -924,7 +1038,9 @@ const colorsArr = [{
     ],
     hex: "#f0d695",
     name: "象牙黄",
-    pinyin: "xiangyahuang"
+    pinyin: "xiangyahuang",
+    arr: ['与天地兮同寿','与日月兮齐光'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -940,7 +1056,9 @@ const colorsArr = [{
     ],
     hex: "#f4ce69",
     name: "炒米黄",
-    pinyin: "chaomihuang"
+    pinyin: "chaomihuang",
+    arr: ['王孙游兮不归','春草生兮萋萋'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -956,7 +1074,9 @@ const colorsArr = [{
     ],
     hex: "#f6c430",
     name: "鹦鹉冠黄",
-    pinyin: "yingwuguanhuang"
+    pinyin: "yingwuguanhuang",
+    arr: ['悲莫愁兮生别离','乐莫乐兮新相知'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -972,7 +1092,9 @@ const colorsArr = [{
     ],
     hex: "#f9c116",
     name: "木瓜黄",
-    pinyin: "muguahuang"
+    pinyin: "muguahuang",
+    arr: ['投我以木瓜','报之以琼琚'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -988,7 +1110,9 @@ const colorsArr = [{
     ],
     hex: "#f9bd10",
     name: "浅烙黄",
-    pinyin: "qianlaohuang"
+    pinyin: "qianlaohuang",
+    arr: ['亦余心之所善兮','虽九死其犹未悔'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -1004,7 +1128,9 @@ const colorsArr = [{
     ],
     hex: "#e5d3aa",
     name: "莲子白",
-    pinyin: "lianzibai"
+    pinyin: "lianzibai",
+    arr: ['情不知所起','一往而深'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -1020,7 +1146,9 @@ const colorsArr = [{
     ],
     hex: "#e8b004",
     name: "谷黄",
-    pinyin: "guhuang"
+    pinyin: "guhuang",
+    arr: ['萚兮萚兮','风其吹女'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -1036,7 +1164,9 @@ const colorsArr = [{
     ],
     hex: "#ebb10d",
     name: "栀子黄",
-    pinyin: "zhizihuang"
+    pinyin: "zhizihuang",
+    arr: ['既见君子','云胡不喜'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -1052,7 +1182,9 @@ const colorsArr = [{
     ],
     hex: "#d9a40e",
     name: "芥黄",
-    pinyin: "jiehuang"
+    pinyin: "jiehuang",
+    arr: ['曰归曰归','岁亦莫止'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -1068,7 +1200,9 @@ const colorsArr = [{
     ],
     hex: "#b5aa90",
     name: "银鼠灰",
-    pinyin: "yinshuhui"
+    pinyin: "yinshuhui",
+    arr: ['燕子来时新社','梨花落后清明'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -1084,7 +1218,9 @@ const colorsArr = [{
     ],
     hex: "#b6a476",
     name: "尘灰",
-    pinyin: "chenhui"
+    pinyin: "chenhui",
+    arr: ['零落成泥碾作尘','只有香如故'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -1100,7 +1236,9 @@ const colorsArr = [{
     ],
     hex: "#b78d12",
     name: "枯绿",
-    pinyin: "kulv"
+    pinyin: "kulv",
+    arr: ['痴心熬尽才可倾城'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1116,7 +1254,9 @@ const colorsArr = [{
     ],
     hex: "#87723e",
     name: "鲛青",
-    pinyin: "jiaoqing"
+    pinyin: "jiaoqing",
+    arr: ['韶华婉转吟诵','苍凉的光荣'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1132,7 +1272,9 @@ const colorsArr = [{
     ],
     hex: "#876818",
     name: "粽叶绿",
-    pinyin: "zongyelv"
+    pinyin: "zongyelv",
+    arr: ['似有故人轻叩','再将棠梨煎雪'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1148,7 +1290,9 @@ const colorsArr = [{
     ],
     hex: "#8a6913",
     name: "灰绿",
-    pinyin: "huilv"
+    pinyin: "huilv",
+    arr: ['不如折它汤炉','笑也当哭泣也当哭','再无情缚'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -1164,7 +1308,9 @@ const colorsArr = [{
     ],
     hex: "#4a4035",
     name: "鹤灰",
-    pinyin: "hehui"
+    pinyin: "hehui",
+    arr: ['宁愿折心沐火舍不得堪破','是你唇边夜雨清荷'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1180,7 +1326,9 @@ const colorsArr = [{
     ],
     hex: "#4d4030",
     name: "淡松烟",
-    pinyin: "dansongyan"
+    pinyin: "dansongyan",
+    arr: ['若是痴心错付','若是相思念苦'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -1196,7 +1344,9 @@ const colorsArr = [{
     ],
     hex: "#584717",
     name: "暗海水绿",
-    pinyin: "anhaishuilv"
+    pinyin: "anhaishuilv",
+    arr: ['思念旦暮未歇'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1212,7 +1362,9 @@ const colorsArr = [{
     ],
     hex: "#5b4913",
     name: "棕榈绿",
-    pinyin: "zonglvlv"
+    pinyin: "zonglvlv",
+    arr: ['至死不渝的一场梦'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1228,7 +1380,9 @@ const colorsArr = [{
     ],
     hex: "#f9e9cd",
     name: "米色",
-    pinyin: "mise"
+    pinyin: "mise",
+    arr: ['我的心渐渐改变','你的脸慢慢浮现'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1244,7 +1398,9 @@ const colorsArr = [{
     ],
     hex: "#f8e0b0",
     name: "淡肉色",
-    pinyin: "danrouse"
+    pinyin: "danrouse",
+    arr: ['愿岁并谢','与长友兮'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -1260,7 +1416,9 @@ const colorsArr = [{
     ],
     hex: "#f9d27d",
     name: "麦芽糖黄",
-    pinyin: "maiyatanghuang"
+    pinyin: "maiyatanghuang",
+    arr: ['穿过了小巷后的古街','青墙旁你遥望夕阳斜'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1276,7 +1434,9 @@ const colorsArr = [{
     ],
     hex: "#feba07",
     name: "琥珀黄",
-    pinyin: "hupohuang"
+    pinyin: "hupohuang",
+    arr: ['兰陵美酒郁金香','玉碗盛来琥珀光'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -1292,7 +1452,9 @@ const colorsArr = [{
     ],
     hex: "#f3bf4c",
     name: "甘草黄",
-    pinyin: "gancaohuang"
+    pinyin: "gancaohuang",
+    arr: ['何昔日之芳草兮','今直为此萧艾也'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -1308,7 +1470,9 @@ const colorsArr = [{
     ],
     hex: "#f8bc31",
     name: "初熟杏黄",
-    pinyin: "chushuxinghuang"
+    pinyin: "chushuxinghuang",
+    arr: ['春日游','杏花吹满头'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -1324,7 +1488,9 @@ const colorsArr = [{
     ],
     hex: "#e2c17c",
     name: "浅驼色",
-    pinyin: "qiantuose"
+    pinyin: "qiantuose",
+    arr: ['摇摇欲坠不止你的泪','还有仅剩的世界'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1340,7 +1506,9 @@ const colorsArr = [{
     ],
     hex: "#e5b751",
     name: "沙石黄",
-    pinyin: "shashihuang"
+    pinyin: "shashihuang",
+    arr: ['一盏离愁','孤单伫立在窗口'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1356,7 +1524,9 @@ const colorsArr = [{
     ],
     hex: "#eaad1a",
     name: "虎皮黄",
-    pinyin: "hupihuang"
+    pinyin: "hupihuang",
+    arr: ['出鞘剑','杀气荡'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1372,7 +1542,9 @@ const colorsArr = [{
     ],
     hex: "#d6a01d",
     name: "土黄",
-    pinyin: "tuhuang"
+    pinyin: "tuhuang",
+    arr: ['花开花谢花化泥','长顺长安长相依'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -1388,7 +1560,9 @@ const colorsArr = [{
     ],
     hex: "#b4a992",
     name: "百灵鸟灰",
-    pinyin: "bailingniaohui"
+    pinyin: "bailingniaohui",
+    arr: ['月光尽是从前','苍白了的想念'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1404,7 +1578,9 @@ const colorsArr = [{
     ],
     hex: "#b78b26",
     name: "山鸡黄",
-    pinyin: "shanjihuang"
+    pinyin: "shanjihuang",
+    arr: ['我又从西厢过','十二年前的白日梦'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1420,7 +1596,9 @@ const colorsArr = [{
     ],
     hex: "#826b48",
     name: "龟背黄",
-    pinyin: "guibeihuang"
+    pinyin: "guibeihuang",
+    arr: ['火烧三月','咸阳倾城湮灭'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1436,7 +1614,9 @@ const colorsArr = [{
     ],
     hex: "#806332",
     name: "苍黄",
-    pinyin: "canghuang"
+    pinyin: "canghuang",
+    arr: ['是谁恩怨情仇演活','心上牵挂无暇抖落'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1452,7 +1632,9 @@ const colorsArr = [{
     ],
     hex: "#815f25",
     name: "莱阳梨黄",
-    pinyin: "laiyanglihuang"
+    pinyin: "laiyanglihuang",
+    arr: ['雨打梨花深闭门','忘了青春 误了青春'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -1468,7 +1650,9 @@ const colorsArr = [{
     ],
     hex: "#835e1d",
     name: "蜴蜊绿",
-    pinyin: "yililv"
+    pinyin: "yililv",
+    arr: ['出酒坊','醉在柳树旁'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1484,7 +1668,9 @@ const colorsArr = [{
     ],
     hex: "#4f4032",
     name: "松鼠灰",
-    pinyin: "songshuhui"
+    pinyin: "songshuhui",
+    arr: ['风霜仍漂泊','为谁而执着','一任年华过'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1500,7 +1686,9 @@ const colorsArr = [{
     ],
     hex: "#503e2a",
     name: "橄榄灰",
-    pinyin: "ganlanhui"
+    pinyin: "ganlanhui",
+    arr: ['念卿若狂','心思成网'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1516,7 +1704,9 @@ const colorsArr = [{
     ],
     hex: "#513c20",
     name: "蟹壳绿",
-    pinyin: "xiekelv"
+    pinyin: "xiekelv",
+    arr: ['思乡未敢听琵琶','摄魂曲后三股叉'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1532,7 +1722,9 @@ const colorsArr = [{
     ],
     hex: "#533c1b",
     name: "古铜绿",
-    pinyin: "gutonglv"
+    pinyin: "gutonglv",
+    arr: ['纵身入尘埃里','雷雨大作我也放声而歌'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1548,7 +1740,9 @@ const colorsArr = [{
     ],
     hex: "#553b18",
     name: "焦茶绿",
-    pinyin: "jiaochalv"
+    pinyin: "jiaochalv",
+    arr: ['你何时回来喝我熬的茶汤','这次我会多放一些老姜'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1564,7 +1758,9 @@ const colorsArr = [{
     ],
     hex: "#fbf2e3",
     name: "粉白",
-    pinyin: "fenbai"
+    pinyin: "fenbai",
+    arr: ['垆边人似月','皓腕凝霜雪'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -1580,7 +1776,9 @@ const colorsArr = [{
     ],
     hex: "#f9e8d0",
     name: "落英淡粉",
-    pinyin: "luoyingdanfen"
+    pinyin: "luoyingdanfen",
+    arr: ['但见新人笑','那闻旧人哭'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -1596,7 +1794,9 @@ const colorsArr = [{
     ],
     hex: "#f9cb8b",
     name: "瓜瓤粉",
-    pinyin: "guarangfen"
+    pinyin: "guarangfen",
+    arr: ['故人入我梦','明我长相忆'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -1612,7 +1812,9 @@ const colorsArr = [{
     ],
     hex: "#fbb957",
     name: "蜜黄",
-    pinyin: "mihuang"
+    pinyin: "mihuang",
+    arr: ['浓情蜜意','此话当真'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1628,7 +1830,9 @@ const colorsArr = [{
     ],
     hex: "#ffa60f",
     name: "金叶黄",
-    pinyin: "jinyehuang"
+    pinyin: "jinyehuang",
+    arr: ['你一定要在枫叶树下','等着我'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1644,7 +1848,9 @@ const colorsArr = [{
     ],
     hex: "#f4a83a",
     name: "金莺黄",
-    pinyin: "jinyinghuang"
+    pinyin: "jinyinghuang",
+    arr: ['千里莺啼绿映红','水村山郭酒旗风'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -1660,7 +1866,9 @@ const colorsArr = [{
     ],
     hex: "#e3bd8d",
     name: "鹿角棕",
-    pinyin: "lujiaozong"
+    pinyin: "lujiaozong",
+    arr: ['林深时见鹿','海蓝时见鲸'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -1676,7 +1884,9 @@ const colorsArr = [{
     ],
     hex: "#e7a23f",
     name: "凋叶棕",
-    pinyin: "diaoyezong"
+    pinyin: "diaoyezong",
+    arr: ['落叶他乡树','寒灯独夜人'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -1692,7 +1902,9 @@ const colorsArr = [{
     ],
     hex: "#daa45a",
     name: "玳瑁黄",
-    pinyin: "daimaohuang"
+    pinyin: "daimaohuang",
+    arr: ['谁将烟焚散','散了纵横的牵绊'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -1708,7 +1920,9 @@ const colorsArr = [{
     ],
     hex: "#de9e44",
     name: "软木黄",
-    pinyin: "ruanmuhuang"
+    pinyin: "ruanmuhuang",
+    arr: ['相思若柳','飘满城','尽飞絮'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -1724,7 +1938,9 @@ const colorsArr = [{
     ],
     hex: "#dc9123",
     name: "风帆黄",
-    pinyin: "fengfanhuang"
+    pinyin: "fengfanhuang",
+    arr: ['人生自是有情痴','此恨不关风与月'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -1740,7 +1956,9 @@ const colorsArr = [{
     ],
     hex: "#c09351",
     name: "桂皮淡棕",
-    pinyin: "guipidanzong"
+    pinyin: "guipidanzong",
+    arr: ['欲买桂花同载酒','终不似 少年游'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -1756,7 +1974,9 @@ const colorsArr = [{
     ],
     hex: "#97846c",
     name: "猴毛灰",
-    pinyin: "houmaohui"
+    pinyin: "houmaohui",
+    arr: ['休怪我','这半生痴情煞多'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1772,7 +1992,9 @@ const colorsArr = [{
     ],
     hex: "#986524",
     name: "山鸡褐",
-    pinyin: "shanjihe"
+    pinyin: "shanjihe",
+    arr: ['恨不知所踪','如影随形'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -1788,7 +2010,9 @@ const colorsArr = [{
     ],
     hex: "#66462a",
     name: "驼色",
-    pinyin: "tuose"
+    pinyin: "tuose",
+    arr: ['就这样吧','从此山水不相逢'],
+    type:'otherWord'
   },
   {
     CMYK: [
@@ -1804,7 +2028,9 @@ const colorsArr = [{
     ],
     hex: "#5d3d21",
     name: "茶褐",
-    pinyin: "chahe"
+    pinyin: "chahe",
+    arr: ['那古道青坟烟','敢问今夕何年','可愿与我梦里共赴雁门关'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1820,7 +2046,9 @@ const colorsArr = [{
     ],
     hex: "#5c3719",
     name: "古铜褐",
-    pinyin: "gutonghe"
+    pinyin: "gutonghe",
+    arr: ['风卷尘沙起','云化雨落地'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1836,7 +2064,9 @@ const colorsArr = [{
     ],
     hex: "#fbecde",
     name: "荷花白",
-    pinyin: "hehuabai"
+    pinyin: "hehuabai",
+    arr: ['兴尽晚回舟','误入藕花深处'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -1852,7 +2082,9 @@ const colorsArr = [{
     ],
     hex: "#f8b37f",
     name: "玫瑰粉",
-    pinyin: "meiguifen"
+    pinyin: "meiguifen",
+    arr: ['回眸一笑百媚生','六宫粉黛无颜色'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -1868,7 +2100,9 @@ const colorsArr = [{
     ],
     hex: "#f97d1c",
     name: "橘橙",
-    pinyin: "jucheng"
+    pinyin: "jucheng",
+    arr: ['今夕何','见此良人'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -1884,7 +2118,9 @@ const colorsArr = [{
     ],
     hex: "#fa7e23",
     name: "美人焦橙",
-    pinyin: "meirenjiaocheng"
+    pinyin: "meirenjiaocheng",
+    arr: ['美人如此多娇','英雄自古风流'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1900,7 +2136,9 @@ const colorsArr = [{
     ],
     hex: "#f7cdbc",
     name: "润红",
-    pinyin: "runhong"
+    pinyin: "runhong",
+    arr: ['秋鬓含霜白','衰颜倚酒红'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -1916,7 +2154,9 @@ const colorsArr = [{
     ],
     hex: "#f6cec1",
     name: "淡桃红",
-    pinyin: "dantaohong"
+    pinyin: "dantaohong",
+    arr: ['一年春事','桃花红了谁'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -1932,7 +2172,9 @@ const colorsArr = [{
     ],
     hex: "#f0945d",
     name: "海螺橙",
-    pinyin: "hailuocheng"
+    pinyin: "hailuocheng",
+    arr: ['白裙红衣的姑娘桥上婀娜'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -1948,7 +2190,9 @@ const colorsArr = [{
     ],
     hex: "#f0ada0",
     name: "桃红",
-    pinyin: "taohong"
+    pinyin: "taohong",
+    arr: ['寻得桃源好避秦','桃红又是一年春'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -1964,7 +2208,9 @@ const colorsArr = [{
     ],
     hex: "#eeaa9c",
     name: "颊红",
-    pinyin: "jiahong"
+    pinyin: "jiahong",
+    arr: ['少年听雨歌楼上','红烛昏罗帐'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -1980,7 +2226,9 @@ const colorsArr = [{
     ],
     hex: "#eea08c",
     name: "淡罂粟红",
-    pinyin: "danyingsuhong"
+    pinyin: "danyingsuhong",
+    arr: ['闻君有两意','故来相决绝'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -1996,7 +2244,9 @@ const colorsArr = [{
     ],
     hex: "#ea8958",
     name: "晨曦红",
-    pinyin: "chenxihong"
+    pinyin: "chenxihong",
+    arr: ['屋檐细雨停在初见季节'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2012,7 +2262,9 @@ const colorsArr = [{
     ],
     hex: "#f27635",
     name: "蟹壳红",
-    pinyin: "xiekehong"
+    pinyin: "xiekehong",
+    arr: ['听惊雷','道破尘世悲哀'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2028,7 +2280,9 @@ const colorsArr = [{
     ],
     hex: "#f86b1d",
     name: "金莲花橙",
-    pinyin: "jinlianhuacheng"
+    pinyin: "jinlianhuacheng",
+    arr: ['背灯和月就花阴','已是十年踪迹十年心'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -2044,7 +2298,9 @@ const colorsArr = [{
     ],
     hex: "#ef6f48",
     name: "草莓红",
-    pinyin: "caomeihong"
+    pinyin: "caomeihong",
+    arr: ['陌上谁家年少','足风流'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -2060,7 +2316,9 @@ const colorsArr = [{
     ],
     hex: "#ef632b",
     name: "龙睛鱼红",
-    pinyin: "longjingyuhong"
+    pinyin: "longjingyuhong",
+    arr: ['年少风雅','鲜衣怒马','也不过一刹那'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2076,7 +2334,9 @@ const colorsArr = [{
     ],
     hex: "#f1441d",
     name: "蜻蜓红",
-    pinyin: "qingtinghong"
+    pinyin: "qingtinghong",
+    arr: ['红藕香残玉簟秋'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -2092,7 +2352,10 @@ const colorsArr = [{
     ],
     hex: "#f04b22",
     name: "大红",
-    pinyin: "dahong"
+    pinyin: "dahong",
+    pinyin: "yujinhong",
+    arr: ['红衣佳人白衣友','朝与同歌暮同酒'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -2108,7 +2371,9 @@ const colorsArr = [{
     ],
     hex: "#f2481b",
     name: "柿红",
-    pinyin: "shihong"
+    pinyin: "shihong",
+    arr: ['桌安上 静静放','一碗红豆汤'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2124,7 +2389,9 @@ const colorsArr = [{
     ],
     hex: "#f34718",
     name: "榴花红",
-    pinyin: "liuhuahong"
+    pinyin: "liuhuahong",
+    arr: ['正是江南好风景','落花时节又逢君'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -2140,7 +2407,9 @@ const colorsArr = [{
     ],
     hex: "#f43e06",
     name: "银朱",
-    pinyin: "yinzhu"
+    pinyin: "yinzhu",
+    arr: ['血染江山的画','怎敌你眉间一点朱砂'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2156,7 +2425,9 @@ const colorsArr = [{
     ],
     hex: "#ed5126",
     name: "朱红",
-    pinyin: "zhuhong"
+    pinyin: "zhuhong",
+    arr: ['春宵一刻值千金'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -2172,7 +2443,9 @@ const colorsArr = [{
     ],
     hex: "#f09c5a",
     name: "鲑鱼红",
-    pinyin: "guiyuhong"
+    pinyin: "guiyuhong",
+    arr: ['烟笼寒水月笼沙','夜泊秦淮近酒家'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -2188,7 +2461,9 @@ const colorsArr = [{
     ],
     hex: "#f26b1f",
     name: "金黄",
-    pinyin: "jinhuang"
+    pinyin: "jinhuang",
+    arr: ['黄钟毁弃','瓦釜雷鸣'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -2204,7 +2479,9 @@ const colorsArr = [{
     ],
     hex: "#d99156",
     name: "鹿皮褐",
-    pinyin: "lupihe"
+    pinyin: "lupihe",
+    arr: ['呦呦鹿鸣','食野之苹'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -2220,7 +2497,9 @@ const colorsArr = [{
     ],
     hex: "#db8540",
     name: "醉瓜肉",
-    pinyin: "zuiguarou"
+    pinyin: "zuiguarou",
+    arr: ['醉里论道','醒时折花'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2236,7 +2515,9 @@ const colorsArr = [{
     ],
     hex: "#de7622",
     name: "麂棕",
-    pinyin: "jizong"
+    pinyin: "jizong",
+    arr: ['梦过春来梦过秋去还将你梦着'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2252,7 +2533,9 @@ const colorsArr = [{
     ],
     hex: "#c1b2a3",
     name: "淡银灰",
-    pinyin: "danyinhui"
+    pinyin: "danyinhui",
+    arr: ['似此星辰非昨夜','为谁风露立中宵'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -2268,7 +2551,9 @@ const colorsArr = [{
     ],
     hex: "#be7e4a",
     name: "淡赭",
-    pinyin: "danzhe"
+    pinyin: "danzhe",
+    arr: ['既然琴瑟起','何以笙箫默'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -2284,7 +2569,9 @@ const colorsArr = [{
     ],
     hex: "#c1651a",
     name: "槟榔综",
-    pinyin: "binglangzong"
+    pinyin: "binglangzong",
+    arr: ['人间可恶','留恋何苦','还不如与蜘蛛为伍'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2300,7 +2587,9 @@ const colorsArr = [{
     ],
     hex: "#918072",
     name: "银灰",
-    pinyin: "yinhui"
+    pinyin: "yinhui",
+    arr: ['天阶夜色凉如水'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -2316,7 +2605,9 @@ const colorsArr = [{
     ],
     hex: "#9a8878",
     name: "海鸥灰",
-    pinyin: "haiouhui"
+    pinyin: "haiouhui",
+    arr: ['所爱隔山海','山海皆可平'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -2332,7 +2623,9 @@ const colorsArr = [{
     ],
     hex: "#945833",
     name: "淡咖啡",
-    pinyin: "dankafei"
+    pinyin: "dankafei",
+    arr: ['确认过眼神','我遇上对的人'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2348,7 +2641,9 @@ const colorsArr = [{
     ],
     hex: "#964d22",
     name: "岩石棕",
-    pinyin: "yanshizong"
+    pinyin: "yanshizong",
+    arr: ['红尘客栈风似刀','骤雨落宿命敲'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2364,7 +2659,9 @@ const colorsArr = [{
     ],
     hex: "#954416",
     name: "芒果棕",
-    pinyin: "mangguozong"
+    pinyin: "mangguozong",
+    arr: ['灯辉摇曳满都城听着雨','夜风散开几圈涟漪'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2380,7 +2677,9 @@ const colorsArr = [{
     ],
     hex: "#624941",
     name: "石板灰",
-    pinyin: "shibanhui"
+    pinyin: "shibanhui",
+    arr: ['世情薄 人情恶','雨送黄昏花易落'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -2396,7 +2695,9 @@ const colorsArr = [{
     ],
     hex: "#64483d",
     name: "珠母灰",
-    pinyin: "zhumuhui"
+    pinyin: "zhumuhui",
+    arr: ['一笑笑出了泪痕','一笔勾销了爱恨'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2412,7 +2713,9 @@ const colorsArr = [{
     ],
     hex: "#71361d",
     name: "丁香棕",
-    pinyin: "dingxiangzong"
+    pinyin: "dingxiangzong",
+    arr: ['若花怨蝶','你会怨着谁'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2428,7 +2731,9 @@ const colorsArr = [{
     ],
     hex: "#753117",
     name: "咖啡",
-    pinyin: "kafei"
+    pinyin: "kafei",
+    arr: ['朝看水东流','暮看日西坠'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -2444,7 +2749,9 @@ const colorsArr = [{
     ],
     hex: "#732e12",
     name: "筍皮棕",
-    pinyin: "sunpizong"
+    pinyin: "sunpizong",
+    arr: ['你为他断了指甲','换不回他一句牵挂'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2460,7 +2767,9 @@ const colorsArr = [{
     ],
     hex: "#fc6315",
     name: "燕颔红",
-    pinyin: "yanhanhong"
+    pinyin: "yanhanhong",
+    arr: ['燕偏偏其辞归兮','蝉寂寞而无声'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -2476,7 +2785,9 @@ const colorsArr = [{
     ],
     hex: "#e8b49a",
     name: "玉粉红",
-    pinyin: "yufenhong"
+    pinyin: "yufenhong",
+    arr: ['天生丽质难自弃'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -2492,7 +2803,9 @@ const colorsArr = [{
     ],
     hex: "#e46828",
     name: "金驼",
-    pinyin: "jintuo"
+    pinyin: "jintuo",
+    arr: ['良辰美景奈何天','赏心乐事谁家院'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -2508,7 +2821,9 @@ const colorsArr = [{
     ],
     hex: "#d85916",
     name: "铁棕",
-    pinyin: "tiezong"
+    pinyin: "tiezong",
+    arr: ['秦时明月汉时关','万里长征人未还'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -2524,7 +2839,9 @@ const colorsArr = [{
     ],
     hex: "#b7a091",
     name: "蛛网灰",
-    pinyin: "zhuwanghui"
+    pinyin: "zhuwanghui",
+    arr: ['十年生死两茫茫','不思量 自难忘'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -2540,7 +2857,9 @@ const colorsArr = [{
     ],
     hex: "#b7511d",
     name: "淡可可棕",
-    pinyin: "dankekezong"
+    pinyin: "dankekezong",
+    arr: ['同是天涯沦落人','相逢何必曾相识'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -2556,7 +2875,9 @@ const colorsArr = [{
     ],
     hex: "#8b614d",
     name: "中红灰",
-    pinyin: "zhonghonghui"
+    pinyin: "zhonghonghui",
+    arr: ['月落乌啼霜满天','江枫渔火对愁眠'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -2572,7 +2893,9 @@ const colorsArr = [{
     ],
     hex: "#8c4b31",
     name: "淡土黄",
-    pinyin: "dantuhuang"
+    pinyin: "dantuhuang",
+    arr: ['一眼回眸','尘缘遇了谁'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -2588,7 +2911,9 @@ const colorsArr = [{
     ],
     hex: "#873d24",
     name: "淡豆沙",
-    pinyin: "dandousha"
+    pinyin: "dandousha",
+    arr: ['东边日出西边雨','道是无晴却有晴'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -2604,7 +2929,9 @@ const colorsArr = [{
     ],
     hex: "#883a1e",
     name: "椰壳棕",
-    pinyin: "yekezong"
+    pinyin: "yekezong",
+    arr: ['胡雁哀鸣夜夜飞','胡儿眼泪双双落'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -2620,7 +2947,9 @@ const colorsArr = [{
     ],
     hex: "#5b423a",
     name: "淡铁灰",
-    pinyin: "dantiehui"
+    pinyin: "dantiehui",
+    arr: ['醉梦天下','动乱金戈铁马','这天下何处是家'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2636,7 +2965,9 @@ const colorsArr = [{
     ],
     hex: "#603d30",
     name: "中灰驼",
-    pinyin: "zhonghuituo"
+    pinyin: "zhonghuituo",
+    arr: ['模糊的身影','跟我回家吧'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2652,7 +2983,9 @@ const colorsArr = [{
     ],
     hex: "#673424",
     name: "淡栗棕",
-    pinyin: "danlizong"
+    pinyin: "danlizong",
+    arr: ['你是风沙的怒吼','你是断崖的坚守'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2668,7 +3001,9 @@ const colorsArr = [{
     ],
     hex: "#652b1c",
     name: "可可棕",
-    pinyin: "kekezong"
+    pinyin: "kekezong",
+    arr: ['你是滴水的沉着','你是落花的幽柔'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2684,7 +3019,9 @@ const colorsArr = [{
     ],
     hex: "#692a1b",
     name: "柞叶棕",
-    pinyin: "zhayezong"
+    pinyin: "zhayezong",
+    arr: ['焚成灰的蝴蝶','断了根的枝叶'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2700,7 +3037,9 @@ const colorsArr = [{
     ],
     hex: "#fb9968",
     name: "野蔷薇红",
-    pinyin: "yeqiangweihong"
+    pinyin: "yeqiangweihong",
+    arr: ['红酥手 黄藤酒','满城春色宫墙柳'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -2716,7 +3055,9 @@ const colorsArr = [{
     ],
     hex: "#fc7930",
     name: "菠萝红",
-    pinyin: "boluohong"
+    pinyin: "boluohong",
+    arr: ['听弦断','断那三千痴缠'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -2732,7 +3073,9 @@ const colorsArr = [{
     ],
     hex: "#edc3ae",
     name: "藕荷",
-    pinyin: "ouhe"
+    pinyin: "ouhe",
+    arr: ['有三秋桂子','十里荷花'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -2748,7 +3091,9 @@ const colorsArr = [{
     ],
     hex: "#e16723",
     name: "陶瓷红",
-    pinyin: "taocihong"
+    pinyin: "taocihong",
+    arr: ['相逢留一笑','不相识又何妨'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -2764,7 +3109,9 @@ const colorsArr = [{
     ],
     hex: "#d4c4b7",
     name: "晓灰",
-    pinyin: "xiaohui"
+    pinyin: "xiaohui",
+    arr: ['世事一场大梦','人生几度秋凉'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -2780,7 +3127,8 @@ const colorsArr = [{
     ],
     hex: "#cf7543",
     name: "余烬红",
-    pinyin: "yujinhong"
+    arr: ['人言落日是天涯','望极天涯不见家'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -2796,7 +3144,9 @@ const colorsArr = [{
     ],
     hex: "#cd6227",
     name: "火砖红",
-    pinyin: "huozhuanhong"
+    pinyin: "huozhuanhong",
+    arr: ['日出江花红胜火','春来江水绿如蓝'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -2812,7 +3162,9 @@ const colorsArr = [{
     ],
     hex: "#aa6a4c",
     name: "火泥棕",
-    pinyin: "huonizong"
+    pinyin: "huonizong",
+    arr: ['七月流火','九月授衣'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -2828,7 +3180,9 @@ const colorsArr = [{
     ],
     hex: "#aa6a4c",
     name: "绀红",
-    pinyin: "ganhong"
+    pinyin: "ganhong",
+    arr: ['哦也罗依呦'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -2844,7 +3198,9 @@ const colorsArr = [{
     ],
     hex: "#773d31",
     name: "橡树棕",
-    pinyin: "xiangshuzong"
+    pinyin: "xiangshuzong",
+    arr: ['南海飞雪','吻过你的眉睫'],
+    type:'songs'
   },
   {
     CMYK: [
@@ -2860,7 +3216,9 @@ const colorsArr = [{
     ],
     hex: "#483332",
     name: "海报灰",
-    pinyin: "haibaohui"
+    pinyin: "haibaohui",
+    arr: ['大风起兮云飞扬','威加海内兮归故乡','安得猛士兮守四方'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -2876,7 +3234,9 @@ const colorsArr = [{
     ],
     hex: "#4b2e2b",
     name: "玫瑰灰",
-    pinyin: "meiguihui"
+    pinyin: "meiguihui",
+    arr: ['酒暖回忆思念瘦'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2892,7 +3252,9 @@ const colorsArr = [{
     ],
     hex: "#482522",
     name: "火山棕",
-    pinyin: "huoshanzong"
+    pinyin: "huoshanzong",
+    arr: ['迢迢河汉间','有磷火坠地如彗锋'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -2908,7 +3270,9 @@ const colorsArr = [{
     ],
     hex: "#481e1c",
     name: "豆沙",
-    pinyin: "dousha"
+    pinyin: "dousha",
+    arr: ['聘聘袅袅十三余','豆蔻梢头二月初'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -2924,7 +3288,9 @@ const colorsArr = [{
     ],
     hex: "#fbeee2",
     name: "淡米粉",
-    pinyin: "danmifen"
+    pinyin: "danmifen",
+    arr: ['同居长干里','两小无嫌猜'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -2940,7 +3306,9 @@ const colorsArr = [{
     ],
     hex: "#f6dcce",
     name: "初桃粉红",
-    pinyin: "chutaofenhong"
+    pinyin: "chutaofenhong",
+    arr: ['浅浅 过来'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -2956,7 +3324,9 @@ const colorsArr = [{
     ],
     hex: "#f7cfba",
     name: "介壳淡粉红",
-    pinyin: "jieqiaodanfenhong"
+    pinyin: "jieqiaodanfenhong",
+    arr: ['长街长','烟花繁','你挑灯回看'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -2972,7 +3342,9 @@ const colorsArr = [{
     ],
     hex: "#f6ad8f",
     name: "淡藏花红",
-    pinyin: "dancanghuahong"
+    pinyin: "dancanghuahong",
+    arr: ['经流年','梦回曲水边','看烟花绽出月圆'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -2988,7 +3360,9 @@ const colorsArr = [{
     ],
     hex: "#f68c60",
     name: "瓜瓤红",
-    pinyin: "guaranghong"
+    pinyin: "guaranghong",
+    arr: ['十方魔','渴饮着我的脆弱'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3004,7 +3378,9 @@ const colorsArr = [{
     ],
     hex: "#f9723d",
     name: "芙蓉红",
-    pinyin: "furonghong"
+    pinyin: "furonghong",
+    arr: ['清水出芙蓉','天然去雕饰'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -3020,7 +3396,9 @@ const colorsArr = [{
     ],
     hex: "#fa5d19",
     name: "莓酱红",
-    pinyin: "meijianghong"
+    pinyin: "meijianghong",
+    arr: ['胭脂香味','能爱不能给'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3036,7 +3414,9 @@ const colorsArr = [{
     ],
     hex: "#ee8055",
     name: "法螺红",
-    pinyin: "faluohong"
+    pinyin: "faluohong",
+    arr: ['世间安得双全法','不负如来不负卿'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3052,7 +3432,10 @@ const colorsArr = [{
     ],
     hex: "#cf4813",
     name: "落霞红",
-    pinyin: "luoxiahong"
+    pinyin: "luoxiahong",
+    arr: ['红豆生南国','春来发几枝'],
+    type: 'poetry',
+
   },
   {
     CMYK: [
@@ -3068,7 +3451,9 @@ const colorsArr = [{
     ],
     hex: "#b89485",
     name: "淡玫瑰灰",
-    pinyin: "danmeiguihui"
+    pinyin: "danmeiguihui",
+    arr: ['一句一伤  无话可讲','你坐看缘分了断'],
+    type:'songs'
   },
   {
     CMYK: [
@@ -3084,7 +3469,9 @@ const colorsArr = [{
     ],
     hex: "#b14b28",
     name: "蟹蝥红",
-    pinyin: "xiemaohong"
+    pinyin: "xiemaohong",
+    arr: ['看你飞远去','看你离我而去'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3100,7 +3487,9 @@ const colorsArr = [{
     ],
     hex: "#863020",
     name: "火岩棕",
-    pinyin: "huoyanzong"
+    pinyin: "huoyanzong",
+    arr: ['沧海桑田','我们回不去了'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -3116,7 +3505,9 @@ const colorsArr = [{
     ],
     hex: "#862617",
     name: "赭石",
-    pinyin: "zheshi"
+    pinyin: "zheshi",
+    arr: ['既不守诺','何必许诺'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -3132,7 +3523,9 @@ const colorsArr = [{
     ],
     hex: "#592620",
     name: "暗驼棕",
-    pinyin: "antuozong"
+    pinyin: "antuozong",
+    arr: ['溪云初起日沉阁','山雨欲来风满楼'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3148,7 +3541,9 @@ const colorsArr = [{
     ],
     hex: "#5a1f1b",
     name: "酱棕",
-    pinyin: "jiangzong"
+    pinyin: "jiangzong",
+    arr: ['纵然情深','奈何缘浅'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -3164,7 +3559,9 @@ const colorsArr = [{
     ],
     hex: "#5c1e19",
     name: "栗棕",
-    pinyin: "lizong"
+    pinyin: "lizong",
+    arr: ['寄君一曲','不问曲终人聚散'],
+    type:'otherWord'
   },
   {
     CMYK: [
@@ -3180,7 +3577,9 @@ const colorsArr = [{
     ],
     hex: "#f4c7ba",
     name: "洋水仙红",
-    pinyin: "yangshuixianhong"
+    pinyin: "yangshuixianhong",
+    arr: ['风陵渡口初相遇','一见杨过误终身'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -3196,7 +3595,9 @@ const colorsArr = [{
     ],
     hex: "#f17666",
     name: "谷鞘红",
-    pinyin: "guqiaohong"
+    pinyin: "guqiaohong",
+    arr: ['短亭短','红尘辗','我把萧再叹'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -3212,7 +3613,9 @@ const colorsArr = [{
     ],
     hex: "#f15642",
     name: "苹果红",
-    pinyin: "pingguohong"
+    pinyin: "pingguohong",
+    arr: ['金风玉露一相逢','便胜却人间无数'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3228,7 +3631,9 @@ const colorsArr = [{
     ],
     hex: "#f5391c",
     name: "铁水红",
-    pinyin: "tieshuihong"
+    pinyin: "tieshuihong",
+    arr: ['白日登山望烽火','黄昏饮马傍交河'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3244,7 +3649,9 @@ const colorsArr = [{
     ],
     hex: "#f25a47",
     name: "桂红",
-    pinyin: "guihong"
+    pinyin: "guihong",
+    arr: ['芙蓉帐','桂花酿','倾身黄梨傍'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3260,7 +3667,9 @@ const colorsArr = [{
     ],
     hex: "#f33b1f",
     name: "极光红",
-    pinyin: "jiguanghong"
+    pinyin: "jiguanghong",
+    arr: ['十步杀一人','千里不留行'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3276,7 +3685,9 @@ const colorsArr = [{
     ],
     hex: "#f2b9b2",
     name: "粉红",
-    pinyin: "fenhong"
+    pinyin: "fenhong",
+    arr: ['人面桃花相映红'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3292,7 +3703,9 @@ const colorsArr = [{
     ],
     hex: "#f19790",
     name: "舌红",
-    pinyin: "shehong"
+    pinyin: "shehong",
+    arr: ['不如折它汤炉','笑也当哭泣也当哭','再无情缚'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -3308,7 +3721,9 @@ const colorsArr = [{
     ],
     hex: "#f05a46",
     name: "曲红",
-    pinyin: "quhong"
+    pinyin: "quhong",
+    arr: ['春风得意马蹄疾','一日看尽长安花'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3324,7 +3739,9 @@ const colorsArr = [{
     ],
     hex: "#f23e23",
     name: "红汞红",
-    pinyin: "honggonghong"
+    pinyin: "honggonghong",
+    arr: ['若是痴心错付','若是相思念苦'],
+    type:'word'
   },
   {
     CMYK: [
@@ -3340,7 +3757,9 @@ const colorsArr = [{
     ],
     hex: "#f2cac9",
     name: "淡绯",
-    pinyin: "danfei"
+    pinyin: "danfei",
+    arr: ['天淡天青宿雨沾襟','一年一会信笺却只见寥寥数言'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3356,7 +3775,9 @@ const colorsArr = [{
     ],
     hex: "#efafad",
     name: "无花果红",
-    pinyin: "wuhuaguohong"
+    pinyin: "wuhuaguohong",
+    arr: ['直道相思了无益','未妨惆怅是清狂'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3372,7 +3793,9 @@ const colorsArr = [{
     ],
     hex: "#f1908c",
     name: "榴子红",
-    pinyin: "liuzihong"
+    pinyin: "liuzihong",
+    arr: ['一点灵犀','真情赠了谁'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -3388,7 +3811,9 @@ const colorsArr = [{
     ],
     hex: "#f03f24",
     name: "胭脂红",
-    pinyin: "yanzhihong"
+    pinyin: "yanzhihong",
+    arr: ['妆罢低头问夫婿','画眉深浅入时无'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3404,7 +3829,9 @@ const colorsArr = [{
     ],
     hex: "#f0a1a8",
     name: "合欢红",
-    pinyin: "hehuanhong"
+    pinyin: "hehuanhong",
+    arr: ['人生得意须尽欢','莫使金樽空对月'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -3420,7 +3847,9 @@ const colorsArr = [{
     ],
     hex: "#f1939c",
     name: "春梅红",
-    pinyin: "chunmeihong"
+    pinyin: "chunmeihong",
+    arr: ['有事钟无艳','无事夏迎春'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -3436,7 +3865,9 @@ const colorsArr = [{
     ],
     hex: "#f07c82",
     name: "香叶红",
-    pinyin: "xiangyehong"
+    pinyin: "xiangyehong",
+    arr: ['萧萧梧叶送寒声'],
+    type:'poetry'
   },
   {
     CMYK: [
@@ -3452,7 +3883,9 @@ const colorsArr = [{
     ],
     hex: "#f04a3a",
     name: "珊瑚红",
-    pinyin: "shanhuhong"
+    pinyin: "shanhuhong",
+    arr: ['人雁南飞','转身一瞥你噙泪'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3468,7 +3901,9 @@ const colorsArr = [{
     ],
     hex: "#f13c22",
     name: "萝卜红",
-    pinyin: "luobohong"
+    pinyin: "luobohong",
+    arr: ['烛火晃斑驳儿时廊旁谁家白墙'],
+    type:'songs'
   },
   {
     CMYK: [
@@ -3484,7 +3919,9 @@ const colorsArr = [{
     ],
     hex: "#e77c8e",
     name: "淡茜红",
-    pinyin: "danqianhong"
+    pinyin: "danqianhong",
+    arr: ['灯为谁点脂为谁添','任谁来笑我太疯癫'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3500,7 +3937,9 @@ const colorsArr = [{
     ],
     hex: "#ed5a65",
     name: "艳红",
-    pinyin: "yanhong"
+    pinyin: "yanhong",
+    arr: ['一行朱砂','到底圈了谁'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3516,7 +3955,9 @@ const colorsArr = [{
     ],
     hex: "#ed4845",
     name: "淡菽红",
-    pinyin: "danshuhong"
+    pinyin: "danshuhong",
+    arr: ['恨了没','你摇头轻叹谁让你蹙着眉'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3532,7 +3973,9 @@ const colorsArr = [{
     ],
     hex: "#ed3b2f",
     name: "鱼鳃红",
-    pinyin: "yusaihong"
+    pinyin: "yusaihong",
+    arr: ['他画着那个她 到耳聋眼盲','而他再看不见他的姑娘'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3548,7 +3991,9 @@ const colorsArr = [{
     ],
     hex: "#ed3321",
     name: "樱桃红",
-    pinyin: "yingtaohong"
+    pinyin: "yingtaohong",
+    arr: ['桃李春风一杯酒','江湖夜雨十年灯'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -3564,7 +4009,9 @@ const colorsArr = [{
     ],
     hex: "#ee4866",
     name: "淡蕊香红",
-    pinyin: "danruixianghong"
+    pinyin: "danruixianghong",
+    arr: ['斯人若彩虹','遇上方知有'],
+    type:'poetry'
   },
   {
     CMYK: [
@@ -3580,7 +4027,9 @@ const colorsArr = [{
     ],
     hex: "#ee4863",
     name: "石竹红",
-    pinyin: "shizhuhong"
+    pinyin: "shizhuhong",
+    arr: ['与君初相识','犹如故人归'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3596,7 +4045,9 @@ const colorsArr = [{
     ],
     hex: "#ef475d",
     name: "草茉莉红",
-    pinyin: "caomolihong"
+    pinyin: "caomolihong",
+    arr: ['南风知我意','吹梦到西洲'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3612,7 +4063,9 @@ const colorsArr = [{
     ],
     hex: "#ee3f4d",
     name: "茶花红",
-    pinyin: "chahuahong"
+    pinyin: "chahuahong",
+    type: 'poetry',
+    arr: ['感时花溅泪','恨别鸟惊心'],
   },
   {
     CMYK: [
@@ -3628,7 +4081,9 @@ const colorsArr = [{
     ],
     hex: "#ed3333",
     name: "枸枢红",
-    pinyin: "goushuhong"
+    pinyin: "goushuhong",
+    arr: ['小舟从此逝','江海寄余生'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3644,7 +4099,9 @@ const colorsArr = [{
     ],
     hex: "#ec2b24",
     name: "秋海棠红",
-    pinyin: "qiuhaitanghong"
+    pinyin: "qiuhaitanghong",
+    arr: ['月照城头乌半飞','霜凄万树风入衣'],
+    type:'poetry'
   },
   {
     CMYK: [
@@ -3660,7 +4117,9 @@ const colorsArr = [{
     ],
     hex: "#eb261a",
     name: "丽春红",
-    pinyin: "lichunhong"
+    pinyin: "lichunhong",
+    arr: ['春风十里不如你'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -3676,7 +4135,9 @@ const colorsArr = [{
     ],
     hex: "#de2a18",
     name: "夕阳红",
-    pinyin: "xiyanghong"
+    pinyin: "xiyanghong",
+    arr: ['最浪漫不过与你并肩看夕阳','我心之所向'],
+    type: 'songs',
   },
   {
     CMYK: [
@@ -3692,7 +4153,9 @@ const colorsArr = [{
     ],
     hex: "#d42517",
     name: "鹤顶红",
-    pinyin: "hedinghong"
+    pinyin: "hedinghong",
+    arr: ['奢望着','能生死相拥'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3708,7 +4171,9 @@ const colorsArr = [{
     ],
     hex: "#ab372f",
     name: "鹅血石红",
-    pinyin: "exueshihong"
+    pinyin: "exueshihong",
+    arr: ['天地正玲珑','殡葬了飞虫'],
+    type:'songs'
   },
   {
     CMYK: [
@@ -3724,7 +4189,9 @@ const colorsArr = [{
     ],
     hex: "#ac1f18",
     name: "覆盆子红",
-    pinyin: "fupenzihong"
+    pinyin: "fupenzihong",
+    arr: ['昏黄烛火轻摇晃','大红盖头下谁彷徨'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3740,7 +4207,9 @@ const colorsArr = [{
     ],
     hex: "#5d3131",
     name: "貂紫",
-    pinyin: "diaozi"
+    pinyin: "diaozi",
+    arr: ['又一场离合','开始凄恻'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3756,7 +4225,9 @@ const colorsArr = [{
     ],
     hex: "#5c2223",
     name: "暗玉紫",
-    pinyin: "anyuzi"
+    pinyin: "anyuzi",
+    arr: ['雨中灯市欲眠','原已萧萧数年'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3772,7 +4243,9 @@ const colorsArr = [{
     ],
     hex: "#5a191b",
     name: "栗紫",
-    pinyin: "lizi"
+    pinyin: "lizi",
+    arr: ['又一年七月晚风凉','斜阳渐矮只影长'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3788,7 +4261,9 @@ const colorsArr = [{
     ],
     hex: "#5a1216",
     name: "葡萄酱紫",
-    pinyin: "putaojiangzi"
+    pinyin: "putaojiangzi",
+    arr: ['战士军前半死生','美人帐下犹歌舞'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -3804,7 +4279,9 @@ const colorsArr = [{
     ],
     hex: "#eea2a4",
     name: "牡丹粉红",
-    pinyin: "mudanfenhong"
+    pinyin: "mudanfenhong",
+    arr: ['唯有牡丹真国色','花开时节动京城'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -3820,7 +4297,10 @@ const colorsArr = [{
     ],
     hex: "#ed556a",
     name: "山茶红",
-    pinyin: "shanchahong"
+    pinyin: "shanchahong",
+    arr: ['白茶清欢无别事','煮好岁月待故人'],
+    type: 'poetry',
+
   },
   {
     CMYK: [
@@ -3836,7 +4316,9 @@ const colorsArr = [{
     ],
     hex: "#f03752",
     name: "海棠红",
-    pinyin: "haitanghong"
+    pinyin: "haitanghong",
+    arr: ['一年春事几何空','杏花红 海棠红'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -3852,7 +4334,9 @@ const colorsArr = [{
     ],
     hex: "#c04851",
     name: "玉红",
-    pinyin: "yuhong"
+    pinyin: "yuhong",
+    arr: ['二十四桥明月夜','玉人何处教吹箫'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3868,7 +4352,9 @@ const colorsArr = [{
     ],
     hex: "#c02c38",
     name: "高粱红",
-    pinyin: "gaolianghong"
+    pinyin: "gaolianghong",
+    arr: ['风吹柳花满店香','吴姬压酒唤客尝'],
+    type:'poetry'
   },
   {
     CMYK: [
@@ -3884,7 +4370,9 @@ const colorsArr = [{
     ],
     hex: "#a7535a",
     name: "满江红",
-    pinyin: "manjianghong"
+    pinyin: "manjianghong",
+    arr: ['一将功成万骨枯'],
+    poetry: 'poetry'
   },
   {
     CMYK: [
@@ -3900,7 +4388,9 @@ const colorsArr = [{
     ],
     hex: "#7c1823",
     name: "枣红",
-    pinyin: "zaohong"
+    pinyin: "zaohong",
+    arr: ['举杯邀月','醉在桃溪春野'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3916,7 +4406,9 @@ const colorsArr = [{
     ],
     hex: "#4c1f24",
     name: "葡萄紫",
-    pinyin: "putaozi"
+    pinyin: "putaozi",
+    arr: ['士为知己者死','女为悦己者容'],
+    type:'word'
   },
   {
     CMYK: [
@@ -3932,7 +4424,9 @@ const colorsArr = [{
     ],
     hex: "#4d1018",
     name: "酱紫",
-    pinyin: "jiangzi"
+    pinyin: "jiangzi",
+    arr: ['无人与我立黄昏','无人问我粥可温'],
+    type:'word'
   },
   {
     CMYK: [
@@ -3948,7 +4442,9 @@ const colorsArr = [{
     ],
     hex: "#ee2746",
     name: "淡曙红",
-    pinyin: "danshuhong"
+    pinyin: "danshuhong",
+    arr: ['你眺望着天边','我眺望你的脸'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -3964,7 +4460,9 @@ const colorsArr = [{
     ],
     hex: "#de1c31",
     name: "唐菖蒲红",
-    pinyin: "tangchangpuhong"
+    pinyin: "tangchangpuhong",
+    arr: ['西陆蝉声唱','南冠客思侵'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -3980,7 +4478,9 @@ const colorsArr = [{
     ],
     hex: "#d11a2d",
     name: "鹅冠红",
-    pinyin: "eguanhong"
+    pinyin: "eguanhong",
+    arr: ['鹤鸣于九皋','声闻于天'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -3996,7 +4496,9 @@ const colorsArr = [{
     ],
     hex: "#c45a65",
     name: "莓红",
-    pinyin: "meihong"
+    pinyin: "meihong",
+    arr: ['巧笑倩兮','美目盼兮'],
+    type:'bookSongs'
   },
   {
     CMYK: [
@@ -4012,7 +4514,9 @@ const colorsArr = [{
     ],
     hex: "#c21f30",
     name: "枫叶红",
-    pinyin: "fengyehong"
+    pinyin: "fengyehong",
+    arr: ['一日不见','如三秋兮'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -4028,7 +4532,9 @@ const colorsArr = [{
     ],
     hex: "#a61b29",
     name: "苋菜红",
-    pinyin: "xiancaihong"
+    pinyin: "xiancaihong",
+    arr: ['人说百花的深处','住着老情人','缝着绣花鞋'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4044,7 +4550,9 @@ const colorsArr = [{
     ],
     hex: "#894e54",
     name: "烟红",
-    pinyin: "yanhong"
+    pinyin: "yanhong",
+    arr: ['日色欲尽花含烟','月明欲素愁不眠'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -4060,7 +4568,9 @@ const colorsArr = [{
     ],
     hex: "#82202b",
     name: "暗紫苑红",
-    pinyin: "anziyuanhong"
+    pinyin: "anziyuanhong",
+    arr: ['我已等待了千年','为何良人不回来'],
+    type:'songs'
   },
   {
     CMYK: [
@@ -4076,7 +4586,9 @@ const colorsArr = [{
     ],
     hex: "#82111f",
     name: "殷红",
-    pinyin: "yanhong"
+    pinyin: "yanhong",
+    arr: ['永安 卿酒酒'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4092,7 +4604,9 @@ const colorsArr = [{
     ],
     hex: "#541e24",
     name: "猪肝紫",
-    pinyin: "zhuganzi"
+    pinyin: "zhuganzi",
+    arr: ['笑看世间','痴人万千'],
+    type:'songs'
   },
   {
     CMYK: [
@@ -4108,7 +4622,9 @@ const colorsArr = [{
     ],
     hex: "#500a16",
     name: "金鱼紫",
-    pinyin: "jinyuzi"
+    pinyin: "jinyuzi",
+    arr: ['梨花香','缠着衣角掠过熙攘'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4124,7 +4640,9 @@ const colorsArr = [{
     ],
     hex: "#f8ebe6",
     name: "草珠红",
-    pinyin: "caozhuhong"
+    pinyin: "caozhuhong",
+    arr: ['天涯何处无芳草'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -4140,7 +4658,9 @@ const colorsArr = [{
     ],
     hex: "#ec7696",
     name: "淡绛红",
-    pinyin: "danjianghong"
+    pinyin: "danjianghong",
+    arr: ['凤冠下','伊人似玉白'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4156,7 +4676,9 @@ const colorsArr = [{
     ],
     hex: "#ef3473",
     name: "品红",
-    pinyin: "pinhong"
+    pinyin: "pinhong",
+    arr: ['山有木兮木有枝','心悦君兮君不知'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -4172,7 +4694,10 @@ const colorsArr = [{
     ],
     hex: "#ea7293",
     name: "凤仙花红",
-    pinyin: "fengxianhuahong"
+    pinyin: "fengxianhuahong",
+    arr: ['身无彩凤双飞翼','心有灵犀一点通'],
+    type: 'poetry',
+
   },
   {
     CMYK: [
@@ -4188,7 +4713,9 @@ const colorsArr = [{
     ],
     hex: "#ec9bad",
     name: "粉团花红",
-    pinyin: "fentuanhuahong"
+    pinyin: "fentuanhuahong",
+    arr: ['去年花里逢君别','今日花开又一年'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -4204,7 +4731,10 @@ const colorsArr = [{
     ],
     hex: "#eb507e",
     name: "夹竹桃红",
-    pinyin: "jiazhutaohong"
+    pinyin: "jiazhutaohong",
+    arr: ['灼灼桃花十里','取一朵放在心上','足矣'],
+    type: 'otherWord',
+    
   },
   {
     CMYK: [
@@ -4220,7 +4750,9 @@ const colorsArr = [{
     ],
     hex: "#ed2f6a",
     name: "榲桲舡",
-    pinyin: "wenpochuan"
+    pinyin: "wenpochuan",
+    arr: ['落魄江南载酒行','楚腰纤细掌中轻'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -4236,7 +4768,9 @@ const colorsArr = [{
     ],
     hex: "#eeb8c3",
     name: "姜红",
-    pinyin: "jianghong"
+    pinyin: "jianghong",
+    arr: ['晚来天欲雪','能饮一杯无'],
+    type:'poetry'
   },
   {
     CMYK: [
@@ -4252,7 +4786,9 @@ const colorsArr = [{
     ],
     hex: "#ea517f",
     name: "莲瓣红",
-    pinyin: "lianbanhong"
+    pinyin: "lianbanhong",
+    arr: ['绿竹含新粉','红莲落故衣'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -4268,7 +4804,9 @@ const colorsArr = [{
     ],
     hex: "#f1c4cd",
     name: "水红",
-    pinyin: "shuihong"
+    pinyin: "shuihong",
+    arr: ['半江瑟瑟半江红'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -4284,7 +4822,9 @@ const colorsArr = [{
     ],
     hex: "#ec8aa4",
     name: "报春红",
-    pinyin: "baochunhong"
+    pinyin: "baochunhong",
+    arr: ['渭北春天树','江东日暮云'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -4300,7 +4840,9 @@ const colorsArr = [{
     ],
     hex: "#ce5777",
     name: "月季红",
-    pinyin: "yuejihong"
+    pinyin: "yuejihong",
+    arr: ['三十功名尘与土','八千里路云和月'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -4316,7 +4858,10 @@ const colorsArr = [{
     ],
     hex: "#ed9db2",
     name: "豇豆红",
-    pinyin: "jiangdouhong"
+    pinyin: "jiangdouhong",
+    arr: ['玲珑筛子安红豆','入骨相思君不知'],
+    type: 'poetry',
+
   },
   {
     CMYK: [
@@ -4332,7 +4877,9 @@ const colorsArr = [{
     ],
     hex: "#ef82a0",
     name: "霞光红",
-    pinyin: "xiaguanghong"
+    pinyin: "xiaguanghong",
+    arr: ['当时明月在','曾照彩云归'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -4348,7 +4895,9 @@ const colorsArr = [{
     ],
     hex: "#eb3c70",
     name: "松叶牡丹红",
-    pinyin: "songyemudanhong"
+    pinyin: "songyemudanhong",
+    arr: ['拣尽寒枝不肯栖','寂寞沙洲冷'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -4364,7 +4913,9 @@ const colorsArr = [{
     ],
     hex: "#ec2c64",
     name: "喜蛋红",
-    pinyin: "xidanhong"
+    pinyin: "xidanhong",
+    arr: ['总角之宴','言笑晏晏'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -4380,7 +4931,9 @@ const colorsArr = [{
     ],
     hex: "#e3b4b8",
     name: "鼠鼻红",
-    pinyin: "shubihong"
+    pinyin: "shubihong",
+    arr: ['鸟飞反故乡兮','狐死必首丘'],
+    type: 'poetrySongs',
   },
   {
     CMYK: [
@@ -4396,7 +4949,9 @@ const colorsArr = [{
     ],
     hex: "#cc163a",
     name: "尖晶玉红",
-    pinyin: "jianjingyuhong"
+    pinyin: "jianjingyuhong",
+    arr: ['红尘醉微醺的岁月','我用无悔刻永世爱你的碑'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4412,7 +4967,9 @@ const colorsArr = [{
     ],
     hex: "#c27c88",
     name: "山黎豆红",
-    pinyin: "shanlidouhong"
+    pinyin: "shanlidouhong",
+    arr: ['枉将绿蜡作红玉','满座衣冠无相忆'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4428,7 +4985,9 @@ const colorsArr = [{
     ],
     hex: "#bf3553",
     name: "锦葵红",
-    pinyin: "jinkuihong"
+    pinyin: "jinkuihong",
+    arr: ['红尘多可笑','痴情最无聊'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4444,7 +5003,9 @@ const colorsArr = [{
     ],
     hex: "#73575c",
     name: "鼠背灰",
-    pinyin: "shubeihui"
+    pinyin: "shubeihui",
+    arr: ['悲兮愁','哀兮忧'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -4460,7 +5021,9 @@ const colorsArr = [{
     ],
     hex: "#621624",
     name: "甘蔗紫",
-    pinyin: "ganzhezi"
+    pinyin: "ganzhezi",
+    arr: ['怨公子兮怅忘归','君思我兮不得闲'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -4476,7 +5039,9 @@ const colorsArr = [{
     ],
     hex: "#63071c",
     name: "石竹紫",
-    pinyin: "shizhuzi"
+    pinyin: "shizhuzi",
+    arr: ['终南有坟','名不老'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4492,7 +5057,9 @@ const colorsArr = [{
     ],
     hex: "#36282b",
     name: "苍蝇灰",
-    pinyin: "cangyinghui"
+    pinyin: "cangyinghui",
+    arr: ['凋谢的世道上','命运不堪'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4508,7 +5075,9 @@ const colorsArr = [{
     ],
     hex: "#30161c",
     name: "卵石紫",
-    pinyin: "luanshizi"
+    pinyin: "luanshizi",
+    arr: ['笑沧桑','万行泪化寒窗'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4524,7 +5093,9 @@ const colorsArr = [{
     ],
     hex: "#2b1216",
     name: "李紫",
-    pinyin: "lizi"
+    pinyin: "lizi",
+    arr: ['在下  柸中公仪斐','敢问姑娘芳名'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4540,7 +5111,9 @@ const colorsArr = [{
     ],
     hex: "#2d0c13",
     name: "茄皮紫",
-    pinyin: "jiapizi"
+    pinyin: "jiapizi",
+    arr: ['那烛火未明摇曳满地的冷清'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4556,7 +5129,9 @@ const colorsArr = [{
     ],
     hex: "#2d0c13",
     name: "吊钟花红",
-    pinyin: "diaozhonghuahong"
+    pinyin: "diaozhonghuahong",
+    arr: ['摇红烛影','今夜少了你的醉卧'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4572,7 +5147,9 @@ const colorsArr = [{
     ],
     hex: "#ec4e8a",
     name: "兔眼红",
-    pinyin: "tuyanhong"
+    pinyin: "tuyanhong",
+    arr: ['回头看不曾走远','依依目光此生不换'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4588,7 +5165,9 @@ const colorsArr = [{
     ],
     hex: "#ee2c79",
     name: "紫荆红",
-    pinyin: "zijinghong"
+    pinyin: "zijinghong",
+    arr: ['君可见刺绣每一针','有人为你疼'],
+    type: 'songs',
   },
   {
     CMYK: [
@@ -4604,7 +5183,9 @@ const colorsArr = [{
     ],
     hex: "#951c48",
     name: "菜头紫",
-    pinyin: "caitouzi"
+    pinyin: "caitouzi",
+    arr: ['客官您请进','请问住店还是打尖'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4620,7 +5201,9 @@ const colorsArr = [{
     ],
     hex: "#621d34",
     name: "鹞冠紫",
-    pinyin: "yaoguanzi"
+    pinyin: "yaoguanzi",
+    arr: ['孤剑指尖谈笑'],
+    type: "songs"
   },
   {
     CMYK: [
@@ -4636,7 +5219,10 @@ const colorsArr = [{
     ],
     hex: "#62102e",
     name: "葡萄酒红",
-    pinyin: "putaojiuhong"
+    pinyin: "putaojiuhong",
+    arr: ['葡萄美酒夜光杯','欲饮琵琶马上催'],
+    type: 'poetry',
+
   },
   {
     CMYK: [
@@ -4652,7 +5238,9 @@ const colorsArr = [{
     ],
     hex: "#382129",
     name: "磨石紫",
-    pinyin: "moshizi"
+    pinyin: "moshizi",
+    arr: ['兰花指捻红尘似水','三尺红台万事入歌吹'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4668,7 +5256,9 @@ const colorsArr = [{
     ],
     hex: "#381924",
     name: "檀紫",
-    pinyin: "tanzi"
+    pinyin: "tanzi",
+    arr: ['你发如雪','凄美了那离别','我焚香感动了谁'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4684,7 +5274,9 @@ const colorsArr = [{
     ],
     hex: "#33141e",
     name: "火鹅紫",
-    pinyin: "huoezi"
+    pinyin: "huoezi",
+    arr: ['遇见她','如春水映梨花'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4700,7 +5292,9 @@ const colorsArr = [{
     ],
     hex: "#310f1b",
     name: "墨紫",
-    pinyin: "mozi"
+    pinyin: "mozi",
+    arr: ['半城烟沙','兵临池下'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4716,7 +5310,9 @@ const colorsArr = [{
     ],
     hex: "#eea6b7",
     name: "晶红",
-    pinyin: "jinghong"
+    pinyin: "jinghong",
+    arr: ['喝最烈的酒','恋最美的人'],
+    type:'songs'
   },
   {
     CMYK: [
@@ -4732,7 +5328,9 @@ const colorsArr = [{
     ],
     hex: "#ef498b",
     name: "扁豆花红",
-    pinyin: "biandouhuahong"
+    pinyin: "biandouhuahong",
+    arr: ['短墙堪种豆','枯树惜沿藤'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -4748,7 +5346,9 @@ const colorsArr = [{
     ],
     hex: "#de7897",
     name: "白芨红",
-    pinyin: "baijihong"
+    pinyin: "baijihong",
+    arr: ['满座衣冠君无双','赠我白芷别红妆'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -4764,7 +5364,9 @@ const colorsArr = [{
     ],
     hex: "#de3f7c",
     name: "嫩菱红",
-    pinyin: "nenlinghong"
+    pinyin: "nenlinghong",
+    arr: ['有些情入苦难回绵','窗间月夕夕玦'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4780,7 +5382,9 @@ const colorsArr = [{
     ],
     hex: "#d13c74",
     name: "菠根红",
-    pinyin: "bogenhong"
+    pinyin: "bogenhong",
+    arr: ['被抛弃被遗忘','被欺骗被敷衍'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4796,7 +5400,9 @@ const colorsArr = [{
     ],
     hex: "#c5708b",
     name: "酢酱草红",
-    pinyin: "cujiangcaohong"
+    pinyin: "cujiangcaohong",
+    arr: ['风再冷不想要','花再美也不想要','任我飘摇'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4812,7 +5418,9 @@ const colorsArr = [{
     ],
     hex: "#a8456b",
     name: "洋葱紫",
-    pinyin: "yangcongzi"
+    pinyin: "yangcongzi",
+    arr: ['在梅边落花似雪纷纷绵绵谁人怜'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4828,7 +5436,9 @@ const colorsArr = [{
     ],
     hex: "#4b1e2f",
     name: "海象紫",
-    pinyin: "haixiangzi"
+    pinyin: "haixiangzi",
+    arr: ['在柳边风吹悬念生生死死随人愿'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4844,7 +5454,9 @@ const colorsArr = [{
     ],
     hex: "#461629",
     name: "绀紫",
-    pinyin: "ganzi"
+    pinyin: "ganzi",
+    arr: ['杯中景色鬼魅','我忘了我是谁'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4860,7 +5472,9 @@ const colorsArr = [{
     ],
     hex: "#440e25",
     name: "古铜紫",
-    pinyin: "gutongzi"
+    pinyin: "gutongzi",
+    arr: ['千古恨','轮回尝'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4876,7 +5490,9 @@ const colorsArr = [{
     ],
     hex: "#f0c9cf",
     name: "石蕊红",
-    pinyin: "shiruihong"
+    pinyin: "shiruihong",
+    arr: ['回荡古城里的小河边','思绪又清晰心难寻'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4892,7 +5508,9 @@ const colorsArr = [{
     ],
     hex: "#eba0b3",
     name: "芍药耕红",
-    pinyin: "shaoyaogenghong"
+    pinyin: "shaoyaogenghong",
+    arr: ['庭前芍药妖无格','池上芙蓉净少情'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -4908,7 +5526,9 @@ const colorsArr = [{
     ],
     hex: "#ec2d7a",
     name: "藏花红",
-    pinyin: "canghuahong"
+    pinyin: "canghuahong",
+    arr: ['花自飘零水自流','一种相思 两处闲愁'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -4924,7 +5544,9 @@ const colorsArr = [{
     ],
     hex: "#e16c96",
     name: "初荷红",
-    pinyin: "chuhehong"
+    pinyin: "chuhehong",
+    arr: ['蒹葭苍苍','白露为霜'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -4940,7 +5562,9 @@ const colorsArr = [{
     ],
     hex: "#ede3e7",
     name: "马鞭草紫",
-    pinyin: "mabiancaozi"
+    pinyin: "mabiancaozi",
+    arr: ['思念如马','自别离','未停蹄'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -4956,7 +5580,9 @@ const colorsArr = [{
     ],
     hex: "#e9d7df",
     name: "丁香淡紫",
-    pinyin: "dingxiangdanzi"
+    pinyin: "dingxiangdanzi",
+    arr: ['衣香鬓影演过了几声叹息','冷眼看过了霓虹几场别离'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4972,7 +5598,9 @@ const colorsArr = [{
     ],
     hex: "#d2568c",
     name: "丹紫红",
-    pinyin: "danzihong"
+    pinyin: "danzihong",
+    arr: ['君可见牡丹开一生','有人为你等'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -4988,7 +5616,9 @@ const colorsArr = [{
     ],
     hex: "#d2357d",
     name: "玫瑰红",
-    pinyin: "meiguihong"
+    pinyin: "meiguihong",
+    arr: ['桃之夭夭','灼灼其华'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -5004,7 +5634,9 @@ const colorsArr = [{
     ],
     hex: "#d1c2d3",
     name: "淡牵牛紫",
-    pinyin: "danqianniuzi"
+    pinyin: "danqianniuzi",
+    arr: ['风也萧萧雨也萧萧','瘦尽灯花又一宵'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -5020,7 +5652,9 @@ const colorsArr = [{
     ],
     hex: "#c8adc4",
     name: "凤信紫",
-    pinyin: "fengxinzi"
+    pinyin: "fengxinzi",
+    arr: ['暮光尽来年别有信','故人杨花白露轻'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5036,7 +5670,9 @@ const colorsArr = [{
     ],
     hex: "#c08eaf",
     name: "萝兰紫",
-    pinyin: "luolanzi"
+    pinyin: "luolanzi",
+    arr: ['唧唧复唧唧','木兰当户织'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -5052,7 +5688,9 @@ const colorsArr = [{
     ],
     hex: "#ba2f7b",
     name: "玫瑰紫",
-    pinyin: "meiguizi"
+    pinyin: "meiguizi",
+    arr: ['一种相思','两处闲愁'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -5068,7 +5706,9 @@ const colorsArr = [{
     ],
     hex: "#8076a3",
     name: "藤萝紫",
-    pinyin: "tengluozi"
+    pinyin: "tengluozi",
+    arr: ['沉浮中以为','情深缘浅'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5084,7 +5724,9 @@ const colorsArr = [{
     ],
     hex: "#806d9e",
     name: "槿紫",
-    pinyin: "jinzi"
+    pinyin: "jinzi",
+    arr: ['光阴过处徒留皎月几盅','温柔了十方春冬'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5100,7 +5742,9 @@ const colorsArr = [{
     ],
     hex: "#815c94",
     name: "蕈紫",
-    pinyin: "xunzi"
+    pinyin: "xunzi",
+    arr: ['静静和衣睡去','不理朝夕'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5116,7 +5760,9 @@ const colorsArr = [{
     ],
     hex: "#813c85",
     name: "桔梗紫",
-    pinyin: "jiegengzi"
+    pinyin: "jiegengzi",
+    arr: ['雨伞下','是故人模样'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5132,7 +5778,9 @@ const colorsArr = [{
     ],
     hex: "#7e1671",
     name: "魏紫",
-    pinyin: "weizi"
+    pinyin: "weizi",
+    arr: ['那时候相顾似乎','只一笑都忘忧'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5148,7 +5796,9 @@ const colorsArr = [{
     ],
     hex: "#7e1671",
     name: "芝兰紫",
-    pinyin: "zhilanzi"
+    pinyin: "zhilanzi",
+    arr: ['沅有芷兮澧有兰','思公子兮未敢言'],
+    type: 'poetrySOngs'
   },
   {
     CMYK: [
@@ -5164,7 +5814,9 @@ const colorsArr = [{
     ],
     hex: "#d276a3",
     name: "菱锰红",
-    pinyin: "lingmenghong"
+    pinyin: "lingmenghong",
+    arr: ['曾有烟雨湿青苔','曾有凌云舞沧海'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5180,7 +5832,9 @@ const colorsArr = [{
     ],
     hex: "#cc5595",
     name: "龙须红",
-    pinyin: "longxuhong"
+    pinyin: "longxuhong",
+    arr: ['剑煮酒无味','饮一杯为谁'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5196,7 +5850,9 @@ const colorsArr = [{
     ],
     hex: "#e6d2d5",
     name: "蓟粉红",
-    pinyin: "jifenhong"
+    pinyin: "jifenhong",
+    arr: ['雪粉华舞梨花','再不见烟村四五家'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -5212,7 +5868,9 @@ const colorsArr = [{
     ],
     hex: "#c35691",
     name: "电气石红",
-    pinyin: "dianqishihong"
+    pinyin: "dianqishihong",
+    arr: ['爱那么绵那么粘','管命运设定要谁离别'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5228,7 +5886,9 @@ const colorsArr = [{
     ],
     hex: "#c06f98",
     name: "樱草紫",
-    pinyin: "yingcaozi"
+    pinyin: "yingcaozi",
+    arr: ['几世情缘不负相思引','等待繁花能开满天际'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5244,7 +5904,9 @@ const colorsArr = [{
     ],
     hex: "#bdaead",
     name: "芦穗灰",
-    pinyin: "lusuihui"
+    pinyin: "lusuihui",
+    arr: ['终是白玉碎落染尘埃'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5260,7 +5922,9 @@ const colorsArr = [{
     ],
     hex: "#b598a1",
     name: "隐红灰",
-    pinyin: "yinhonghui"
+    pinyin: "yinhonghui",
+    arr: ['爱着你 像心跳 难触摸','画着你 画不出你的骨骼'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5276,7 +5940,9 @@ const colorsArr = [{
     ],
     hex: "#9b1e64",
     name: "苋菜紫",
-    pinyin: "xiancaizi"
+    pinyin: "xiancaizi",
+    arr: ['春在溪头荠菜花'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -5292,7 +5958,9 @@ const colorsArr = [{
     ],
     hex: "#856d72",
     name: "芦灰",
-    pinyin: "luhui"
+    pinyin: "luhui",
+    arr: ['霜雪凝成最初的缠绵'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5308,7 +5976,9 @@ const colorsArr = [{
     ],
     hex: "#4f383e",
     name: "暮云灰",
-    pinyin: "muyunhui"
+    pinyin: "muyunhui",
+    arr: ['将此情置长夜','似繁星明灭'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5324,7 +5994,9 @@ const colorsArr = [{
     ],
     hex: "#482936",
     name: "斑鸠灰",
-    pinyin: "banjiuhui"
+    pinyin: "banjiuhui",
+    arr: ['天涯海角','同归同去'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5340,7 +6012,9 @@ const colorsArr = [{
     ],
     hex: "#f2e7e5",
     name: "淡藤萝紫",
-    pinyin: "dantengluozi"
+    pinyin: "dantengluozi",
+    arr: ['将相思寄明月','期盼你能察觉'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5356,7 +6030,9 @@ const colorsArr = [{
     ],
     hex: "#e0c8d1",
     name: "淡青紫",
-    pinyin: "danqingzi"
+    pinyin: "danqingzi",
+    arr: ['物有无穷好','蓝青又出青'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -5372,7 +6048,9 @@ const colorsArr = [{
     ],
     hex: "#bc84a8",
     name: "青蛤壳紫",
-    pinyin: "qinghakezi"
+    pinyin: "qinghakezi",
+    arr: ['琴声何来生死难猜','用一生去等待'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5388,7 +6066,9 @@ const colorsArr = [{
     ],
     hex: "#ad6598",
     name: "豆蔻紫",
-    pinyin: "doukouzi"
+    pinyin: "doukouzi",
+    arr: ['执子之手','与子偕老'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -5404,7 +6084,9 @@ const colorsArr = [{
     ],
     hex: "#a35c8f",
     name: "扁豆紫",
-    pinyin: "biandouzi"
+    pinyin: "biandouzi",
+    arr: ['未见君子','忧心忡忡'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -5420,7 +6102,9 @@ const colorsArr = [{
     ],
     hex: "#983680",
     name: "芥花紫",
-    pinyin: "jiehuazi"
+    pinyin: "jiehuazi",
+    arr: ['二子乘舟','泛泛其景'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -5436,7 +6120,9 @@ const colorsArr = [{
     ],
     hex: "#8b2671",
     name: "青莲",
-    pinyin: "qinglian"
+    pinyin: "qinglian",
+    arr: ['紫绀之堂临水','青莲之台带风'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -5452,7 +6138,9 @@ const colorsArr = [{
     ],
     hex: "#894276",
     name: "芓紫",
-    pinyin: "zizi"
+    pinyin: "zizi",
+    arr: ['爱的那么深','爱的那么认真'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5500,7 +6188,9 @@ const colorsArr = [{
     ],
     hex: "#5d3f51",
     name: "紫灰",
-    pinyin: "zihui"
+    pinyin: "zihui",
+    arr: ['那年那月垂柳紫陌洛城东北城别','回眸三生琥珀色'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -5516,7 +6206,9 @@ const colorsArr = [{
     ],
     hex: "#4e2a40",
     name: "龙睛鱼紫",
-    pinyin: "longjingyuzi"
+    pinyin: "longjingyuzi",
+    arr: ['虎啸而谷风至兮','龙举而景云往'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -5532,7 +6224,9 @@ const colorsArr = [{
     ],
     hex: "#411c35",
     name: "荸荠紫",
-    pinyin: "biqizi"
+    pinyin: "biqizi",
+    arr: ['昔君与我诚言兮','曰黄昏以为期'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -5548,7 +6242,9 @@ const colorsArr = [{
     ],
     hex: "#36292f",
     name: "古鼎灰",
-    pinyin: "gudinghui"
+    pinyin: "gudinghui",
+    arr: ['一壶浊酒喜相逢'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -5564,7 +6260,9 @@ const colorsArr = [{
     ],
     hex: "#1e131d",
     name: "鸟梅紫",
-    pinyin: "niaomeizi"
+    pinyin: "niaomeizi",
+    arr: ['胡马依北风','越鸟巢南枝'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -5580,7 +6278,9 @@ const colorsArr = [{
     ],
     hex: "#1c0d1a",
     name: "深牵牛紫",
-    pinyin: "shenqianniuzi"
+    pinyin: "shenqianniuzi",
+    arr: ['曲径通幽处','禅房花木深'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -5596,7 +6296,9 @@ const colorsArr = [{
     ],
     hex: "#f1f0ed",
     name: "银白",
-    pinyin: "yinbai"
+    pinyin: "yinbai",
+    arr: ['愿得一人心','白首不分离'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -5612,7 +6314,9 @@ const colorsArr = [{
     ],
     hex: "#e2e1e4",
     name: "芡食白",
-    pinyin: "qianshibai"
+    pinyin: "qianshibai",
+    arr: ['何所冬暖','何所夏寒'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -5628,7 +6332,9 @@ const colorsArr = [{
     ],
     hex: "#ccccd6",
     name: "远山紫",
-    pinyin: "yuanshanzi"
+    pinyin: "yuanshanzi",
+    arr: ['衣上征尘杂酒痕','远游无处不消魂'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -5644,7 +6350,9 @@ const colorsArr = [{
     ],
     hex: "#a7a8bd",
     name: "淡蓝紫",
-    pinyin: "danlanzi"
+    pinyin: "danlanzi",
+    arr: ['制芰荷以为衣兮','集芙蓉以为裳'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -5660,7 +6368,9 @@ const colorsArr = [{
     ],
     hex: "#61649f",
     name: "山梗紫",
-    pinyin: "shangengzi"
+    pinyin: "shangengzi",
+    arr: ['山有扶苏','隰有荷华'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -5676,7 +6386,9 @@ const colorsArr = [{
     ],
     hex: "#74759b",
     name: "螺甸紫",
-    pinyin: "luodianzi"
+    pinyin: "luodianzi",
+    arr: ['月出皎兮','佼人僚兮'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -5692,7 +6404,9 @@ const colorsArr = [{
     ],
     hex: "#cfccc9",
     name: "玛瑙灰",
-    pinyin: "manaohui"
+    pinyin: "manaohui",
+    arr: ['琴瑟在御','莫不静好'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -5708,7 +6422,9 @@ const colorsArr = [{
     ],
     hex: "#525288",
     name: "野菊紫",
-    pinyin: "yejuzi"
+    pinyin: "yejuzi",
+    arr: ['静女其姝','俟我于城隅'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -5724,7 +6440,9 @@ const colorsArr = [{
     ],
     hex: "#2e317c",
     name: "满天星紫",
-    pinyin: "mantianxingzi"
+    pinyin: "mantianxingzi",
+    arr: ['死生契','与子成说'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -5740,7 +6458,9 @@ const colorsArr = [{
     ],
     hex: "#7a7374",
     name: "锌灰",
-    pinyin: "xinhui"
+    pinyin: "xinhui",
+    arr: ['知我者谓我心忧','不知我者谓我何求'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -5756,7 +6476,9 @@ const colorsArr = [{
     ],
     hex: "#302f4b",
     name: "野葡萄紫",
-    pinyin: "yeputaozi"
+    pinyin: "yeputaozi",
+    arr: ['燕燕于飞','差池其羽'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -5772,7 +6494,9 @@ const colorsArr = [{
     ],
     hex: "#3e3841",
     name: "剑锋紫",
-    pinyin: "jianfengzi"
+    pinyin: "jianfengzi",
+    arr: ['苍茫大地一剑尽挽破','何处繁华笙歌落'],
+    type: 'word',
   },
   {
     CMYK: [
@@ -5788,7 +6512,9 @@ const colorsArr = [{
     ],
     hex: "#322f3b",
     name: "龙葵紫",
-    pinyin: "longkuizi"
+    pinyin: "longkuizi",
+    arr: ['除非黄土白骨','我守你百岁无忧'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -5804,7 +6530,9 @@ const colorsArr = [{
     ],
     hex: "#22202e",
     name: "暗龙胆紫",
-    pinyin: "anlongdanzi"
+    pinyin: "anlongdanzi",
+    arr: ['我若成佛','天下无魔'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -5820,7 +6548,9 @@ const colorsArr = [{
     ],
     hex: "#1f2040",
     name: "晶石紫",
-    pinyin: "jingshizi"
+    pinyin: "jingshizi",
+    arr: ['你有没有爱过一个人','你有没有恨过一个人'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -5836,7 +6566,9 @@ const colorsArr = [{
     ],
     hex: "#131124",
     name: "暗蓝紫",
-    pinyin: "anlanzi"
+    pinyin: "anlanzi",
+    arr: ['她遗憾没在最好的年华里遇上他'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -5852,7 +6584,9 @@ const colorsArr = [{
     ],
     hex: "#2775b6",
     name: "景泰蓝",
-    pinyin: "jingtailan"
+    pinyin: "jingtailan",
+    arr: ['求而不得','忘而不能','是谓长相思'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -5868,7 +6602,9 @@ const colorsArr = [{
     ],
     hex: "#2474b5",
     name: "尼罗蓝",
-    pinyin: "niluolan"
+    pinyin: "niluolan",
+    arr: ['诸邪退避','万事胜意'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -5884,7 +6620,9 @@ const colorsArr = [{
     ],
     hex: "#d0dfe6",
     name: "远天蓝",
-    pinyin: "yuantianlan"
+    pinyin: "yuantianlan",
+    arr: ['一壶漂泊','浪迹天涯难入喉'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5900,7 +6638,9 @@ const colorsArr = [{
     ],
     hex: "#93b5cf",
     name: "星蓝",
-    pinyin: "xinglan"
+    pinyin: "xinglan",
+    arr: ['月光尽是从前','苍白了想念'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -5916,7 +6656,10 @@ const colorsArr = [{
     ],
     hex: "#619ac3",
     name: "羽扇豆蓝",
-    pinyin: "yushandoulan"
+    pinyin: "yushandoulan",
+    arr: ['羽扇纶巾谈笑间','樯橹灰飞烟灭'],
+    type: 'word',
+    
   },
   {
     CMYK: [
@@ -5932,7 +6675,9 @@ const colorsArr = [{
     ],
     hex: "#2376b7",
     name: "花青",
-    pinyin: "huaqing"
+    pinyin: "huaqing",
+    arr: ['十年一觉扬州梦','赢得青楼薄幸名'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -5948,7 +6693,9 @@ const colorsArr = [{
     ],
     hex: "#5698c3",
     name: "睛蓝",
-    pinyin: "jinglan"
+    pinyin: "jinglan",
+    arr: ['柳絮风轻','梨花雨细'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -5964,7 +6711,9 @@ const colorsArr = [{
     ],
     hex: "#2177b8",
     name: "虹蓝",
-    pinyin: "honglan"
+    pinyin: "honglan",
+    arr: ['怎相忘光影绵长','还似旧模样'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -5980,7 +6729,9 @@ const colorsArr = [{
     ],
     hex: "#b0d5df",
     name: "湖水蓝",
-    pinyin: "hushuilan"
+    pinyin: "hushuilan",
+    arr: ['盈盈一水间','脉脉不得语'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -5996,7 +6747,9 @@ const colorsArr = [{
     ],
     hex: "#8abcd1",
     name: "秋波蓝",
-    pinyin: "qiubolan"
+    pinyin: "qiubolan",
+    arr: ['众里寻他千百度','蓦然回首','那人却在灯火阑珊处'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6012,7 +6765,9 @@ const colorsArr = [{
     ],
     hex: "#66a9c9",
     name: "涧石蓝",
-    pinyin: "jianshilan"
+    pinyin: "jianshilan",
+    arr: ['古道西风瘦马','夕阳西下','断肠人在天涯'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6028,7 +6783,9 @@ const colorsArr = [{
     ],
     hex: "#2983bb",
     name: "潮蓝",
-    pinyin: "chaolan"
+    pinyin: "chaolan",
+    arr: ['江山如此多娇','引无数英雄竞折腰'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6044,7 +6801,9 @@ const colorsArr = [{
     ],
     hex: "#1772b4",
     name: "群青",
-    pinyin: "qunqing"
+    pinyin: "qunqing",
+    arr: ['袅袅城边柳','青青陌上桑'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6060,7 +6819,9 @@ const colorsArr = [{
     ],
     hex: "#63bbd0",
     name: "霁青",
-    pinyin: "jiqing"
+    pinyin: "jiqing",
+    arr: ['疏影横斜水清浅','暗香浮动月黄昏'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6076,7 +6837,9 @@ const colorsArr = [{
     ],
     hex: "#5cb3cc",
     name: "碧青",
-    pinyin: "biqing"
+    pinyin: "biqing",
+    arr: ['夜雨染成天水碧','朝阳借出胭脂色'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6092,7 +6855,9 @@ const colorsArr = [{
     ],
     hex: "#2486b9",
     name: "宝石蓝",
-    pinyin: "baoshilan"
+    pinyin: "baoshilan",
+    arr: ['滚滚长江东逝水','浪花淘尽英雄'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6108,7 +6873,9 @@ const colorsArr = [{
     ],
     hex: "#1677b3",
     name: "天蓝",
-    pinyin: "tianlan"
+    pinyin: "tianlan",
+    arr: ['天若有情天亦老'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -6124,7 +6891,9 @@ const colorsArr = [{
     ],
     hex: "#126bae",
     name: "柏林蓝",
-    pinyin: "bolinlan"
+    pinyin: "bolinlan",
+    arr: ['愿左手痴缠','右手枯禅','一声长叹一刀两断'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -6140,7 +6909,9 @@ const colorsArr = [{
     ],
     hex: "#22a2c3",
     name: "海青",
-    pinyin: "haiqing"
+    pinyin: "haiqing",
+    arr: ['已是人海孤鸿','你是人间朝暮'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -6156,7 +6927,9 @@ const colorsArr = [{
     ],
     hex: "#1a94bc",
     name: "钴蓝",
-    pinyin: "gulan"
+    pinyin: "gulan",
+    arr: ['风华是一指流砂','苍老是一段年华'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -6172,7 +6945,9 @@ const colorsArr = [{
     ],
     hex: "#158bb8",
     name: "鸢尾蓝",
-    pinyin: "yuanweilan"
+    pinyin: "yuanweilan",
+    arr: ['一见容止误终身','不见容止终身误'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -6188,7 +6963,9 @@ const colorsArr = [{
     ],
     hex: "#1177b0",
     name: "牵牛花蓝",
-    pinyin: "qianniuhualan"
+    pinyin: "qianniuhualan",
+    arr: ['落花人独立','微雨燕双飞'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6204,7 +6981,9 @@ const colorsArr = [{
     ],
     hex: "#0f59a4",
     name: "飞燕草蓝",
-    pinyin: "feiyancaolan"
+    pinyin: "feiyancaolan",
+    arr: ['旧时王谢堂前燕','飞入寻常百姓家'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6220,7 +6999,9 @@ const colorsArr = [{
     ],
     hex: "#2b73af",
     name: "品蓝",
-    pinyin: "pinlan"
+    pinyin: "pinlan",
+    arr: ['万籁此俱寂','但余钟磬音'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6236,7 +7017,9 @@ const colorsArr = [{
     ],
     hex: "#cdd1d3",
     name: "银鱼白",
-    pinyin: "yinyubai"
+    pinyin: "yinyubai",
+    arr: ['入我相思门','知我相思苦'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6252,7 +7035,9 @@ const colorsArr = [{
     ],
     hex: "#3170a7",
     name: "安安蓝",
-    pinyin: "ananlan"
+    pinyin: "ananlan",
+    arr: ['北方有佳人','绝世而独立'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6268,7 +7053,9 @@ const colorsArr = [{
     ],
     hex: "#5e616d",
     name: "鱼尾灰",
-    pinyin: "yuweihui"
+    pinyin: "yuweihui",
+    arr: ['君生我未生','我生君已老'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6284,7 +7071,9 @@ const colorsArr = [{
     ],
     hex: "#475164",
     name: "鲸鱼灰",
-    pinyin: "jingyuhui"
+    pinyin: "jingyuhui",
+    arr: ['问世间情为何物','直教人生死相许'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6300,7 +7089,9 @@ const colorsArr = [{
     ],
     hex: "#fffefa",
     name: "海参灰",
-    pinyin: "haishenhui"
+    pinyin: "haishenhui",
+    arr: ['多情自古伤离别'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6316,7 +7107,9 @@ const colorsArr = [{
     ],
     hex: "#35333c",
     name: "沙鱼灰",
-    pinyin: "shayuhui"
+    pinyin: "shayuhui",
+    arr: ['世人笑我太疯癫','我笑他人看不穿'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6332,7 +7125,9 @@ const colorsArr = [{
     ],
     hex: "#0f1423",
     name: "钢蓝",
-    pinyin: "ganglan"
+    pinyin: "ganglan",
+    arr: ['风萧萧兮易水寒'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6348,7 +7143,9 @@ const colorsArr = [{
     ],
     hex: "#baccd9",
     name: "云水蓝",
-    pinyin: "yunshuilan"
+    pinyin: "yunshuilan",
+    arr: ['云想衣裳花想容','春风拂槛露华浓'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -6364,7 +7161,9 @@ const colorsArr = [{
     ],
     hex: "#8fb2c9",
     name: "晴山蓝",
-    pinyin: "qingshanlan"
+    pinyin: "qingshanlan",
+    arr: ['对酒当歌','人生几何'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6380,7 +7179,9 @@ const colorsArr = [{
     ],
     hex: "#1661ab",
     name: "靛青",
-    pinyin: "dianqing"
+    pinyin: "dianqing",
+    arr: ['青山绿水','白草红叶黄花'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6396,7 +7197,9 @@ const colorsArr = [{
     ],
     hex: "#c4cbcf",
     name: "大理石灰",
-    pinyin: "dalishihui"
+    pinyin: "dalishihui",
+    arr: ['式微式微','胡不归'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -6412,7 +7215,9 @@ const colorsArr = [{
     ],
     hex: "#15559a",
     name: "海涛蓝",
-    pinyin: "haitaolan"
+    pinyin: "haitaolan",
+    arr: ['海上生明月','天涯共此时'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6428,7 +7233,9 @@ const colorsArr = [{
     ],
     hex: "#4e7ca1",
     name: "蝶翅蓝",
-    pinyin: "diechilan"
+    pinyin: "diechilan",
+    arr: ['南有乔木','不可休思'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -6444,7 +7251,9 @@ const colorsArr = [{
     ],
     hex: "#346c9c",
     name: "海军蓝",
-    pinyin: "haijunlan"
+    pinyin: "haijunlan",
+    arr: ['绿兮衣兮','绿衣黄里'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -6460,7 +7269,9 @@ const colorsArr = [{
     ],
     hex: "#2f2f35",
     name: "水牛灰",
-    pinyin: "shuiniuhui"
+    pinyin: "shuiniuhui",
+    arr: ['饮马渡秋水','水寒风似刀'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6476,7 +7287,9 @@ const colorsArr = [{
     ],
     hex: "#2d2e36",
     name: "牛角灰",
-    pinyin: "niujiaohui"
+    pinyin: "niujiaohui",
+    arr: ['天长地久有时尽','此恨绵绵无绝期'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6492,7 +7305,9 @@ const colorsArr = [{
     ],
     hex: "#131824",
     name: "燕颔蓝",
-    pinyin: "yanhanlan"
+    pinyin: "yanhanlan",
+    arr: ['无可难何花落去','似曾相识燕归来'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6508,7 +7323,9 @@ const colorsArr = [{
     ],
     hex: "#d8e3e7",
     name: "云峰白",
-    pinyin: "yunfengbai"
+    pinyin: "yunfengbai",
+    arr: ['白云千里万里','明月前溪后溪'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6524,7 +7341,9 @@ const colorsArr = [{
     ],
     hex: "#c3d7df",
     name: "井天蓝",
-    pinyin: "jingtianlan"
+    pinyin: "jingtianlan",
+    arr: ['人生若只如初见','何事秋风悲画扇'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6540,7 +7359,9 @@ const colorsArr = [{
     ],
     hex: "#2f90b9",
     name: "云山蓝",
-    pinyin: "yunshanlan"
+    pinyin: "yunshanlan",
+    arr: ['山一程 水一程','身向榆关那畔行'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6556,7 +7377,9 @@ const colorsArr = [{
     ],
     hex: "#1781b5",
     name: "釉蓝",
-    pinyin: "youlan"
+    pinyin: "youlan",
+    arr: ['天青色 等烟雨','而我在等你'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -6572,7 +7395,9 @@ const colorsArr = [{
     ],
     hex: "#c7d2d4",
     name: "鸥蓝",
-    pinyin: "oulan"
+    pinyin: "oulan",
+    arr: ['岁岁燕丘','策马天下知多少'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -6588,7 +7413,9 @@ const colorsArr = [{
     ],
     hex: "#11659a",
     name: "搪磁蓝",
-    pinyin: "tangcilan"
+    pinyin: "tangcilan",
+    arr: ['想那年树下回眸无邪','恰逢花雨未歇'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -6604,7 +7431,9 @@ const colorsArr = [{
     ],
     hex: "#c0c4c3",
     name: "月影白",
-    pinyin: "yueyingbai"
+    pinyin: "yueyingbai",
+    arr: ['海底月是天上月','眼前人是心上人'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -6620,7 +7449,9 @@ const colorsArr = [{
     ],
     hex: "#b2bbbe",
     name: "星灰",
-    pinyin: "xinghui"
+    pinyin: "xinghui",
+    arr: ['偏爱枕惊鸿二字入梦的时节','烛火惺忪却可与她漫聊彻夜'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -6636,7 +7467,9 @@ const colorsArr = [{
     ],
     hex: "#5e7987",
     name: "淡蓝灰",
-    pinyin: "danlanhui"
+    pinyin: "danlanhui",
+    arr: ['岁岁花藻檐下共将棠梨煎雪','自总角至你我某日辗转天边'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -6652,7 +7485,9 @@ const colorsArr = [{
     ],
     hex: "#144a74",
     name: "鷃蓝",
-    pinyin: "yanlan"
+    pinyin: "yanlan",
+    arr: ['风在城外','裁去春秋几载'],
+    type:'songs'
   },
   {
     CMYK: [
@@ -6668,7 +7503,9 @@ const colorsArr = [{
     ],
     hex: "#74787a",
     name: "嫩灰",
-    pinyin: "nenhui"
+    pinyin: "nenhui",
+    arr: ['谁念西风独自凉'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6684,7 +7521,9 @@ const colorsArr = [{
     ],
     hex: "#495c69",
     name: "战舰灰",
-    pinyin: "zhanjianhui"
+    pinyin: "zhanjianhui",
+    arr: ['长烟落日孤城闭','浊酒一杯家万里'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6700,7 +7539,9 @@ const colorsArr = [{
     ],
     hex: "#47484c",
     name: "瓦罐灰",
-    pinyin: "waguanhui"
+    pinyin: "waguanhui",
+    arr: ['寻寻觅觅','冷冷清清','凄凄惨惨戚戚'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6716,7 +7557,9 @@ const colorsArr = [{
     ],
     hex: "#2b333e",
     name: "青灰",
-    pinyin: "qinghui"
+    pinyin: "qinghui",
+    arr: ['青石板街','回眸一笑你婉约'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -6732,7 +7575,9 @@ const colorsArr = [{
     ],
     hex: "#1c2938",
     name: "鸽蓝",
-    pinyin: "gelan"
+    pinyin: "gelan",
+    arr: ['面容安详的老人','依旧等着那出征的归人'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -6748,7 +7593,9 @@ const colorsArr = [{
     ],
     hex: "#142334",
     name: "钢青",
-    pinyin: "gangqing"
+    pinyin: "gangqing",
+    arr: ['把寂寞唱成一首歌'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -6764,7 +7611,9 @@ const colorsArr = [{
     ],
     hex: "#101f30",
     name: "暗蓝",
-    pinyin: "anlan"
+    pinyin: "anlan",
+    arr: ['长安一片月','万户捣衣声'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6780,7 +7629,9 @@ const colorsArr = [{
     ],
     hex: "#eef7f2",
     name: "月白",
-    pinyin: "yuebai"
+    pinyin: "yuebai",
+    arr: ['岁月长','衣裳薄'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -6796,7 +7647,9 @@ const colorsArr = [{
     ],
     hex: "#c6e6e8",
     name: "海天蓝",
-    pinyin: "haitianlan"
+    pinyin: "haitianlan",
+    arr: ['天涯海角','矢志不渝'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -6812,7 +7665,9 @@ const colorsArr = [{
     ],
     hex: "#93d5dc",
     name: "清水蓝",
-    pinyin: "qingshuilan"
+    pinyin: "qingshuilan",
+    arr: ['曾经沧海难为水','除却巫山不是云'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -6828,7 +7683,9 @@ const colorsArr = [{
     ],
     hex: "#51c4d3",
     name: "瀑布蓝",
-    pinyin: "pubulan"
+    pinyin: "pubulan",
+    arr: ['何以飘零去 何以少团栾','何以别离久 何以不得安'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -6844,7 +7701,9 @@ const colorsArr = [{
     ],
     hex: "#29b7cb",
     name: "蔚蓝",
-    pinyin: "weilan"
+    pinyin: "weilan",
+    arr: ['长相思','在长安'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6860,7 +7719,10 @@ const colorsArr = [{
     ],
     hex: "#0eb0c9",
     name: "孔雀蓝",
-    pinyin: "kongquelan"
+    pinyin: "kongquelan",
+    arr: ['孔雀东南飞','五里一徘徊'],
+    type: 'poetry',
+
   },
   {
     CMYK: [
@@ -6876,7 +7738,9 @@ const colorsArr = [{
     ],
     hex: "#10aec2",
     name: "甸子蓝",
-    pinyin: "dianzilan"
+    pinyin: "dianzilan",
+    arr: ['何当共剪西窗烛','却话巴山夜雨时'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6892,7 +7756,9 @@ const colorsArr = [{
     ],
     hex: "#57c3c2",
     name: "石绿",
-    pinyin: "shilv"
+    pinyin: "shilv",
+    arr: ['酒入愁肠','化作相思泪'],
+    type:'word'
   },
   {
     CMYK: [
@@ -6908,7 +7774,9 @@ const colorsArr = [{
     ],
     hex: "#b9dec9",
     name: "竹篁绿",
-    pinyin: "zhuhuanglv"
+    pinyin: "zhuhuanglv",
+    arr: ['帘卷西风','人比黄花瘦'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -6924,7 +7792,9 @@ const colorsArr = [{
     ],
     hex: "#83cbac",
     name: "粉绿",
-    pinyin: "fenlv"
+    pinyin: "fenlv",
+    arr: ['银烛秋光冷画屏','轻罗小扇扑流萤'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6940,7 +7810,9 @@ const colorsArr = [{
     ],
     hex: "#12aa9c",
     name: "美蝶绿",
-    pinyin: "meidielv"
+    pinyin: "meidielv",
+    arr: ['你挽指做蝴蝶从窗框飞起','飞过我指尖和眉宇'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -6956,7 +7828,9 @@ const colorsArr = [{
     ],
     hex: "#66c18c",
     name: "毛绿",
-    pinyin: "maolv"
+    pinyin: "maolv",
+    arr: ['沾衣欲湿杏花雨','吹面不寒杨柳风'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6972,7 +7846,9 @@ const colorsArr = [{
     ],
     hex: "#5dbe8a",
     name: "蔻梢绿",
-    pinyin: "koushaolv"
+    pinyin: "koushaolv",
+    arr: ['昔我往矣','杨柳依依'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -6988,7 +7864,9 @@ const colorsArr = [{
     ],
     hex: "#55bb8a",
     name: "麦苗绿",
-    pinyin: "maimiaolv"
+    pinyin: "maimiaolv",
+    arr: ['早春暮春','酒暖花深'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7004,7 +7882,9 @@ const colorsArr = [{
     ],
     hex: "#45b787",
     name: "蛙绿",
-    pinyin: "walv"
+    pinyin: "walv",
+    arr: ['春水望断','夏花宿妆残'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7020,7 +7900,9 @@ const colorsArr = [{
     ],
     hex: "#2bae85",
     name: "铜绿",
-    pinyin: "tonglv"
+    pinyin: "tonglv",
+    arr: ['春日宴','绿酒一杯 歌一遍'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -7036,7 +7918,9 @@ const colorsArr = [{
     ],
     hex: "#1ba784",
     name: "竹绿",
-    pinyin: "zhulv"
+    pinyin: "zhulv",
+    arr: ['帘外雨潺潺','春意阑珊'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -7052,7 +7936,9 @@ const colorsArr = [{
     ],
     hex: "#12a182",
     name: "蓝绿",
-    pinyin: "lanlv"
+    pinyin: "lanlv",
+    arr: ['人人尽说江南好','游人只合江南老'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -7068,7 +7954,9 @@ const colorsArr = [{
     ],
     hex: "#c4d7d6",
     name: "穹灰",
-    pinyin: "qionghui"
+    pinyin: "qionghui",
+    arr: ['生当复来归','死当长相思'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -7084,7 +7972,9 @@ const colorsArr = [{
     ],
     hex: "#1e9eb3",
     name: "翠蓝",
-    pinyin: "cuilan"
+    pinyin: "cuilan",
+    arr: ['你泪如梨花洒满了纸上的天下'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7100,7 +7990,9 @@ const colorsArr = [{
     ],
     hex: "#0f95b0",
     name: "胆矾蓝",
-    pinyin: "danfanlan"
+    pinyin: "danfanlan",
+    arr: ['深情一眼 挚爱万年','几度轮回恋恋不灭'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7116,7 +8008,9 @@ const colorsArr = [{
     ],
     hex: "#1491a8",
     name: "樫鸟蓝",
-    pinyin: "jianniaolan"
+    pinyin: "jianniaolan",
+    arr: ['千年后会有人从传说里','借月光将思念看清'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7132,7 +8026,9 @@ const colorsArr = [{
     ],
     hex: "#7cabb1",
     name: "闪蓝",
-    pinyin: "shanlan"
+    pinyin: "shanlan",
+    arr: ['把岁月铺成红毯','见证我们的极限'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7148,7 +8044,9 @@ const colorsArr = [{
     ],
     hex: "#a4aca7",
     name: "冰山蓝",
-    pinyin: "bingshanlan"
+    pinyin: "bingshanlan",
+    arr: ['渡口白雨成行','篷舟摇去无方'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7164,7 +8062,9 @@ const colorsArr = [{
     ],
     hex: "#869d9d",
     name: "虾壳青",
-    pinyin: "xiakeqing"
+    pinyin: "xiakeqing",
+    arr: ['欲黄昏','雨打梨花深闭门'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -7180,7 +8080,9 @@ const colorsArr = [{
     ],
     hex: "#648e93",
     name: "晚波蓝",
-    pinyin: "wanbolan"
+    pinyin: "wanbolan",
+    arr: ['人有悲欢离合','月有阴晴圆缺'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -7196,7 +8098,9 @@ const colorsArr = [{
     ],
     hex: "#3b818c",
     name: "蜻蜓蓝",
-    pinyin: "qingtinglan"
+    pinyin: "qingtinglan",
+    arr: ['碧玉眼睛云母翅','轻于粉蝶瘦于蜂'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -7212,7 +8116,9 @@ const colorsArr = [{
     ],
     hex: "#126e82",
     name: "玉鈫蓝",
-    pinyin: "yuqinlan"
+    pinyin: "yuqinlan",
+    arr: ['雨纷纷 旧故里草木深','我听闻 你始终一个人'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7228,7 +8134,9 @@ const colorsArr = [{
     ],
     hex: "#737c7b",
     name: "垩灰",
-    pinyin: "ehui"
+    pinyin: "ehui",
+    arr: ['只为她袖手天下'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7244,7 +8152,9 @@ const colorsArr = [{
     ],
     hex: "#617172",
     name: "夏云灰",
-    pinyin: "xiayunhui"
+    pinyin: "xiayunhui",
+    arr: ['浮云一别后','流水十年间'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -7260,7 +8170,9 @@ const colorsArr = [{
     ],
     hex: "#134857",
     name: "苍蓝",
-    pinyin: "canglan"
+    pinyin: "canglan",
+    arr: ['扶摇如可借','从此戾苍穹'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -7276,7 +8188,10 @@ const colorsArr = [{
     ],
     hex: "#474b4c",
     name: "黄昏灰",
-    pinyin: "huanghunhui"
+    pinyin: "huanghunhui",
+    arr: ['春心莫共花争发','一寸相思一寸灰'],
+    type: 'poetry',
+
   },
   {
     CMYK: [
@@ -7292,7 +8207,10 @@ const colorsArr = [{
     ],
     hex: "#21373d",
     name: "灰蓝",
-    pinyin: "huilan"
+    pinyin: "huilan",
+    arr: ['衣带渐宽终不悔','为伊消得人憔悴'],
+    type: 'poetry',
+
   },
   {
     CMYK: [
@@ -7308,7 +8226,10 @@ const colorsArr = [{
     ],
     hex: "#132c33",
     name: "深灰蓝",
-    pinyin: "shenhuilan"
+    pinyin: "shenhuilan",
+    arr: ['长相思兮长相忆'],
+    type: 'poetry',
+
   },
   {
     CMYK: [
@@ -7324,7 +8245,9 @@ const colorsArr = [{
     ],
     hex: "#a4cab6",
     name: "玉簪绿",
-    pinyin: "yuzanlv"
+    pinyin: "yuzanlv",
+    arr: ['我自是年少','韶华倾负'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -7340,7 +8263,9 @@ const colorsArr = [{
     ],
     hex: "#2c9678",
     name: "青矾绿",
-    pinyin: "qingfanlv"
+    pinyin: "qingfanlv",
+    arr: ['青石长阶','染尽生离死别'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7356,7 +8281,9 @@ const colorsArr = [{
     ],
     hex: "#9abeaf",
     name: "草原远绿",
-    pinyin: "caoyuanyuanlv"
+    pinyin: "caoyuanyuanlv",
+    arr: ['衰草连横向晚晴','半城柳色半声笛'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7372,7 +8299,9 @@ const colorsArr = [{
     ],
     hex: "#69a794",
     name: "梧枝绿",
-    pinyin: "wuzhilv"
+    pinyin: "wuzhilv",
+    arr: ['地上梧桐相持老','天上鹣鹣不独飞','水中鸳鸯会双死'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -7388,7 +8317,9 @@ const colorsArr = [{
     ],
     hex: "#92b3a5",
     name: "浪花绿",
-    pinyin: "langhualv"
+    pinyin: "langhualv",
+    arr: ['上有青冥之长天','下有渌水之波澜'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -7404,7 +8335,9 @@ const colorsArr = [{
     ],
     hex: "#248067",
     name: "海王绿",
-    pinyin: "haiwanglv"
+    pinyin: "haiwanglv",
+    arr: ['相濡以沫','不如相忘于江湖'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -7420,7 +8353,9 @@ const colorsArr = [{
     ],
     hex: "#428675",
     name: "亚丁绿",
-    pinyin: "yadinglv"
+    pinyin: "yadinglv",
+    arr: ['苍何剑挽千里霜','倾城一夜雪苍茫'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7436,7 +8371,9 @@ const colorsArr = [{
     ],
     hex: "#9fa39a",
     name: "镍灰",
-    pinyin: "niehui"
+    pinyin: "niehui",
+    arr: ['我明白的太迟','而你终究不会再原地等我'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -7452,7 +8389,9 @@ const colorsArr = [{
     ],
     hex: "#8a988e",
     name: "明灰",
-    pinyin: "minghui"
+    pinyin: "minghui",
+    arr: ['温柔的最决绝','坠落的曾摇曳'],
+    type: "songs"
   },
   {
     CMYK: [
@@ -7468,7 +8407,9 @@ const colorsArr = [{
     ],
     hex: "#70887d",
     name: "淡绿灰",
-    pinyin: "danlvhui"
+    pinyin: "danlvhui",
+    arr: ['绣罗衣裳照暮春','蹙金孔雀银麒麟'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -7484,7 +8425,9 @@ const colorsArr = [{
     ],
     hex: "#497568",
     name: "飞泉绿",
-    pinyin: "feiquanlv"
+    pinyin: "feiquanlv",
+    arr: ['温柔了杯中','三分明月落'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7500,7 +8443,9 @@ const colorsArr = [{
     ],
     hex: "#5d655f",
     name: "狼烟灰",
-    pinyin: "langyanhui"
+    pinyin: "langyanhui",
+    arr: ['狼烟千里乱葬岗','乱世孤魂无人访'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -7516,7 +8461,9 @@ const colorsArr = [{
     ],
     hex: "#314a43",
     name: "绿灰",
-    pinyin: "lvhui"
+    pinyin: "lvhui",
+    arr: ['春风绿过柳叶','你曾笑的无邪'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7532,7 +8479,9 @@ const colorsArr = [{
     ],
     hex: "#223e36",
     name: "苍绿",
-    pinyin: "canglv"
+    pinyin: "canglv",
+    arr: ['记得城中日月','蝉鸣后又初雪'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7548,7 +8497,9 @@ const colorsArr = [{
     ],
     hex: "#1a3b32",
     name: "深海绿",
-    pinyin: "shenhailv"
+    pinyin: "shenhailv",
+    arr: ['若醉了不过一滴泪'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7564,7 +8515,9 @@ const colorsArr = [{
     ],
     hex: "#363433",
     name: "长石灰",
-    pinyin: "changshihui"
+    pinyin: "changshihui",
+    arr: ['明知无人回顾','谁能初心不负'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7580,7 +8533,9 @@ const colorsArr = [{
     ],
     hex: "#1f2623",
     name: "苷蓝绿",
-    pinyin: "ganlanlv"
+    pinyin: "ganlanlv",
+    arr: ['佼佼佳人','江东之畔'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7596,7 +8551,9 @@ const colorsArr = [{
     ],
     hex: "#141e1b",
     name: "莽丛绿",
-    pinyin: "mangconglv"
+    pinyin: "mangconglv",
+    arr: ['兮何年','万千佳人相伴','可笑今朝我形只影单'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7612,7 +8569,9 @@ const colorsArr = [{
     ],
     hex: "#c6dfc8",
     name: "淡翠绿",
-    pinyin: "dancuilv"
+    pinyin: "dancuilv",
+    arr: ['痴笑轻狂','任我潇洒少年游'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7628,7 +8587,9 @@ const colorsArr = [{
     ],
     hex: "#9eccab",
     name: "明绿",
-    pinyin: "minglv"
+    pinyin: "minglv",
+    arr: ['一种相思花自飘零水自流','两处闲愁独自寂寞上心头'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7644,7 +8605,9 @@ const colorsArr = [{
     ],
     hex: "#68b88e",
     name: "田园绿",
-    pinyin: "tianyuanlv"
+    pinyin: "tianyuanlv",
+    arr: ['阿暖吾妻','见信如面'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7660,7 +8623,9 @@ const colorsArr = [{
     ],
     hex: "#20a162",
     name: "翠绿",
-    pinyin: "cuilv"
+    pinyin: "cuilv",
+    arr: ['无关风月','我题序等你回'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7676,7 +8641,9 @@ const colorsArr = [{
     ],
     hex: "#61ac85",
     name: "淡绿",
-    pinyin: "danlv"
+    pinyin: "danlv",
+    arr: ['夕阳余晖','如你的羞怯似醉'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7692,7 +8659,9 @@ const colorsArr = [{
     ],
     hex: "#40a070",
     name: "葱绿",
-    pinyin: "conglv"
+    pinyin: "conglv",
+    arr: ['而我独缺','你一生的了解'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7708,7 +8677,9 @@ const colorsArr = [{
     ],
     hex: "#229453",
     name: "孔雀绿",
-    pinyin: "kongquelv"
+    pinyin: "kongquelv",
+    arr: ['唯此间江湖年少','偏爱纵横天下'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7724,7 +8695,9 @@ const colorsArr = [{
     ],
     hex: "#cad3c3",
     name: "艾绿",
-    pinyin: "ailv"
+    pinyin: "ailv",
+    arr: ['泪有点咸有点甜','你的胸膛吻着我的侧脸'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7740,7 +8713,9 @@ const colorsArr = [{
     ],
     hex: "#3c9566",
     name: "蟾绿",
-    pinyin: "chanlv"
+    pinyin: "chanlv",
+    arr: ['又是一年春华成秋碧','莫叹明月笑多情'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7756,7 +8731,9 @@ const colorsArr = [{
     ],
     hex: "#20894d",
     name: "宫殿绿",
-    pinyin: "gongdianlv"
+    pinyin: "gongdianlv",
+    arr: ['一城烟雨一楼台','一花只为一树开'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7772,7 +8749,9 @@ const colorsArr = [{
     ],
     hex: "#83a78d",
     name: "松霜绿",
-    pinyin: "songshuanglv"
+    pinyin: "songshuanglv",
+    arr: ['能否消得','你一路而来的半生风雪'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7788,7 +8767,9 @@ const colorsArr = [{
     ],
     hex: "#579572",
     name: "蛋白石绿",
-    pinyin: "danbaishilv"
+    pinyin: "danbaishilv",
+    arr: ['天意总将人捉弄','怎奈何身不由己情衷'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7804,7 +8785,9 @@ const colorsArr = [{
     ],
     hex: "#207f4c",
     name: "薄荷绿",
-    pinyin: "bohelv"
+    pinyin: "bohelv",
+    arr: ['曾有满山佛桑花','曾有檐上月影来'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7820,7 +8803,9 @@ const colorsArr = [{
     ],
     hex: "#6e8b74",
     name: "瓦松绿",
-    pinyin: "wasonglv"
+    pinyin: "wasonglv",
+    arr: ['时光穿不断','流转在从前'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7836,7 +8821,9 @@ const colorsArr = [{
     ],
     hex: "#1a6840",
     name: "荷叶绿",
-    pinyin: "heyelv"
+    pinyin: "heyelv",
+    arr: ['江城外送故人别归州','驿桥下饮一杯新陪酒'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -7852,7 +8839,9 @@ const colorsArr = [{
     ],
     hex: "#5e665b",
     name: "田螺绿",
-    pinyin: "tianluolv"
+    pinyin: "tianluolv",
+    arr: ['两情若是长久时','又岂在朝朝暮暮'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -7868,7 +8857,9 @@ const colorsArr = [{
     ],
     hex: "#485b4d",
     name: "白屈菜绿",
-    pinyin: "baiqucailv"
+    pinyin: "baiqucailv",
+    arr: ['此去经年','应是良辰好景虚设'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -7884,7 +8875,9 @@ const colorsArr = [{
     ],
     hex: "#393733",
     name: "河豚灰",
-    pinyin: "hetunhui"
+    pinyin: "hetunhui",
+    arr: ['相思相见知何日','此时此夜难为情'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -7900,7 +8893,9 @@ const colorsArr = [{
     ],
     hex: "#373834",
     name: "蒽油绿",
-    pinyin: "enyoulv"
+    pinyin: "enyoulv",
+    arr: ['锦衣白马青油客'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -7916,7 +8911,9 @@ const colorsArr = [{
     ],
     hex: "#2b312c",
     name: "槲寄生绿",
-    pinyin: "hujishenglv"
+    pinyin: "hujishenglv",
+    arr: ['何当霜雪时','散发槲叶衣'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -7932,7 +8929,9 @@ const colorsArr = [{
     ],
     hex: "#15231b",
     name: "云杉绿",
-    pinyin: "yunshanlv"
+    pinyin: "yunshanlv",
+    arr: ['云淡风轻近午天','傍花随柳过前川'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -7948,7 +8947,9 @@ const colorsArr = [{
     ],
     hex: "#f0f5e5",
     name: "嫩菊绿",
-    pinyin: "nenjulv"
+    pinyin: "nenjulv",
+    arr: ['朝饮木兰之坠露兮','夕餐秋菊之落英'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -7964,7 +8965,9 @@ const colorsArr = [{
     ],
     hex: "#dfecd5",
     name: "艾背绿",
-    pinyin: "aibeilv"
+    pinyin: "aibeilv",
+    arr: ['何昔日之芳草兮','今直为此萧艾也'],
+    type: 'poetrySongs'
   },
   {
     CMYK: [
@@ -7980,7 +8983,9 @@ const colorsArr = [{
     ],
     hex: "#add5a2",
     name: "嘉陵水绿",
-    pinyin: "jialingshuilv"
+    pinyin: "jialingshuilv",
+    arr: ['千里嘉陵江水色','含烟带月碧于蓝'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -7996,7 +9001,9 @@ const colorsArr = [{
     ],
     hex: "#41b349",
     name: "玉髓绿",
-    pinyin: "yusuilv"
+    pinyin: "yusuilv",
+    arr: ['问谁调玉髓','暗补香瘢'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -8012,7 +9019,9 @@ const colorsArr = [{
     ],
     hex: "#43b244",
     name: "鲜绿",
-    pinyin: "xianlv"
+    pinyin: "xianlv",
+    arr: ['气暖禽声变','风恬草色鲜'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -8028,7 +9037,9 @@ const colorsArr = [{
     ],
     hex: "#41ae3c",
     name: "宝石绿",
-    pinyin: "baoshilv"
+    pinyin: "baoshilv",
+    arr: ['玛瑙一泓浮翠玉','瓠犀终日凛天风'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -8044,7 +9055,9 @@ const colorsArr = [{
     ],
     hex: "#e2e7bf",
     name: "海沬绿",
-    pinyin: "haimeilv"
+    pinyin: "haimeilv",
+    arr: ['秀色娟娟','最宜雨沐风梳际'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -8060,7 +9073,9 @@ const colorsArr = [{
     ],
     hex: "#d0deaa",
     name: "姚黄",
-    pinyin: "yaohuang"
+    pinyin: "yaohuang",
+    arr: ['黄衫飞白马','日日青楼下'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -8076,7 +9091,9 @@ const colorsArr = [{
     ],
     hex: "#b2cf87",
     name: "橄榄石绿",
-    pinyin: "ganlanshilv"
+    pinyin: "ganlanshilv",
+    arr: ['山无棱天地合','才敢与君绝'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -8092,7 +9109,9 @@ const colorsArr = [{
     ],
     hex: "#8cc269",
     name: "水绿",
-    pinyin: "shuilv"
+    pinyin: "shuilv",
+    arr: ['桂棹兮兰桨','击空明兮溯流光'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -8108,7 +9127,9 @@ const colorsArr = [{
     ],
     hex: "#b7d07a",
     name: "芦苇绿",
-    pinyin: "luweilv"
+    pinyin: "luweilv",
+    arr: ['才下眉头','却上心头'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -8124,7 +9145,9 @@ const colorsArr = [{
     ],
     hex: "#d2d97a",
     name: "槐花黄绿",
-    pinyin: "huaihuahuanglv"
+    pinyin: "huaihuahuanglv",
+    arr: ['菩提花开满宫墙','花下是谁影成双'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -8140,7 +9163,9 @@ const colorsArr = [{
     ],
     hex: "#bacf65",
     name: "苹果绿",
-    pinyin: "pingguolv"
+    pinyin: "pingguolv",
+    arr: ['但愿人长久','千里共婵娟'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -8156,7 +9181,9 @@ const colorsArr = [{
     ],
     hex: "#96c24e",
     name: "芽绿",
-    pinyin: "yalv"
+    pinyin: "yalv",
+    arr: ['几处早莺争暖树','谁家新燕啄春泥'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -8172,7 +9199,9 @@ const colorsArr = [{
     ],
     hex: "#e2d849",
     name: "蝶黄",
-    pinyin: "diehuang"
+    pinyin: "diehuang",
+    arr: ['一生一代一双人'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -8188,7 +9217,9 @@ const colorsArr = [{
     ],
     hex: "#bec936",
     name: "橄榄黄绿",
-    pinyin: "ganlanhuanglv"
+    pinyin: "ganlanhuanglv",
+    arr: ['一日不见兮','思之如狂'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -8204,7 +9235,9 @@ const colorsArr = [{
     ],
     hex: "#5bae23",
     name: "鹦鹉绿",
-    pinyin: "yingwulv"
+    pinyin: "yingwulv",
+    arr: ['独上高楼','望尽天涯路'],
+    type: 'word'
   },
   {
     CMYK: [
@@ -8220,7 +9253,9 @@ const colorsArr = [{
     ],
     hex: "#253d24",
     name: "油绿",
-    pinyin: "youlv"
+    pinyin: "youlv",
+    arr: ['青青子衿','悠悠我心'],
+    type: 'bookSongs'
   },
   {
     CMYK: [
@@ -8236,7 +9271,9 @@ const colorsArr = [{
     ],
     hex: "#fffef8",
     name: "象牙白",
-    pinyin: "xiangyabai"
+    pinyin: "xiangyabai",
+    arr: ['西城诀','转身一世琉璃白'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -8252,7 +9289,9 @@ const colorsArr = [{
     ],
     hex: "#f8f4ed",
     name: "汉白玉",
-    pinyin: "hanbaiyu"
+    pinyin: "hanbaiyu",
+    arr: ['岂曰无衣','与子同袍'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -8268,7 +9307,9 @@ const colorsArr = [{
     ],
     hex: "#fffef9",
     name: "雪白",
-    pinyin: "xuebai"
+    pinyin: "xuebai",
+    arr: ['君埋泉下泥销骨','我寄人间雪满头'],
+    type: 'poetry',
   },
   {
     CMYK: [
@@ -8284,7 +9325,9 @@ const colorsArr = [{
     ],
     hex: "#f7f4ed",
     name: "鱼肚白",
-    pinyin: "yudubai"
+    pinyin: "yudubai",
+    arr: ['愿你一世安乐无忧'],
+    type: 'otherWord'
   },
   {
     CMYK: [
@@ -8300,7 +9343,9 @@ const colorsArr = [{
     ],
     hex: "#e4dfd7",
     name: "珍珠灰",
-    pinyin: "zhenzhuhui"
+    pinyin: "zhenzhuhui",
+    arr: ['枕上书','书了几段几行'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -8316,7 +9361,9 @@ const colorsArr = [{
     ],
     hex: "#dad4cb",
     name: "浅灰",
-    pinyin: "qianhui"
+    pinyin: "qianhui",
+    arr: ['等佛铃盛放','将眉眼深藏','再开出回忆里你知的模样'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -8332,7 +9379,9 @@ const colorsArr = [{
     ],
     hex: "#bbb5ac",
     name: "铅灰",
-    pinyin: "qianhui"
+    pinyin: "qianhui",
+    arr: ['你曾说过不分离','要一直一直在一起'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -8348,7 +9397,9 @@ const colorsArr = [{
     ],
     hex: "#bbb5ac",
     name: "中灰",
-    pinyin: "zhonghui"
+    pinyin: "zhonghui",
+    arr: ['枕风宿雪多年','我与虎谋早餐'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -8364,7 +9415,9 @@ const colorsArr = [{
     ],
     hex: "#867e76",
     name: "瓦灰",
-    pinyin: "wahui"
+    pinyin: "wahui",
+    arr: ['等待良人归来那一刻','眼泪为你唱歌'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -8380,7 +9433,9 @@ const colorsArr = [{
     ],
     hex: "#847c74",
     name: "夜灰",
-    pinyin: "yehui"
+    pinyin: "yehui",
+    arr: ['我寄愁心与明月','随风直到夜郎西'],
+    type: 'poetry'
   },
   {
     CMYK: [
@@ -8396,7 +9451,9 @@ const colorsArr = [{
     ],
     hex: "#80766e",
     name: "雁灰",
-    pinyin: "yanhui"
+    pinyin: "yanhui",
+    arr: ['琴弦断了','缘尽了','你也走了'],
+    type: 'songs'
   },
   {
     CMYK: [
@@ -8412,7 +9469,9 @@ const colorsArr = [{
     ],
     hex: "#81776e",
     name: "深灰",
-    pinyin: "shenhui"
+    pinyin: "shenhui",
+    arr: ['嘲笑的风高唱的离别','我却听不见'],
+    type: 'songs'
   }
 ]
 

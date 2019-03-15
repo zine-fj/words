@@ -1,6 +1,6 @@
 <!--index.wxml-->
 
-<view class="words" style='background: rgba({{bg}})'>
+<view class="words" style='background: rgba({{bg.rgba}})'>
   <view class='title ovcl'>{{title}}</view>
   <view class='author ovcl'>
     <text>文 / {{author}}</text>

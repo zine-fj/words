@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/my/my",
+    
     "pages/collection/collection",
     "pages/state/state",
     "pages/video/index/index",
@@ -18,8 +19,8 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
-    "color": "#6f6d85",
-    "selectedColor": "#000",
+    "color": "#8a8a8a",
+    "selectedColor": "#3e5b68",
     "borderStyle": "white",
     "backgroundColor": "#fff",
     "list": [

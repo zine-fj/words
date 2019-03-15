@@ -67,6 +67,9 @@ Page({
 
     colors.forEach((item,index)=>{
       item.isCollection = false;
+      // if(item.arr) {
+      //   item.arr = item.arr.reverse();
+      // }
       if (storageArr) {
         storageArr.forEach((sItem, sIndex) => {
           if (item.hex == sItem.hex) {
@@ -76,7 +79,7 @@ Page({
       }
       
     })
-
+    console.log(colors)
     this.setData({
       colors
     })
@@ -164,7 +167,9 @@ Page({
     console.log('长按');
     let id = e.currentTarget.dataset.id;
     let colors = this.data.colors;
-    let _bg = colors[id].RGB.join(',') + ',' + 1;
+    let _bg = {};
+    _bg.rgba = colors[id].RGB.join(',') + ',' + 1;
+    _bg.hex = colors[id].hex;
     // console.log(_bg)
     this.poetryOpacity();
     wx.showModal({

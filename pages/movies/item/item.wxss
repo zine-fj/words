@@ -194,7 +194,7 @@
   background: #fff;
   padding: 20rpx;
   border-radius: 20rpx;
-
+  box-shadow: 0 0 10rpx #ddd;
 }
 .movie-comments .comments {
   padding: 20rpx;
@@ -241,5 +241,5 @@
 .movie-comments .comments-footer image {
   width: 30rpx;
   height: 30rpx;
-  margin-right: 10rpx;
+  margin-right: 5rpx;
 }

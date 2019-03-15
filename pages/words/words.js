@@ -22,9 +22,15 @@ Page({
     this.getTime();
     this.getData(time);
     let _bg = wx.getStorageSync('bg');
-    this.setData({
-      bg: _bg
-    })
+    if (_bg) {
+      this.setData({
+        bg: _bg
+      })
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: _bg.hex,
+      })
+    }
   },
   // 获取时间
   getTime() {

@@ -12,9 +12,15 @@ Page({
     console.log(options)
     this.getDetailMovie(options);
     let _bg = wx.getStorageSync('bg');
-    this.setData({
-      bg: _bg
-    })
+    if (_bg) {
+      this.setData({
+        bg: _bg
+      })
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: _bg.hex,
+      })
+    }
   },
   // 获取电影信息
   getDetailMovie(e) {

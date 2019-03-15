@@ -1,5 +1,5 @@
 <include src="../../../components/toast_up/toast_up.wxml" />
-<view class='ky-play' style='background: rgba({{bg}})'>
+<view class='ky-play' style='background: rgba({{bg.rgba}})'>
   <video class='video' object-fit='fill' poster='{{videoLi.poster}}' src='{{videoLi.video}}' controls></video>
   <view class='video-h'>
     <view class='title'>{{videoLi.title}}</view>

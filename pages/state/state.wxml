@@ -1,5 +1,5 @@
 <!--pages/state/state.wxml-->
-<view class='state' style='background: rgba({{bg}})'>
+<view class='state' style='background: rgba({{bg.rgba}})'>
   <view class='header'>
     <image class='v-img' mode='aspectFill' src='{{vImg}}' />
     <view class='version-name'>
@@ -9,9 +9,118 @@
   </view>
 
   <view class='content'>
+    <!-- 功能介绍 -->
     <view class='cont-li'>
-      <view class='title'></view>
-      <view class=''></view>
+      <view class='title' data-type='gnjs' bindtap='bindState'>
+        <text>功能介绍</text>
+        <image class="arrow-right {{isGnjsShow?'arrow-right-act':''}}" mode='aspectFit' src='{{arrowRight}}' />
+      </view>
+      <view class="cont {{isGnjsShow?'':'hide'}}">
+        <view class='intro1'>
+          <text class='intro1-title'>序言：</text> 
+          本小程序需要获取您的地址信息以便得到当前城市的电影及天气；需要获取您的公开信息以便得到昵称及头像；
+        </view>
+        <view class='intro2'>
+          本小程序目前一共包含五大模块，分别是：豆瓣电影、开眼视频、每日一文、中国色、我的收藏，下方为具体介绍：
+        </view>
+        <!-- 豆瓣电影 -->
+        <view class='contList'>
+          <view class='cont-list-title'>1、豆瓣电影：</view>
+          <view class='cont-list-li'>
+            a、轮播图中展示了前四张当前正在上映的电影，点击可进入电影详情页。
+          </view>
+          <view class='cont-list-li'>
+            b、轮播图下方为搜索框，点击可弹出搜索页面，用户可按关键词搜索，亦可按照类型搜索。
+            <view>注：搜索结果默认展示前20条数据。</view>
+          </view>
+          <view class='cont-list-li'>
+            c、搜索框下方展示了四个列表，分别是正在热映、即将上映、豆瓣新片榜、豆瓣top250榜。每个列表可左滑展示最多10张，想看更多列表可点击右箭头进入该列表页。
+          </view>
+          <view class='cont-list-li'>
+            d、点击单个电影即可进入该电影详情页，里面包含电影的类型、评分、简介、短评等一些基本信息。
+            <view>注：剧照可保存哦</view>
+          </view>
+        </view>
+        <!-- 开眼视频 -->
+        <view class='contList'>
+          <view class='cont-list-title'>2、开眼视频：</view>
+          <view class='cont-list-li'>
+            a、开眼视频页面展示了每天推荐的10部视频，点击可进入该视频详情页。
+          </view>
+          <view class='cont-list-li'>
+            b、详情页中包含了该视频的一些基本介绍，及相应推荐的一些视频信息。其中推荐的视频为随机展示，每个推荐列表左滑最多可展示5部视频，点击可进入其详情页。
+            <view>注：点击收藏可在我的收藏中查看该视频；点击分享可将该视频分享给您的微信好友；点击评论可查看其他用户对该视频的评论。</view>
+          </view>
+        </view>
+        <!-- 每日一文 -->
+        <view class='contList'>
+          <view class='cont-list-title'>3、每日一文：</view>
+          <view class='cont-list-li'>
+            每日一文页面即展示了当前日期官方推荐的文章，包含标题、作者、内容，点击右上角小心心可收藏，收藏后可在我的收藏中查看该文章。页面底部左下角点击看查看上一天或下一天的文章，右下角为该文章字数。
+          </view>
+        </view>
+        <!-- 中国色 -->
+        <view class='contList'>
+          <view class='cont-list-title'>4、中国色：</view>
+          <view class='cont-list-li'>
+            进入该页面可随机分配一种中国色，右上角为其该色的名称。中间显示为一句话，该话可能是诗、词、歌词、名句等。单击可进入下一个中国色，双击为收藏（再双击为取消）、点击右边小心心也可收藏，收藏后可在我的收藏中查看。
+            <view>注：一共有 526 种颜色哦。</view>
+
+          </view>
+        </view>
+        <!-- 我的收藏 -->
+        <view class='contList'>
+          <view class='cont-list-title'>5、我的收藏：</view>
+          <view class='cont-list-li'>
+            a、我的收藏中目前支持收藏中国色、每日一文、开眼视频，均为列表显示；
+          </view>
+          <view class='cont-list-li'>
+            b、中国色点击可进入该页面，左滑点击小红心可取消收藏。
+          </view>
+          <view class='cont-list-li'>
+            c、每日一文点击可进入该页面，点击小红心可取消收藏。
+          </view>
+          <view class='cont-list-li'>
+            d、开眼视频点击可进入该页面，点击右上角小×可取消收藏。
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 免责声明 -->
+    <view class='cont-li'>
+      <view class='title' data-type='mzsm' bindtap='bindState'>
+        <text>免责声明</text>
+        <image class="arrow-right {{isMzsmShow?'arrow-right-act':''}}" mode='aspectFit' src='{{arrowRight}}' />
+      </view>
+      <view class="cont {{isMzsmShow?'':'hide'}}">
+        <view>
+          <view>本小程序使用了第三方网址的数据，分别为豆瓣电影、开眼视频、每日一文、中国色。</view>
+          <view>以上数据若无意侵犯了贵公司的版权，请及时联系我，我会尽快回复和处理的，谢谢！</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 关于我 -->
+    <view class='cont-li'>
+      <view class='title' data-type='gyw' bindtap='bindState'>
+        <text>关于我</text>
+        <image class="arrow-right {{isGywShow?'arrow-right-act':''}}" mode='aspectFit' src='{{arrowRight}}' />
+      </view>
+      <view class="cont {{isGywShow?'':'hide'}}">
+        <view>
+          <view>
+            本人前端小白一枚，凭着对技术的一点热爱、热忱、热血，在没有需求、设计、UI、后台的情况下，依然决然的写出了这款小程序！功能不多，但都还阔以。哈哈哈哈….
+            <view>希望用到该小程序的您会喜欢！！！</view>
+          </view>
+          <view>
+            <view>以下为本人的联系方式，欢迎随时沟通交流：</view>
+            <view>微信：an6785653。</view>
+            <view>公众号：素商。</view>
+            <view>博客：一世长安（https://zine-fj.github.io）（中国色中用到的句子都收录在此哦）</view>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
 

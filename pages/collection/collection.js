@@ -29,11 +29,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
     let _bg = wx.getStorageSync('bg');
-    this.setData({
-      bg: _bg
-    })
+    if (_bg) {
+      this.setData({
+        bg: _bg
+      })
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: _bg.hex,
+      })
+    }
   },
 
   // 点击navlist
@@ -56,6 +61,7 @@ Page({
     let self = this;
     let wordsArr = wx.getStorageSync('wordsArr');
     let wordsList = this.data.wordsList;
+    let nowNav = this.data.nowNav;
     if (wordsArr) {
       wordsArr = wordsArr.reverse();
       let _isNoCollec;
@@ -68,20 +74,19 @@ Page({
         wordsList: wordsArr,
         isNoCollec: _isNoCollec,
       })
-    } else {
+    } else{
       this.setData({
         isNoCollec: true,
       })
     }
   },
-  // 点击文章小红心
+  // 点击每日一文取消按钮
   bindWordsLove(e) {
     let self = this;
     let index = e.currentTarget.dataset.index;
     let wordsList = wx.getStorageSync('wordsArr');
     wordsList[wordsList.indexOf(wordsList[index])] = null;
     wordsList.splice(wordsList.indexOf(null), 1);
-    // console.log(wordsList);
     this.setData({
       nowClickWord: index
     })
@@ -102,6 +107,16 @@ Page({
       self.setData({
         wordsList,
         nowClickWord: -1,
+      })
+
+      let _isNoCollec;
+      if (wordsList.length > 0) {
+        _isNoCollec = false;
+      } else {
+        _isNoCollec = true;
+      }
+      this.setData({
+        isNoCollec: _isNoCollec
       })
 
     }, 500)
@@ -149,14 +164,20 @@ Page({
   getColorSync() {
     let _colorsArr = wx.getStorageSync('colorsArr');
     let _isNoCollec;
+    console.log(_colorsArr)
     if (_colorsArr) {
       _colorsArr = _colorsArr.reverse();
-      console.log(_colorsArr.length)
       if (_colorsArr.length > 0) {
         _isNoCollec = false;
       } else {
         _isNoCollec = true;
       }
+      // _colorsArr.forEach((item,index)=>{
+      //   console.log(item.arr)
+      //   if(item.arr) {
+      //     item.arr = item.arr.reverse()
+      //   }
+      // })
       this.setData({
         colorsArr: _colorsArr,
         isNoCollec: _isNoCollec
@@ -221,16 +242,14 @@ Page({
     // 返回角度 Math.atan() 返回数字的反正切值
     return 360 * Math.atan(_Y / _X) / (2 * Math.PI);
   },
-  // 中国色 删除
+  // 中国色 取消按钮
   delItem: function(e) {
     let self = this;
     let id = e.currentTarget.dataset.id;
     let colorsArr = this.data.colorsArr;
-    console.log(id)
     colorsArr[colorsArr.indexOf(colorsArr[id])] = null;
     colorsArr.splice(colorsArr.indexOf(null), 1);
     console.log(colorsArr);
-
     this.animation.opacity(0).step({
       duration: 500
     });
@@ -247,6 +266,16 @@ Page({
         this.setData({
           animat: this.animation.export()
         })
+
+        let _isNoCollec;
+        if (colorsArr.length > 0) {
+          _isNoCollec = false;
+        } else {
+          _isNoCollec = true;
+        }
+        this.setData({
+          isNoCollec: _isNoCollec
+        })
       }, 300)
     }, 500)
 
@@ -257,6 +286,7 @@ Page({
   getVideos() {
     let self = this;
     let videos = wx.getStorageSync('videosArr');
+    let nowNav = this.data.nowNav;
     if (videos) {
       videos = videos.reverse();
       let _isNoCollec;
@@ -302,6 +332,16 @@ Page({
       self.setData({
         videosList,
       })
+
+      let _isNoCollec;
+      if (videosList.length > 0) {
+        _isNoCollec = false;
+      } else {
+        _isNoCollec = true;
+      }
+      this.setData({
+        isNoCollec: _isNoCollec
+      })
     }, 500)
   },
 
@@ -316,9 +356,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    this.getWords()
-    this.getColorSync()
-    this.getVideos()
+    let nowNav = this.data.nowNav;
+    console.log(nowNav)
+    if (nowNav == 'zgs') {
+      this.getColorSync()
+    } else if (nowNav == 'mryw') {
+      this.getWords()
+    } else if (nowNav == 'kysp') {
+      this.getVideos()
+
+    }
   },
 
   /**
