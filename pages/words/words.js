@@ -54,14 +54,56 @@ Page({
       _nowTime = this.data.nowTime
     }
     let nowTime = _nowTime;
-    let theNowTime = this.data.theNowTime;
-    let wordsUrl = this.data.wordsUrl;
+    
+    let wordsUrl = self.data.wordsUrl;
     wx.showLoading({
       title: '文章加载中...',
     });
+    self.getDatePromise(nowTime).then((suc)=>{
+      console.log(suc)
+      if(!suc.data.data) {
+        //昨天的时间
+        let yesToday = new Date();
+        yesToday.setTime(yesToday.getTime() - 24 * 60 * 60 * 1000);
+        let yesTodayY = yesToday.getFullYear();
+        let yesTodayM = yesToday.getMonth() + 1;
+        yesTodayM = yesTodayM < 10 ? '0' + yesTodayM : yesTodayM;
+        let yesTodayD = yesToday.getDate();
+        yesTodayD = yesTodayD < 10 ? '0' + yesTodayD : yesTodayD;
+        let theYestoDay = `${yesTodayY}${yesTodayM}${yesTodayD}`;
+
+        self.getDateRequest(wordsUrl, theYestoDay);
+        util.showMsg('今天的内容暂无更新')
+      } else {
+        self.getDateRequest(wordsUrl, nowTime)
+      }
+    }).catch((err)=>{
+      console.log(err)
+    })
+   
+  },
+
+  // 获取数据 异步
+  getDatePromise(nowTime) {
+    let self = this;
+    let wordsUrl = this.data.wordsUrl;
+    return new Promise((resolve,reject)=>{
+      wx.request({
+        url: `${wordsUrl}article/day?dev=1&date=${nowTime}`,
+        success: resolve,
+        fail: reject
+      })
+    })
+  },
+
+  // 获取请求到的数据
+  getDateRequest(wordsUrl, nowTime) {
+    let self = this;
+    let theNowTime = this.data.theNowTime;
     wx.request({
       url: `${wordsUrl}article/day?dev=1&date=${nowTime}`,
       success(res) {
+        console.log(res)
         wx.hideLoading();
         let data = res.data.data;
         // 判断下一天按钮是否显示

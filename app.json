@@ -1,13 +1,12 @@
 {
   "pages":[
+    "pages/movies/index/index",
+    "pages/words/words",
     "pages/my/my",
-    
     "pages/collection/collection",
     "pages/state/state",
     "pages/video/index/index",
-    "pages/movies/index/index",
     "pages/video/video_play/video_play",
-    "pages/words/words",
     "pages/colors/colors",
     "pages/movies/item/item",
     "pages/movies/list/list"

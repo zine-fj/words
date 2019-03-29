@@ -189,7 +189,7 @@ Page({
     } else if(type == 'share') {
       let shareId = wx.getStorageSync('shareId');
       if(shareId) {
-        wx.clearStorageSync('shareId')
+        // wx.clearStorageSync('shareId')
         wx.setStorageSync('shareId', theId)
       } else {
         wx.setStorageSync('shareId', theId)
@@ -328,8 +328,9 @@ Page({
    */
   onShareAppMessage: function(options) {
     let videoLi = this.data.videoLi;
-    // console.log(videoLi)
+    console.log(videoLi)
     var path = '/pages/video/video_play/video_play';
+    theId = videoLi.id;
     return {
       title: videoLi.title,
       path: path,

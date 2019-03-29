@@ -90,7 +90,6 @@ Page({
     // 获取当前城市 暂无合适地址，先注释
     util.getLocation().then((suc) => {
       util.getCity(suc.latitude, suc.longitude).then((suc) => {
-        console.log(suc)
         let city = suc.data.result.addressComponent.city.replace('市', '');
         that.getMovies(city);
         that.setData({
