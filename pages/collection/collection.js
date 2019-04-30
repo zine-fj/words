@@ -12,9 +12,6 @@ Page({
     }, {
       name: '每日一文',
       id: 'mryw'
-    }, {
-      name: '开眼视频',
-      id: 'kysp'
     }],
     videoCancelImg: '/images/close.png', 
     colorsArr: [], // 颜色列表
@@ -51,8 +48,6 @@ Page({
       this.getWords();
     } else if (id == 'zgs') {
       this.getColorSync();
-    } else if (id == 'kysp') {
-      this.getVideos();
     }
   },
 
@@ -152,10 +147,6 @@ Page({
     } else if (nowNav == 'mryw') {
       wx.navigateTo({
         url: '/pages/words/words',
-      })
-    } else if (nowNav == 'kysp') {
-      wx.navigateTo({
-        url: '/pages/video/index/index',
       })
     }
   },
@@ -278,71 +269,6 @@ Page({
         })
       }, 300)
     }, 500)
-
-
-  },
-
-  // 获取开眼视频
-  getVideos() {
-    let self = this;
-    let videos = wx.getStorageSync('videosArr');
-    let nowNav = this.data.nowNav;
-    if (videos) {
-      videos = videos.reverse();
-      let _isNoCollec;
-      if (videos.length > 0) {
-        _isNoCollec = false;
-      } else {
-        _isNoCollec = true;
-      }
-      self.setData({
-        videosList: videos,
-        isNoCollec: _isNoCollec
-      })
-    } else {
-      this.setData({
-        isNoCollec: true,
-      })
-    }
-  },
-
-  // 点击视频
-  bindVideo(e) {
-    let id = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: `/pages/video/video_play/video_play?id=${id}`,
-    })
-  },
-
-  // 点击视频取消按钮
-  bindVideoCancel(e) {
-    let self = this;
-    let id = e.currentTarget.dataset.id;
-
-    let videosList = this.data.videosList;
-    console.log(videosList)
-    videosList[videosList.indexOf(videosList[id])] = null;
-    videosList.splice(videosList.indexOf(null), 1);
-    wx.setStorageSync('videosArr', videosList);
-    wx.showLoading({
-      title: '删除视频中..',
-    })
-    setTimeout(() => {
-      wx.hideLoading();
-      self.setData({
-        videosList,
-      })
-
-      let _isNoCollec;
-      if (videosList.length > 0) {
-        _isNoCollec = false;
-      } else {
-        _isNoCollec = true;
-      }
-      this.setData({
-        isNoCollec: _isNoCollec
-      })
-    }, 500)
   },
 
   /**
@@ -362,9 +288,6 @@ Page({
       this.getColorSync()
     } else if (nowNav == 'mryw') {
       this.getWords()
-    } else if (nowNav == 'kysp') {
-      this.getVideos()
-
     }
   },
 

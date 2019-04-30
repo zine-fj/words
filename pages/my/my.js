@@ -7,8 +7,8 @@ Page({
    */
   data: {
     myList: [{
-      img: '../../images/video.png',
-      name: '开眼视频',
+      img: '../../images/heart.png',
+      name: '漫威',
       arrowRight: '../../images/arrowright.png',
       url: '/pages/video/index/index'
     }, {
@@ -49,7 +49,12 @@ Page({
     this.getTime();
     this.getWeather();
     this.bindUserInfo();
-
+    wx.request({
+      url: 'https://chinesecolor-ff06c.firebaseio.com/color.json',
+      success(res) {
+        console.log(res)
+      }
+    })
   },
 
   // 获取授权

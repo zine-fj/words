@@ -1,73 +1,122 @@
-/* pages/kaiyan/kaiyan.wxss */
-
 page {
   width: 100%;
   height: 100%;
 }
-
-.video-list {
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  padding: 30rpx 0;
+.avengers-header swiper {
+  height: 480rpx;
 }
 
-.video-li {
-  width: 95%;
-  height: 400rpx;
-  box-sizing: border-box;
-  position: relative;
-  left: 0;
-  top: 0;
-  margin: 0 auto 30rpx;
-  box-shadow: 0 0 10rpx #ddd;
-  border-radius: 10rpx;
-  overflow: hidden;
-}
-
-.video-li image {
-  width: 100%;
+.avengers-header swiper image {
   height: 100%;
-  position: absolute;
+  width: 100%;
+}
+
+.avengers-header swiper .back-image {
+  position: fixed;
   left: 0;
   top: 0;
-  z-index: 1;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1000;
+  opacity: 0.4;
 }
 
-.video-li .words {
-  position: absolute;
-  left: 20rpx;
-  bottom: 20rpx;
-  color: #fff;
-  z-index: 2;
-  width: calc(100% - 40rpx);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.video-li .words-left {
-  background: rgba(0, 0, 0, 0.2);
-  padding: 10rpx;
-  width: 70%;
-}
-
-.video-li .title {
+.avengers-header swiper .movie-intro {
+  position: fixed;
+  top: 80rpx;
+  right: 10rpx;
+  height: auto;
+  width: 300rpx;
+  z-index: 123;
+  opacity: 0.5;
+  color: #000;
   font-size: 28rpx;
 }
-.video-li .title,
-.video-li .slogan {
+.avengers-header swiper .movie-intro .swiAvra{
+  margin: 30rpx 0;
+}
+
+.avengers-header swiper .slide-image {
+  width: 324rpx;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+/* .avengers-header navigator:nth-of-type(1) .slide-image {
+  margin-left: 100rpx;
+}
+.avengers-header navigator:nth-of-type(2) .slide-image {
+  margin-left: 180rpx;
+}
+.avengers-header navigator:nth-of-type(3) .slide-image {
+  margin-left: 260rpx;
+}
+.avengers-header navigator:nth-of-type(4) .slide-image {
+  margin-left: 340rpx;
+} */
+
+
+.avengers-list {
   width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.video-li .slogan, .video-li .video-time {
+.avengers-list .item {
+  display: flex;
+  padding: 20rpx 20rpx;
+  width: 95%;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.2);
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.avengers-list .time {
+  margin: 20rpx 0;
+  font-size: 40rpx;
+}
+
+.avengers-list .item .poster {
+  width: 128rpx;
+  height: 168rpx;
+  margin-right: 20rpx;
+}
+
+.avengers-list .item .meta {
+  flex: 1;
+}
+
+.avengers-list .item .meta .title, .avengers-list .item .meta .sub-title {
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.avengers-list .item .meta .title {
+  font-size: 32rpx;
+}
+
+.avengers-list .item .meta .sub-title {
+  font-size: 22rpx;
+  color: #c0c0c0;
+}
+
+.avengers-list .item .meta .artists {
   font-size: 24rpx;
+  color: #999;
 }
 
-.video-li .video-time {
-  background: rgba(0, 0, 0, 0.2);
+.avengers-list .item .rating text {
+  display: inline-block;
+  width: 40rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(247, 76, 49, 0.8);
   padding: 10rpx;
+  border-radius: 20rpx;
 }

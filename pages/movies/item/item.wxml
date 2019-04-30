@@ -13,10 +13,10 @@
       <!-- 一些信息 -->
       <view class='some-info'>
         <view>
-          类型：<text wx:for='{{movie.genres}}' wx:for-item='itemGen'>{{itemGen}} </text>
+          类型：<text wx:for='{{movie.genres}}' wx:key="index" wx:for-item='itemGen'>{{itemGen}} </text>
         </view>
         <view>
-          国家：<text wx:for='{{movie.countries}}' wx:for-item='itemCoun'>{{itemCoun}} </text>
+          国家：<text wx:for='{{movie.countries}}' wx:key="index" wx:for-item='itemCoun'>{{itemCoun}} </text>
         </view>
         <view>
           <text>片长：{{movie.durations[0]}} </text>

@@ -104,7 +104,7 @@ Page({
       movieList: app.globalData.movieList
     });
 
-    
+
   },
 
   // 获取电影

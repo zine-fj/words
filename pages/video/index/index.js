@@ -1,40 +1,118 @@
-// pages/kaiyan/kaiyan.js
-const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    eyeUrl: app.globalData.eyeUrl,
-    infoList: [{
-      id: '',
-      title: '', // 名字
-      slogan: '', // 标语
-      description: '', // 简介
-      category: '', // 分类
-      author: {
-        icon: '', // 头像
-        name: '',
-        description: '', // 介绍
+    imgUrls: [
+      {
+        img: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1524359776.jpg',
+        id: 1866479
       },
-      cover: {}, // 背景图
-      playUrl: '', // 视频播放地址
-      duration: '', // 播放时长
-      videoTime: '',
-      consumption: {
-        collectionCount: '', // 多少人收藏
-        shareCount: '', // 分享
-        replyCount: '' // 回复
-      }
-    }],
+      {
+        img: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2237747953.jpg',
+        id: 10741834
+      },
+      {
+        img: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2517753454.jpg',
+        id: 24773958
+      },
+      {
+        img: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2552058346.jpg',
+        id: 26100958
+      },
+    ], // 轮播图效果
+    indicatorDots: true,
+    autoplay: true,
+    circular: false, // 是否衔接
+    interval: 5000, // 自动切换
+    duration: 1000, // 过渡时间
+    vertical: false, // 纵向
+    avengersList: [
+      {
+        time: 2008,
+        list: [
+          { id: '1432146', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p725871004.jpg', title: '钢铁侠', en_title: 'Iron Man', genres: ['动作', '科幻', '冒险'], durations: '126分钟', rating: '8.2' },
+          { id: '1866475', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p916263375.jpg', title: '无敌浩克', en_title: 'The Incredible Hulk', genres: ['动作', '科幻', '惊悚'], durations: '112分钟', rating: '6.9' },
+        ]
+      },
+      {
+        time: 2010,
+        list: [
+          { id: '3066739', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p451885601.jpg', title: '钢铁侠2', en_title: 'Iron Man 2', genres: ['动作', '科幻', '冒险'], durations: '124分钟', rating: '7.5' },
+        ]
+      },
+      {
+        time: 2011,
+        list: [
+          { id: '1866471', image: 'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2159068249.jpg', title: '雷神', en_title: 'Thor', genres: ['动作', '冒险', '奇幻'], durations: '115分钟', rating: '6.9' },
+          { id: '2138838', image: 'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1075448129.jpg', title: '美国队长', en_title: 'Captain America: The First Avenger', genres: ['动作', '科幻', '冒险'], durations: '124分钟', rating: '6.9' },
+        ]
+      },
+      {
+        time: 2012,
+        list: [
+          { id: '1866479', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1524359776.jpg', title: '复仇者联盟', en_title: 'The Avengers', genres: ['动作', '科幻', '奇幻'], durations: '142分钟', rating: '8.1' },
+        ]
+      },
+      {
+        time: 2013,
+        list: [
+          { id: '3231742', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1955027201.jpg', title: '钢铁侠3', en_title: 'Iron Man 3', genres: ['动作', '科幻'], durations: '134分钟', rating: '7.7' },
+          { id: '6560058', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2156839164.jpg', title: '雷神2：黑暗世界', en_title: 'Thor: The Dark World', genres: ['动作', '冒险', '奇幻'], durations: '112分钟', rating: '7.4' },
+        ]
+      },
+      {
+        time: 2014,
+        list: [
+          { id: '6390823', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2174824694.jpg', title: '美国队长2：冬日战士', en_title: 'Captain America: The Winter Soldier', genres: ['动作', '科幻', '冒险'], durations: '136分钟', rating: '8' },
+          { id: '7065154', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2198455702.jpg', title: '银河护卫队', en_title: 'Guardians of the Galaxy', genres: ['动作', '科幻', '奇幻'], durations: '121分钟', rating: '8' },
+        ]
+      },
+      {
+        time: 2015,
+        list: [
+          { id: '10741834', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2237747953.jpg', title: '复仇者联盟2：奥创纪元', en_title: 'Avengers: Age of Ultron', genres: ['动作', '科幻', '奇幻'], durations: '142分钟', rating: '7.4' },
+          { id: '1866473', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2266823371.jpg', title: '蚁人', en_title: 'Ant-Man', genres: ['动作', '科幻', '冒险'], durations: '117分钟', rating: '7.6' },
+        ]
+      },
+      {
+        time: 2016,
+        list: [
+          { id: '25820460', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2332503406.jpg', title: '美国队长3：内战', en_title: 'Captain America: Civil War', genres: ['动作', '科幻', '冒险'], durations: '148分钟', rating: '7.8' },
+          { id: '3025375', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2388501883.jpg', title: '奇异博士', en_title: 'Doctor Strange', genres: ['动作', '冒险', '奇幻'], durations: '115分钟', rating: '7.6' },
+        ]
+      },
+      {
+        time: 2017,
+        list: [
+          { id: '25937854', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2455261804.jpg', title: '银河护卫队2', en_title: 'Guardians of the Galaxy Vol. 2', genres: ['动作', '科幻', '冒险'], durations: '136分钟', rating: '8' },
+          { id: '24753477', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2497756471.jpg', title: '蜘蛛侠：英雄归来', en_title: 'Spider-Man: Homecoming', genres: ['动作', '科幻', '奇幻'], durations: '133分钟', rating: '7.4' },
+          { id: '25821634', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2500451074.jpg', title: '雷神3：诸神黄昏', en_title: 'Thor: Ragnarok', genres: ['动作', '冒险', '奇幻'], durations: '130分钟', rating: '7.4' },
+        ]
+      },
+      {
+        time: 2018,
+        list: [
+          { id: '6390825', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2512123434.jpg', title: '黑豹', en_title: 'Black Panther', genres: ['动作', '科幻', '冒险'], durations: '134分钟', rating: '6.5' },
+          { id: '24773958', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2517753454.jpg', title: '复仇者联盟3：无限战争', en_title: 'Avengers: Infinity War', genres: ['动作', '科幻', '奇幻'], durations: '149分钟', rating: '8.1' },
+          { id: '26636712', image: 'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2529389608.jpg', title: '蚁人2：黄蜂女现身', en_title: '117分钟', genres: ['动作', '科幻', '冒险'], durations: '118分钟', rating: '7.3' },
+        ]
+      },
+      {
+        time: 2019,
+        list: [
+          { id: '26213252', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2548870813.jpg', title: '惊奇队长', en_title: 'Captain Marvel', genres: ['动作', '科幻', '冒险'], durations: '124分钟', rating: '7' },
+          { id: '26100958', image: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2552058346.jpg', title: '复仇者联盟4：终局之战', en_title: 'Avengers: Endgame', genres: ['动作', '科幻', '奇幻'], durations: '181分钟', rating: '8.8' },
+        ]
+      },
+    ],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getInfo();
     let _bg = wx.getStorageSync('bg');
     if (_bg) {
       this.setData({
@@ -47,73 +125,12 @@ Page({
     }
   },
 
-  getInfo() {
-    let self = this;
-    let eyeUrl = this.data.eyeUrl;
-    wx.showLoading({
-      title: '努力加载中...',
-    })
-    wx.request({
-      url: `${eyeUrl}api/v4/tabs/selected`,
-      success(res) {
-        let _itemList = res.data.itemList;
-        let itemList = _itemList.filter((item) => {
-          return item.type == 'video'
-        })
-        // console.log(itemList)
-        let _infoList = itemList.map((item, index) => {
-          let _infoListArr = {};
-          _infoListArr.id = item.data.id;
-          _infoListArr.title = item.data.title;
-          _infoListArr.slogan = item.data.slogan;
-          _infoListArr.description = item.data.description;
-          _infoListArr.category = item.data.category;
-          _infoListArr.author = {};
-          _infoListArr.author.icon = item.data.author.icon;
-          _infoListArr.author.name = item.data.author.name;
-          _infoListArr.author.description = item.data.author.description;
-          _infoListArr.cover = item.data.cover;
-          _infoListArr.playUrl = item.data.playUrl;
-          _infoListArr.duration = item.data.duration;
-          _infoListArr.consumption = {};
-          _infoListArr.consumption.collectionCount = item.data.consumption.collectionCount;
-          _infoListArr.consumption.shareCount = item.data.consumption.shareCount;
-          _infoListArr.consumption.replyCount = item.data.consumption.replyCount;
-
-          // 时间
-          let min = parseInt(item.data.duration / 60);
-          let sec = parseInt(item.data.duration % 60);
-          if (min.toString().length == 1) {
-            min = `0${min}`;
-          };
-          if (sec.toString().length == 1) {
-            sec = `0${sec}`;
-          };
-          _infoListArr.videoTime = `${min}′${sec}″`
-          return _infoListArr;
-        })
-        // console.log(_infoList);
-        wx.hideLoading();
-        self.setData({
-          infoList: _infoList
-        })
-        wx.stopPullDownRefresh({});
-      }
-    })
-  },
-
-  bindKanYan(e) {
-    let id = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: `/pages/video/video_play/video_play?id=${id}`,
-    })
-  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
@@ -127,34 +144,40 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.getInfo();
+    
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    let _path = '/pages/video/index/index';
+    let _imageUrl = 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2552058346.jpg'
+    return {
+      title: 'Avengers',
+      path: _path,
+      imageUrl: _imageUrl,
+    }
   }
 })

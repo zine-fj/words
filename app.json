@@ -1,21 +1,20 @@
 {
-  "pages":[
+  "pages": [
     "pages/movies/index/index",
+    "pages/video/index/index",
     "pages/words/words",
     "pages/my/my",
     "pages/collection/collection",
     "pages/state/state",
-    "pages/video/index/index",
-    "pages/video/video_play/video_play",
     "pages/colors/colors",
     "pages/movies/item/item",
     "pages/movies/list/list"
   ],
-  "window":{
-    "backgroundTextStyle":"dark",
+  "window": {
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "素商",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#8a8a8a",
@@ -41,5 +40,6 @@
     "scope.userLocation": {
       "desc": "用于获取当前城市信息,否则默认北京"
     }
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
