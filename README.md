@@ -1,4 +1,4 @@
-# 个人小程序
+# 个人小程序 - 素商
 ![二维码](https://zine-fj.github.io/images/xcx.png)
 
 ## 豆瓣电影
