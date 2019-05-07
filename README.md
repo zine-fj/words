@@ -1,6 +1,6 @@
 # 个人小程序
 >素商
-
+![二维码](https://zine-fj.github.io/images/xcx.png)
 ## 豆瓣电影
 ```shell
 let dbUrl = https://api.douban.com
@@ -15,6 +15,7 @@ ${dbUrl}/v2/movie/in_theaters?start=0&count=10&city=${city}
 2、正在上映：
 ```shell
 ${dbUrl}/v2/movie/in_theaters
+```
 3、即将上映：
 ```shell
 ${dbUrl}/v2/movie/coming_soon
@@ -40,15 +41,18 @@ https://api.douban.com/v2/movie/subject/${id}
 ```
 
 ## 每日一文
+```shell
+let wordUrl = https://interface.meiriyiwen.com
+```
 1、每日一文
 ```shell
-https://interface.meiriyiwen.com/article/today?dev=1
+${wordUrl}/article/today?dev=1
 ```
 2、特定某一天
 ```shell
-https://interface.meiriyiwen.com/article/day?dev=1&date=20170216
+${wordUrl}/article/day?dev=1&date=20170216
 ```
 3、随机某一天
 ```shell
-https://interface.meiriyiwen.com/article/random?dev=1
+${wordUrl}/article/random?dev=1
 ```
