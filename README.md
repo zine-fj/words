@@ -1,7 +1,7 @@
 # 个人小程序
 >素商  
 
-![二维码](https://zine-fj.github.io/images/xcx.png)
+![二维码](https://zine-fj.github.io/images/xcx.png){:width="100px" height="100px"}
 ## 豆瓣电影
 ```shell
 let dbUrl = https://api.douban.com
