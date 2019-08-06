@@ -23,16 +23,6 @@ Page({
     console.log(options)
     whitch = options;
     this.getMoviesList(options);
-    let _bg = wx.getStorageSync('bg');
-    if (_bg) {
-      this.setData({
-        bg: _bg
-      })
-      wx.setNavigationBarColor({
-        frontColor: '#ffffff',
-        backgroundColor: _bg.hex,
-      })
-    }
   },
 
   // 获取电影
@@ -167,7 +157,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    let _bg = wx.getStorageSync('bg');
+    if (_bg) {
+      this.setData({
+        bg: _bg
+      })
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: _bg.hex,
+      })
+    }
   },
 
   /**

@@ -7,6 +7,7 @@ Page({
    */
   data: {
     colors: [], // 所有颜色
+    color: '', // 当前颜色
     colorLogo: '../../images/colorLogo.png',
     rgba: '',
     colorName: '中国色',
@@ -22,6 +23,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
     this.animation = wx.createAnimation();
     this.theColors(options.color);
     this.poetryOpacity();
@@ -52,9 +54,13 @@ Page({
       let mathNum = parseInt(Math.random() * 526);
       let _rgba = (colors[mathNum].RGB.join(',') + ',' + 1);
       console.log(colors[mathNum])
+      let _color = colors[mathNum].hex;
+      let _colorName = colors[mathNum].name;
       self.setData({
         rgba: _rgba,
-        mathNum: mathNum
+        mathNum: mathNum,
+        color: _color,
+        colorName: _colorName,
       })
       wx.setNavigationBarTitle({
         title: colors[mathNum].name
@@ -79,7 +85,7 @@ Page({
       }
       
     })
-    console.log(colors)
+    // console.log(colors)
     this.setData({
       colors
     })
@@ -177,6 +183,11 @@ Page({
       content: '是否将此颜色设置为您的小程序背景色',
       success(res) {
         if(res.confirm) {
+          wx.showToast({
+            title: '设置背景色成功',
+            icon: 'success',
+            duration: 2000
+          })
           wx.setStorageSync('bg', _bg)
         }
       }
@@ -256,6 +267,13 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    let _title = this.data.colorName
+    let color = this.data.color;
+    let _path = `pages/colors/colors?color=${color}`;
+    console.log(_title,color)
+    return {
+      title: _title,
+      path: _path,
+    }
   }
 })

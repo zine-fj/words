@@ -7,6 +7,10 @@ App({
     version: '2.1.0',
     vName: '素商',
     userInfo: null,
+    movieUrl: 'https://douban.uieee.com/v2/',
+    wordsUrl: 'https://interface.meiriyiwen.com/',
+    eyeUrl: 'https://baobab.kaiyanapp.com/',
+    mwPicUrl: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public', // 漫威图片地址
     movieList: [{
       type: '类型',
       list: [{
@@ -140,7 +144,6 @@ App({
         li: '更早'
       },]
     }],
-    wordsUrl: 'https://interface.meiriyiwen.com/',
-    eyeUrl: 'https://baobab.kaiyanapp.com/',
+    
   }
 })

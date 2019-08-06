@@ -7,20 +7,15 @@ Page({
     starList: [],
     inWordShow: -1,
     photos: [], // 剧照图片列表
+    options: '',
+    title: '',
   },
   onLoad: function(options) {
     console.log(options)
     this.getDetailMovie(options);
-    let _bg = wx.getStorageSync('bg');
-    if (_bg) {
-      this.setData({
-        bg: _bg
-      })
-      wx.setNavigationBarColor({
-        frontColor: '#ffffff',
-        backgroundColor: _bg.hex,
-      })
-    }
+    this.setData({
+      options
+    })
   },
   // 获取电影信息
   getDetailMovie(e) {
@@ -61,6 +56,7 @@ Page({
         that.setData({
           starList,
           photos: _photos,
+          title: res.data.title
         })
         wx.setNavigationBarTitle({
           title: res.data.title
@@ -97,29 +93,29 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    let _bg = wx.getStorageSync('bg');
+    if (_bg) {
+      this.setData({
+        bg: _bg
+      })
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: _bg.hex,
+      })
+    }
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
-    let _path = '/pages/movies/item/item';
+  onShareAppMessage: function(e) {
+    let options = this.data.options;
+    let _path = `/pages/movies/item/item?id=${options.id}`;
+    let _title = this.data.title;
     return {
-      title: '豆瓣电影',
+      title: _title,
       path: _path,
       // imageUrl: '/images/an.jpg',
-      success: function(res) {
-        // 转发成功
-        wx.showToast({
-          title: "转发成功",
-          icon: 'success',
-          duration: 2000
-        })
-      },
-      fail: function(res) {
-        // 转发失败
-      }
     }
   }
 })

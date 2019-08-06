@@ -1,24 +1,8 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
-
-  return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
-}
-
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
-}
+const app = getApp();
 
 // 自己封装的请求函数
 const myRequest = (options) => {
-  let domain = 'https://douban.uieee.com/v2/';
-  // let domain = 'https://api.douban.com/v2/';
-
+  let domain = app.globalData.movieUrl;
   options.header = {
     'content-type': 'application/xml'
   };
@@ -30,6 +14,7 @@ const myRequest = (options) => {
   wx.request(options)
 }
 
+// 获取个人信息
 const getUserInfo = ()=>{
   return new Promise((resolve, reject) => {
     wx.getUserInfo({
@@ -38,7 +23,7 @@ const getUserInfo = ()=>{
     })
   })
 }
-
+// 获取当前地址
 const getLocation = (type)=>{
   return new Promise((resolve, reject) => {
     wx.getLocation({
@@ -48,7 +33,7 @@ const getLocation = (type)=>{
     })
   })
 }
-
+// 加载
 const showMsg = (msg)=>{
   wx.showToast({
     title: msg,
@@ -112,7 +97,6 @@ const nowTime = () => {
 
 
 module.exports = {
-  formatTime: formatTime,
   myRequest: myRequest,
   getCity,
   getLocation,
