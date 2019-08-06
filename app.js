@@ -4,7 +4,7 @@ App({
 
   },
   globalData: {
-    version: '2.1.0',
+    version: '2.2.0',
     vName: '素商',
     userInfo: null,
     movieUrl: 'https://douban.uieee.com/v2/',
